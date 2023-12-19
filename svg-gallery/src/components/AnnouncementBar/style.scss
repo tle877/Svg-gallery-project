@@ -1,4 +1,15 @@
-.announcementBar{
-    background: #1E78AB;
-    color: #ffffff;
+.announcementBar {
+  background: #1e78ab;
+  color: #ffffff;
+  height: 34px;
+  text-align: center;
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
