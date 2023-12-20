@@ -9,6 +9,7 @@ export const theme = {
       "ct-blue-600": "#ff531a",
       "ct-blue-700": "#e63900",
       "ct-yellow-600": "#f9d13e",
+      "custom-blue": "#1E78AB",
     },
     fontFamily: {
       Poppins: ["Poppins, sans-serif"],
