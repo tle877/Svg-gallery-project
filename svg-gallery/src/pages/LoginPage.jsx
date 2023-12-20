@@ -1,8 +1,8 @@
 
-export default function Example() {
+export default function LoginPage() {
   return (
     <div className="bg-custom-blue p-10 ">
-      <div id="form" className="rounded-xl mx-auto bg-white flex min-h-full flex-1 flex-col justify-center py-12 px-15gi max-w-full sm:max-w-lg">
+      <div id="form" className="rounded-xl mx-auto bg-white flex min-h-full flex-1 flex-col justify-center p-14 max-w-full sm:max-w-md">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Login
@@ -25,7 +25,7 @@ export default function Example() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="  Email"
+                  placeholder="Email"
                   required
                   className="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
