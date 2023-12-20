@@ -1,8 +1,9 @@
 import './style.scss'
+import logo from '../../assets/logo.png'
 const LogoContainer = () => {
     return(
-        <div>
-            <img src="logo" alt="" />
+        <div className={'logo'}> 
+            <img src={logo} alt="omtech laser logo" />
         </div>
     )
 }
