@@ -1,9 +1,33 @@
 
+import topLogo from "../assets/logoLoginPage/topLogo.svg"
+import botLogo from "../assets/logoLoginPage/botLogo.svg"
+import botLogo1 from "../assets/logoLoginPage/botLogo1.svg"
+import botLogo2 from "../assets/logoLoginPage/botLogo2.svg"
 export default function ResetPasswordByEmail() {
     return (
-      <div className="bg-custom-blue p-10 ">
+      <div className="sm:bg-custom-blue sm:p-10 relative ">
+        <img
+        src={topLogo}
+        alt="Logo"
+        className="absolute top-0 right-0 w-3/12"
+      />
+      <img 
+        src={botLogo}
+        alt="Logo1"
+        className="absolute bottom-0 left-0 opacity-5"  
+      />
+        <img 
+        src={botLogo1}
+        alt="Logo1"
+        className="absolute bottom-0 left-0 opacity-5" 
+      />
+        <img 
+        src={botLogo2}
+        alt="Logo1"
+        className="absolute bottom-0 left-0 opacity-5 " 
+      /> 
         
-        <div id="form" className="rounded-xl mx-auto bg-white flex min-h-full flex-1 flex-col justify-center p-4 sm:pt-6 sm:pb-24 sm:px-14  max-w-full sm:max-w-md">
+        <div id="form" className="rounded-xl mx-auto bg-white flex min-h-full flex-1 flex-col justify-center sm:p-14 p-4 max-w-full sm:max-w-lg">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 className="text-center mb-2 text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Reset Your Password
@@ -16,12 +40,12 @@ export default function ResetPasswordByEmail() {
             <form action="#" method="POST">
               <div>
                 <div className="flex ">
-                  <label htmlFor="password" className="block text-sm font-semibold leading-6 text-gray-900">
+                  <label htmlFor="password" className="block text-lg leading-6 text-gray-900">
                     Email 
                   </label>
                 </div>
                 
-                <div className="mt-2 mb-10">
+                <div className="mt-4 mb-10">
                   <input
                   
                     id="email"
@@ -38,13 +62,13 @@ export default function ResetPasswordByEmail() {
             <div className="flex justify-evenly ">    
                 <button
                   type="submit"
-                  className=" w-2/5 sm:w-1/3 rounded-full px-3 py-1.5 border border-custom-blue text-sm leading-6 text-custom-blue shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className=" w-1/3 rounded-full border border-custom-blue text-custom-blue px-3 py-1.5 text-sm leading-6  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className=" w-2/5 sm:w-1/3 rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className=" w-1/3 rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Submit
                 </button>
