@@ -3,6 +3,7 @@
 import "./App.css";
 import AppRoutes from "./Routes";
 import AnnouncementBar from "./components/AnnouncementBar/announcementBar";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <AnnouncementBar />
       <AppRoutes />
+      <Footer />
     </>
   );
 }
