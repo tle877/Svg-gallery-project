@@ -68,6 +68,30 @@
   }
 }
 
+.mobileDropdownMenu {
+  display: none;
+  @include xs {
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+    ul {
+      li {
+        color:#221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px; /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
 .notificationPanel {
   display: none;
   position: absolute;
@@ -79,6 +103,10 @@
   border: 0.5px solid rgba(17, 41, 54, 0.04);
   background: #fff;
   box-shadow: 7px 8px 11px rgba(17, 41, 54, 0.04);
+  @include xs {
+    width: 90%;
+    right: 5%;
+  }
 }
 
 .notificationItemWrapper {
