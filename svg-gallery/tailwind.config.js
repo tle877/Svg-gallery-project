@@ -9,6 +9,7 @@ export const theme = {
       "ct-blue-600": "#ff531a",
       "ct-blue-700": "#e63900",
       "ct-yellow-600": "#f9d13e",
+      "custom-blue": "#158CC5",
       "bg-40": "#2f27250a",
       "bg-100": "#2f27251a",
       "border-ft-item": "#06050480",
