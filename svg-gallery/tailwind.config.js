@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"];
+export const content = ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}"];
 export const theme = {
   extend: {
     colors: {
@@ -9,6 +9,10 @@ export const theme = {
       "ct-blue-600": "#ff531a",
       "ct-blue-700": "#e63900",
       "ct-yellow-600": "#f9d13e",
+      "bg-40": "#2f27250a",
+      "bg-100": "#2f27251a",
+      "border-ft-item": "#06050480",
+      "border-ft": "#090707",
     },
     fontFamily: {
       Poppins: ["Poppins, sans-serif"],
