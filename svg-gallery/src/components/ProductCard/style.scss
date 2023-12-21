@@ -1,0 +1,58 @@
+
+.productCard {
+    width: 357px;
+}
+.product-card {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    border-radius: 12px;
+}
+.image-desc {
+    color: #2F2725;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    text-transform: capitalize; 
+}
+.product-image-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    gap: 10px
+}
+.product-image-button {
+    position: relative;
+    top: 12px;
+    left: 12px;
+}
+.howto-btn {
+    display: inline-flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2px);
+    color: var(--, #2F2725);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+}
+.download-btn {
+    border-radius: 4px;
+    background: rgba(21, 140, 197, 0.80);
+    backdrop-filter: blur(2px);
+    display: inline-flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    font-size: 16px;
+}
