@@ -1,10 +1,10 @@
 // src/pages/HomePage.jsx
 // import React from 'react';
-
+import Carousel from '../components/Carousel/HeroBannerCarousel'
 function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
+      <Carousel/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"];
+export const content = ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}"];
 export const theme = {
   extend: {
     colors: {
