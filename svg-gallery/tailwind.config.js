@@ -11,6 +11,8 @@ export const theme = {
       "ct-yellow-600": "#f9d13e",
       "bg-40": "#2f27250a",
       "bg-100": "#2f27251a",
+      "border-ft-item": "#06050480",
+      "border-ft": "#090707",
     },
     fontFamily: {
       Poppins: ["Poppins, sans-serif"],
