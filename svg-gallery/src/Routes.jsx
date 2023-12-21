@@ -13,9 +13,9 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/createAccount" element={<CreateAccountPage />} />
-        <Route path="/resetPasswordByEmail" element={<ResetPasswordByEmail/>} />
-        <Route path="/resetPassword" element={<ResetPassword/>} />
+        <Route path="/create-account" element={<CreateAccountPage />} />
+        <Route path="/reset-password-by-Email" element={<ResetPasswordByEmail/>} />
+        <Route path="/reset-password" element={<ResetPassword/>} />
       </Routes>
     </Router>
   );
