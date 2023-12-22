@@ -1,10 +1,10 @@
-import { ArrowRightAlt } from '@mui/icons-material';
+import { ArrowRightAlt } from "@mui/icons-material";
 import {
   IconFacebook,
   IconLinkedin,
   IconTwitter,
   IconWhatsapp,
-} from '../../assets/Icons/SocialMediaIcons.jsx';
+} from "../../assets/Icons/SocialMediaIcons.jsx";
 import {
   IconAmericanExpress,
   IconApplePay,
@@ -19,16 +19,16 @@ import {
   IconVisa,
   IconKlarna,
   IconAffirm,
-} from '../../assets/Icons/PaymentIcons.jsx';
-import { FooterMenu } from '../FooterMenu';
-import { FOOTER_MENU } from './constants';
+} from "../../assets/Icons/PaymentIcons.jsx";
+import { FooterMenu } from "../FooterMenu";
+import { FOOTER_MENU } from "./constants";
 
 const Footer = () => {
   return (
-    <div className="footer px-8 pt-2 md:bg-bg-40 md:pt-12 md:pb-8">
-      <div className="container text-left pt-10 border-t border-border-ft md:pt-0 md:border-t-0">
+    <div className="footer px-8 pt-2 md:bg-dark-brown-40 md:pt-12 md:pb-8">
+      <div className="container text-left pt-10 border-t border-dark-brown md:pt-0 md:border-t-0">
         <div className="flex flex-wrap justify-between md:gap-4">
-          <div className="w-full border-b border-border-ft-item md:hidden">
+          <div className="w-full border-b border-dark-brown-400 md:hidden">
             <div className="flex justify-start mb-5">
               <input
                 type="text"
