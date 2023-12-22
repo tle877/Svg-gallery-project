@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 
 export const FooterMenu = ({ menu = {} }) => {
   const [active, setActive] = useState(false);
@@ -18,7 +18,7 @@ export const FooterMenu = ({ menu = {} }) => {
 
   return (
     <div
-      className="w-full border-b border-border-ft-item md:border-b-0 md:w-fit"
+      className="w-full border-b border-dark-brown-400 md:border-b-0 md:w-fit"
       key={menu?.title}
     >
       <h4
@@ -27,7 +27,7 @@ export const FooterMenu = ({ menu = {} }) => {
       >
         {menu?.title}
       </h4>
-      <div className={`${!active && 'hidden'} md:block`}>
+      <div className={`${!active && "hidden"} md:block`}>
         <ItemList />
       </div>
     </div>
