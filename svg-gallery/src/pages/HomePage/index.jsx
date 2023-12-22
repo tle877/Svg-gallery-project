@@ -1,13 +1,16 @@
 // src/pages/HomePage.jsx
 // import React from 'react';
+import ProductCard from "../components/ProductCard/productCard";
+import Carousel from "../components/Carousel/HeroBannerCarousel";
 
-import { Filter } from './components/Filter';
+import { Filter } from "./components/Filter";
 
 function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
       <Filter />
+      <Carousel />
+      <ProductCard />
     </div>
   );
 }

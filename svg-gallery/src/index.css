@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Avenir:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import '@fontsource/metropolis';
 
 #nprogress .bar {
     background: #80ffff !important;
@@ -22,7 +24,7 @@
 @tailwind utilities;
 
 html{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Avenir';
 }
 
 body{
