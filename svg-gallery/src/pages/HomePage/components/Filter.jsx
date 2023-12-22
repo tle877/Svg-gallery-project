@@ -8,7 +8,7 @@ export const Filter = () => {
   const [currentCategory, setCurrentCategory] = useState(false);
 
   return (
-    <div className="max-w-[300px]">
+    <div className="max-w-[300px] mb-10">
       <div className="flex gap-4 p-5 mb-8 bg-blue-40 text-dark-brown text-xl ">
         <Tune />
         Refine

@@ -10,8 +10,10 @@ export const Tag = ({ tag }) => {
 
   return (
     <div
-      className={`bg-blue-60 rounded-2xl px-3 py-1 cursor-pointer text-sm hover:text-blue ${
-        active && "bg-blue text-white hover:text-white"
+      className={`rounded-2xl px-3 py-1 cursor-pointer text-sm ${
+        active
+          ? "bg-blue text-white hover:text-white"
+          : "bg-blue-60 text-dark-brown hover:text-blue"
       }`}
       onClick={toggleActive}
       key={tag?.title}
