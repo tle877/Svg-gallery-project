@@ -5,6 +5,7 @@ import AppRoutes from "./Routes";
 import AnnouncementBar from "./components/AnnouncementBar/announcementBar";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
+import YouMayAlsoLike from "./components/YouMayAlsoLike/YouMayAlsoLike";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Header/>
       <AppRoutes />
       <Footer />
+      
     </>
   );
 }

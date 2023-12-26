@@ -11,7 +11,7 @@ function HomePage() {
       <Carousel />
       <div className="container flex gap-6">
         <Filter />
-        <ProductCard />
+        <ProductCard showUploadButtons showLikeRate/>
       </div>
     </div>
   );

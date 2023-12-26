@@ -6,7 +6,6 @@ import LoginPage from "./pages/LoginPage";
 import CreateAccountPage from "./pages/CreateAccountPage";
 import ResetPasswordByEmail from "./pages/ResetPasswordByEmailPage";
 import ResetPassword from "./pages/ResetPassword";
-
 function AppRoutes() {
   return (
     <Router>
