@@ -18,10 +18,10 @@ const RecommendedModel = () => {
             <h2 className=" leading-10 mb-5">Recommended Model</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4 lg:gap-6 " >
-            <ProductCard  showLikeRate />
-            <ProductCard  showLikeRate />
-            <ProductCard  showLikeRate />
-            <ProductCard  showLikeRate />
+            <ProductCard   />
+            <ProductCard   />
+            <ProductCard   />
+            <ProductCard   />
         </div> 
 
         {/* For Slider */}
