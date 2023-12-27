@@ -27,7 +27,7 @@ const RecommendedModel = () => {
         </div>
         
         <Swiper
-        slidesPerView={2.1}
+        slidesPerView={2.2}
         spaceBetween={10}
         freeMode={true}
         breakpoints={{
