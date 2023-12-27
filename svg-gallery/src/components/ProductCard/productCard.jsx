@@ -35,10 +35,10 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton}) => {
                     <ShareIcons />
                 </div>)}    
             </a>
-            <div className="inline-flex justify-between w-full tracking-wider">
-                <p className="py-2 font-normal image-desc">Christmas SVG,DXF,EPS,JPG</p>
+            <div className="flex flex-col item-start sm:flex-row sm:justify-between w-full tracking-wider">
+                <p className="py-2 mt-1 text-left text-xs sm:text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
                 {showLikeRate &&(
-                <div className="inline-flex items-center py-2 text-sm text-black rounded-lg ">
+                <div className="inline-flex sm:items-center py-2 text-sm text-black rounded-lg ">
                     <StarIcons />
                     <span>5.0</span>
                     <LikeIcons />
