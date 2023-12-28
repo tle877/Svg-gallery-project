@@ -1,0 +1,64 @@
+@import "../../mixin.scss";
+
+
+.desc{
+    h2{
+        color: var(--, #2F2725);
+        /* 模块标题 */
+        font-family: Metropolis;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46px; /* 121.053% */
+        text-transform: capitalize;
+    }
+    >p{
+        color: var(--, #2F2725);
+        font-family: Metropolis;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 42px; /* 150% */
+        text-transform: capitalize;
+    }
+    @include xs{
+        // margin-left: 5px;
+        // margin-right:5px;
+        padding-left: 30px;
+        h2{
+            font-size: 40px;
+            line-height: 48px
+        }
+    }
+    >p{
+
+    }
+}
+.desc_table {
+    border-radius: 12px;
+    background: rgba(36, 43, 46, 0.04);
+    h3{
+        color: var(--, #2F2725);
+        font-family: Metropolis,sans-serif;
+        font-size:28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px; /* 121.429% */
+        text-transform: capitalize;
+    }
+    p{
+        color: var(--, #2F2725);
+        font-family: Metropolis, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px; /* 120.833% */
+        text-transform: capitalize;
+    }
+}
+
+
+
+.items{
+    border-color: rgba(36, 43, 46, 0.10);
+}
