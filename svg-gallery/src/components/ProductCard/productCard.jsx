@@ -5,12 +5,12 @@ import { HeartIcons,
     ShareIcons,
     DownloadIcons,
     StarIcons } from '../../assets/Icons/ImageIcons';
-import ProductImage from "../../assets/productImage.jpeg"
 
 
-const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton}) => {
+
+const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageShow}) => {
     const productImageStyle = {
-        backgroundImage: `url(${ProductImage})`, 
+        backgroundImage: `url(${imageShow})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat',
@@ -36,7 +36,7 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton}) => {
                 </div>)}    
             </a>
             <div className="flex flex-col item-start sm:flex-row sm:justify-between w-full tracking-wider">
-                <p className="py-2 mt-1 text-left text-xs sm:text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
+                <p className="py-2 mt-1 text-left text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
                 {showLikeRate &&(
                 <div className="inline-flex sm:items-center py-2 text-sm text-black rounded-lg ">
                     <StarIcons />
