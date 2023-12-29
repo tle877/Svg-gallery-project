@@ -13,6 +13,8 @@ import Rating from "../../components/ProductDetail/Rating";
 import ButtonGroup from "../../components/ProductDetail/ButtonGroup";
 import YouMayAlsoLike from "../../components/YouMayAlsoLike/YouMayAlsoLike";
 import RecommendedModel from "../../components/RecommendedModel/RecommendedModel";
+import Description from "../../components/Description/Description";
+import ProductionStep from "../../components/ProductionStep/ProductionStep";
 const InspirationPage = () => {
   const productImages = [Image_1, Image_2, Image_3, Image_4, Image_1, Image_2, Image_3, Image_4];
 
@@ -30,6 +32,8 @@ const InspirationPage = () => {
         </div>
         
       </div>
+      <Description/>
+      <ProductionStep/>
       <YouMayAlsoLike />
       <RecommendedModel />
     </div>
