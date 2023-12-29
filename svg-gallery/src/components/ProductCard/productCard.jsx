@@ -19,7 +19,7 @@ const ProductCard = () => {
   return (
     <div className={'productCard'}>
         <div className="rounded-lg h-full">
-            <a href="#" className='product-card' style={productImageStyle}>       
+            <a href="/inspiration-page" className='product-card' style={productImageStyle}>       
                 {/* <img className="rounded-t-xl main-image" src={ProductImage} alt="product image" /> */}
                 <div className='flex product-image-button w-1/2 justify-between'>
                     <button className='howto-btn'>How-To</button>
