@@ -2,7 +2,7 @@ import ProductCard from "../ProductCard/productCard"
 import "./YouMayAlsoLike.scss"
 import ProductImage from "../../assets/productImage.jpeg"
 
-import React, { useRef, useState } from 'react';
+// import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles

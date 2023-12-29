@@ -17,8 +17,7 @@ function App() {
       <AnnouncementBar />
       <Header/>
       <AppRoutes />
-      <YouMayAlsoLike />
-      <RecommendedModel />
+      
       <Footer />
       
     </>

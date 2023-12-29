@@ -8,6 +8,7 @@ import { HeartIcons,
 
 
 
+// eslint-disable-next-line react/prop-types
 const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageShow}) => {
     const productImageStyle = {
         backgroundImage: `url(${imageShow})`, 

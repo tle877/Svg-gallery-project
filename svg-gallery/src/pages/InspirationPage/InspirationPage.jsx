@@ -11,6 +11,8 @@ import ProductID from "../../components/ProductDetail/ProductID";
 import FileDetails from "../../components/ProductDetail/FileDetails";
 import Rating from "../../components/ProductDetail/Rating";
 import ButtonGroup from "../../components/ProductDetail/ButtonGroup";
+import YouMayAlsoLike from "../../components/YouMayAlsoLike/YouMayAlsoLike";
+import RecommendedModel from "../../components/RecommendedModel/RecommendedModel";
 const InspirationPage = () => {
   const productImages = [Image_1, Image_2, Image_3, Image_4, Image_1, Image_2, Image_3, Image_4];
 
@@ -28,6 +30,8 @@ const InspirationPage = () => {
         </div>
         
       </div>
+      <YouMayAlsoLike />
+      <RecommendedModel />
     </div>
   );
 };
