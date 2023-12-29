@@ -8,7 +8,7 @@
     url(./assets/fonts/Metropolis-Bold.otf) format("opentype");
 }
 @font-face {
-  font-family: "Metropolis-Regular";
+  font-family: "Metropolis";
   src: local("Metropolis-Regular"),
     url(./assets/fonts/Metropolis-Regular.otf) format("opentype");
 }
