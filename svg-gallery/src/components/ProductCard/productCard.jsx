@@ -5,12 +5,12 @@ import { HeartIcons,
     ShareIcons,
     DownloadIcons,
     StarIcons } from '../../assets/Icons/ImageIcons';
-import ProductImage from "../../assets/productImage.jpeg"
 
 
-const ProductCard = () => {
+
+const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageShow}) => {
     const productImageStyle = {
-        backgroundImage: `url(${ProductImage})`, 
+        backgroundImage: `url(${imageShow})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat',
@@ -21,29 +21,30 @@ const ProductCard = () => {
         <div className="rounded-lg h-full">
             <a href="/inspiration-page" className='product-card' style={productImageStyle}>       
                 {/* <img className="rounded-t-xl main-image" src={ProductImage} alt="product image" /> */}
+                {showUploadButtons && (
                 <div className='flex product-image-button w-1/2 justify-between'>
                     <button className='howto-btn'>How-To</button>
                     <button className='download-btn'>
                         <DownloadIcons />File                        
                     </button>
-                </div>
+                </div>)}
+                {showLikeRateButton && (
                 <div className='product-image-icon'>
                     <HeartIcons />
                     <ThumbsupIcons />
                     <ShareIcons />
-                </div>
+                </div>)}    
             </a>
-
-            
-        
-            <div className="inline-flex justify-between w-full tracking-wider">
-                <p className="py-2 font-normal image-desc">Christmas SVG,DXF,EPS,JPG</p>
-                <div className="inline-flex items-center py-2 text-sm text-black rounded-lg ">
+            <div className="flex flex-col item-start sm:flex-row sm:justify-between w-full tracking-wider">
+                <p className="py-2 mt-1 text-left text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
+                {showLikeRate &&(
+                <div className="inline-flex sm:items-center py-2 text-sm text-black rounded-lg ">
                     <StarIcons />
                     <span>5.0</span>
                     <LikeIcons />
                     <span>66</span>
-                </div>
+                </div>)
+                }
             </div>
         </div>     
     </div>
