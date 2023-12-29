@@ -33,13 +33,8 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 html{
     font-family: 'Avenir';
-=======
-html {
-  font-family: "Poppins", sans-serif;
->>>>>>> main
 }
 
 body {
