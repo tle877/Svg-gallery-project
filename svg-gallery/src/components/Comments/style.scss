@@ -1,0 +1,116 @@
+.commentSectionContainer {
+  background: #f7f7f6;
+}
+.commentSectionHeading {
+  color: #2f2725;
+  text-align: left;
+  font-family: Metropolis;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: capitalize;
+}
+
+.commentAvatar {
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  img {
+    border-radius: 50%;
+  }
+}
+.writeCommentBox {
+  display: flex;
+  width: 100%;
+
+  .commentBox {
+    width: 100%;
+    position: relative;
+    .addImageBtn {
+      position: absolute;
+      top: 10%;
+      right: 4%;
+    }
+    .addVideoBtn {
+      position: absolute;
+      top: 10%;
+      right: 1%;
+    }
+  }
+}
+
+.submitBtn {
+  border-radius: 25.11px !important;
+  background: #158cc5 !important;
+  color: #ffffff !important;
+  padding: 5px 20px !important;
+}
+.submitBtn:hover {
+  color: #158cc5;
+}
+
+.commentCardContainer {
+  display: flex;
+  width: 100%;
+  .authorName {
+    color: #2f2725;
+    font-family: Metropolis;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29px;
+    text-transform: capitalize;
+  }
+  .postAtDate {
+    color: #999999;
+    font-family: Metropolis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: capitalize;
+  }
+  .commentContent {
+    color: #2f2725;
+    font-family: Metropolis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: capitalize;
+  }
+  .commentMedia {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .mediaItem {
+      width: 33%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .actionBtns {
+    display: flex;
+    justify-content: space-between;
+    .replyBtn {
+      border-radius: 36px;
+      background: rgba(36, 43, 46, 0.1);
+      display: flex;
+      height: 40px;
+      padding: 3px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: #2f2725;
+      font-family: Metropolis;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;  
+      text-transform: capitalize;
+    }
+  }
+}

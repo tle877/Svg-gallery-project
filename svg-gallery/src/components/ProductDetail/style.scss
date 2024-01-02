@@ -1,0 +1,90 @@
+.activeStar {
+  fill: #fcb500 !important;
+}
+.inactiveStar {
+  fill: #f6f7f7 !important;
+}
+.downloadBtn {
+  border-radius: 23px !important;
+  background: #158cc5;
+  height: 40px;
+  font-size: 11px;
+  margin-right: 2rem !important;
+}
+
+.authorAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.authorName {
+  color: #2f2725;
+  font-family: Metropolis;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px; /* 120.833% */
+  text-transform: capitalize;
+}
+
+.productTitle {
+  color: #2f2725;
+  font-family: Metropolis;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px; /* 150% */
+  text-transform: capitalize;
+}
+
+.productId {
+  color: #2f2725;
+  font-family: Metropolis;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 122.222% */
+  text-transform: capitalize;
+}
+
+.reportTypeContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.reportType {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15.5px;
+  background: rgba(21, 140, 197, 0.06);
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+.selectedType {
+  border-radius: 15.5px;
+  background: #158cc5;
+  color: #ffffff;
+}
+.modalAction {
+  display: flex;
+  justify-content: space-between !important;
+  .cancelBtn {
+    border-radius: 25.11px;
+    border: 1px solid #c7cdd0;
+    color: #2f2725;
+  }
+  .submitBtn {
+    border-radius: 25.11px;
+    background: #158cc5;
+    color: #ffffff;
+  }
+  .submitBtn:hover{
+    color: #158cc5
+  }
+}

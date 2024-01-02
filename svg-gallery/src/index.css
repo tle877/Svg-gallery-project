@@ -2,21 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Avenir:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 @import '@fontsource/metropolis';
 
+@font-face {
+  font-family: "Metropolis-Bold";
+  src: local("Metropolis-Bold"),
+    url(./assets/fonts/Metropolis-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Metropolis";
+  src: local("Metropolis-Regular"),
+    url(./assets/fonts/Metropolis-Regular.otf) format("opentype");
+}
 #nprogress .bar {
-    background: #80ffff !important;
-    height: 3px !important;
+  background: #80ffff !important;
+  height: 3px !important;
 }
 
 #nprogress .spinner .spinner-icon {
-    width: 22px;
-    height: 22px;
-    border-top-color: #80ffff !important;
-    border-left-color: #80ffff !important;
+  width: 22px;
+  height: 22px;
+  border-top-color: #80ffff !important;
+  border-left-color: #80ffff !important;
 }
 
 #nprogress .spinner {
-    top: 15px;
-    left: 15px !important;
+  top: 15px;
+  left: 15px !important;
 }
 
 @tailwind base;
@@ -27,6 +37,7 @@ html{
     font-family: 'Avenir';
 }
 
-body{
-    background-color: #ffffff;
+body {
+  background-color: #ffffff;
 }
+

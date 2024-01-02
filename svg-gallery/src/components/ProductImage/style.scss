@@ -1,0 +1,75 @@
+.mainImage{
+  border-radius: 12px;
+}
+.thumbnailSlider {
+  height: 150px !important;
+}
+.swiper-button-prev {
+  background-image: url("../../assets/left-arrow.svg");
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  z-index: 6;
+}
+.swiper-button-next {
+  background-image: url("../../assets/right-arrow.svg");
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  z-index: 6;
+}
+
+.modalContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+.imageContainer{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 50px;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.closeIcon{
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  position: absolute;
+  right: 5%;
+}

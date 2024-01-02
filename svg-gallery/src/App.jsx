@@ -1,18 +1,17 @@
 // import { useState } from 'react'
 
 import "./App.css";
+import "./fonts.css";
 import AppRoutes from "./Routes";
 import AnnouncementBar from "./components/AnnouncementBar/announcementBar";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 
-
 function App() {
-
   return (
     <>
       <AnnouncementBar />
-      <Header/>
+      <Header />
       <AppRoutes />
       <Footer />
     </>

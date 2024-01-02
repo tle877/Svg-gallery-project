@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Metropolis'; /* Choose a name for your font */
+    src: url('./assets/Metropolis-Regular.otf') format('opentype'); /* Adjust the path based on your folder structure */
+    font-weight: normal;
+    font-style: normal;
+  }
