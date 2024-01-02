@@ -3,7 +3,11 @@ import AvatarImage from "../../assets/avatar.png";
 import VideoImage from "../../assets/Image/media1.png";
 import Image from "../../assets/Image/media2.png";
 import Button from "@mui/material/Button";
-const CommentCard = () => {
+import RepliesSection from "./RepliesSection";
+
+const CommentCard = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { hasReply } = props;
   return (
     <div className={"commentCardContainer mt-5"}>
       <div className={"commentAvatar"}>
@@ -57,6 +61,7 @@ const CommentCard = () => {
             </svg>
           </div>
         </div>
+        {hasReply ? <RepliesSection /> : <></>}
       </div>
     </div>
   );
