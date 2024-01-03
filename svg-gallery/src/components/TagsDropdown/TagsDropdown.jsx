@@ -28,7 +28,7 @@ export const TagsDropdown = () => {
                     <h4 className="font-bold mb-2 text-lg"><span className="text-red font-extrabold">*</span> Tags</h4>
                 </div>
                 <div className="selected-items-container w-full relative" >
-                    <div className="flex flex-wrap gap-1 min-h-8">
+                    <div className="flex flex-wrap gap-1 min-h-8 mr-2">
                         {content.map((item)=>(
                             <div key = {item} className="selected-items" onClick={() => handleRemoveClick(item)} >
                                 <span >{item}</span>
@@ -36,7 +36,7 @@ export const TagsDropdown = () => {
                             </div>))
                         }
                     </div>
-                    <span className="absolute top-2 right-2" onClick = {handleDropdownClick}>
+                    <span className="absolute top-2 right-2 " onClick = {handleDropdownClick}>
                         {isOpen && <ExpandLessIcon />}
                         {!isOpen && <ExpandMoreIcon />}
                     </span>
