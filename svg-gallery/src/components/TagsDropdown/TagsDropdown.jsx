@@ -6,7 +6,7 @@ import "./TagsDropdown.scss"
 import CloseIcon from "../../assets/close-icon.svg"
 export const TagsDropdown = () => {
     const [isOpen,setOpen] = useState(true)
-    const [content,setContent] = useState(["Chrismast", "Inpedendence Day"])
+    const [content,setContent] = useState([])
 
     const handleDropdownClick = () =>{
         setOpen(!isOpen)

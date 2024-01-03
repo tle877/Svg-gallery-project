@@ -4,7 +4,7 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Svg",
+      title: "Independence Day",
       handle: "",
     },
     {
@@ -20,7 +20,7 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Home Decor",
+      title: "New Year Eve",
       handle: "",
     },
     {
@@ -36,7 +36,7 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Svg",
+      title: "Labor DAy",
       handle: "",
     },
     {
@@ -48,7 +48,7 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Tags",
+      title: "Furniture",
       handle: "",
     },
     {
