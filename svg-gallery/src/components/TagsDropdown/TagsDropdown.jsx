@@ -37,7 +37,7 @@ export const TagsDropdown = () => {
                         }
                     </div>
                     <span className="absolute top-2 right-2 " onClick = {handleDropdownClick}>
-                        {isOpen && <ExpandLessIcon />}
+                        {isOpen && <ExpandLessIcon className="text-blue"  />}
                         {!isOpen && <ExpandMoreIcon />}
                     </span>
                 </div>

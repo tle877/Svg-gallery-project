@@ -24,15 +24,15 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Tags",
+      title: "Tags1",
       handle: "",
     },
     {
-      title: "Christmas",
+      title: "Christmas1",
       handle: "",
     },
     {
-      title: "Tags",
+      title: "Tags2",
       handle: "",
     },
     {
@@ -40,11 +40,11 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Home Decor",
+      title: "Home Decor1",
       handle: "",
     },
     {
-      title: "Christmas",
+      title: "Christmas2",
       handle: "",
     },
     {
@@ -52,15 +52,15 @@ export const tagList = [
       handle: "",
     },
     {
-      title: "Svg",
+      title: "Svg1",
       handle: "",
     },
     {
-      title: "Home Decor",
+      title: "Home Decor3",
       handle: "",
     },
     {
-      title: "Christmas",
+      title: "Christmas3",
       handle: "",
     },
   ];
