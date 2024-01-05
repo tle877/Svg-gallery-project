@@ -11,11 +11,11 @@ const MachineDropdown = () => {
     const handleClick = (title,index)=>{
         
         setActiveIndex((prevIndex)=>{
-            if (prevIndex!= index){
-                setActiveIndex(index)
+            if (prevIndex!= index ){
                 setContent(title)
+                return index
             }
-            else{
+            else {
                 setActiveIndex(null)
                 setContent("")
             }
