@@ -8,7 +8,6 @@ import CloseIcon from "../../assets/close-icon.svg";
 const CategoryDropdown = () => {
   const [isOpen, setOpen] = useState(true);
   const [content, setContent] = useState([]);
-  const [active, setActive] = useState(false);
 
   const handleCheckBox = (title) => {
     if (content.includes(title)) {
@@ -55,9 +54,9 @@ const CategoryDropdown = () => {
             {!isOpen && <ExpandMoreIcon />}
           </span>
         </div>
+        {isOpen &&(
         <div className="items-container border flex flex-col flex-wrap gap-1 mb-6 p-4"> 
-            {isOpen &&
-            categoryList?.map((item) => (
+            {categoryList?.map((item) => (
                 <CategoryItem
                 category={item}
                 key={item.title}
@@ -65,7 +64,8 @@ const CategoryDropdown = () => {
                 content={content}
                 />
             ))}
-        </div>
+        </div>)
+        }
 
       </div>
     </div>
