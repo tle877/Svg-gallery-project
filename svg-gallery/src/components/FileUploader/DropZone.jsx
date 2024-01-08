@@ -92,7 +92,7 @@ const DropZone = (props) => {
           </svg>
         </div>
         <div className={'fileRestriction p-5'}>
-            <span>supported file formats ：jpg、jpeg、png</span>
+            <span>supported file formats ：jp, jpeg, png</span>
             <span>smallest size：2400*3500px</span>
             <span>maximum file size：10MB</span>
         </div>

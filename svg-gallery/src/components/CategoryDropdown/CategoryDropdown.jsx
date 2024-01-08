@@ -29,7 +29,7 @@ const CategoryDropdown = () => {
   };
 
   return (
-    <div className="container w-full sm:w-1/3 mx-auto">
+    <div className="w-full mx-auto">
       <div>
         <div className="flex justify-between">
           <h4 className="font-bold mb-2 text-lg">

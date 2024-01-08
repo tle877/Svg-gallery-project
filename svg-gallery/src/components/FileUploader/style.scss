@@ -19,18 +19,42 @@
   border: 0.973px dashed #c7cdd0;
   background: #fff;
 }
+
 .fileRestriction {
   display: grid;
   align-items: flex-start;
   gap: 14px;
   margin-left: 20px;
+
   span {
     color: #3f535e;
     font-family: Metropolis;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
     text-transform: capitalize;
   }
+}
+
+.CoverImageUploaderContainer {
+  height: 268px;
+  border-radius: 6px;
+  border: 1px dashed #C7CDD0;
+  background: rgba(36, 43, 46, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CoverImageEditor{
+  height: 400px;
+  width: 800px;
+  display: grid;
+  justify-content: center;
+}
+.MuiDialog-paper{
+  max-width: 100% !important;
+  height: 600px;
 }
