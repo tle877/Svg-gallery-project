@@ -1,0 +1,33 @@
+
+.selected-items-container{
+    border-radius: 4px;
+    border: 1px solid #158CC5;
+    background:  #FFF;
+    padding: 6px
+}
+.selected-items{
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center ;
+    margin-right: 5px ;
+    gap: 3px;
+    border-radius: 57px;
+    background: rgba(36, 43, 46, 0.04);
+    padding:3px 8px 3px 8px;
+}
+
+.selected-items > span{
+    color:  #C7CDD0;
+    text-align: center;
+    font-family: Metropolis;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    letter-spacing: -0.01px;
+    }
+
+    //for machinedropdown.jsx
+.category-item:hover {
+    background: rgba(21, 140, 197, 0.04);
+}
