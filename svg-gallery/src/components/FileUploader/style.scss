@@ -6,3 +6,31 @@
 .custom-file-upload input {
   display: none;
 }
+
+.uploadBtn {
+  display: flex;
+  width: 144px;
+  height: 144px;
+  padding: 7.784px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.73px;
+  border-radius: 5.838px;
+  border: 0.973px dashed #c7cdd0;
+  background: #fff;
+}
+.fileRestriction {
+  display: grid;
+  align-items: flex-start;
+  gap: 14px;
+  margin-left: 20px;
+  span {
+    color: #3f535e;
+    font-family: Metropolis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    text-transform: capitalize;
+  }
+}
