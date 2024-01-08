@@ -20,6 +20,49 @@
   background: #fff;
 }
 
+
+.folderIcon {
+  display: flex;
+  width: 144px;
+  height: 144px;
+  padding: 7.784px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.73px;
+  background: #fff;
+  margin: auto;
+}
+
+.uploadProductionFileDropZone {
+  width: 100%;
+  border-radius: 5.838px;
+  border: 0.973px dashed #c7cdd0;
+  background: #fff;
+  display: grid;
+  justify-content: center;
+}
+
+.productionFile {
+  border-radius: 6px;
+  background: rgba(36, 43, 46, 0.04);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.selectFileBtn {
+  margin: auto !important;
+  border-radius: 25.11px !important;
+  border: 1px solid #C7CDD0 !important;
+  background: #FFF !important;
+  color: #3F535E !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  text-transform: capitalize;
+}
+
 .fileRestriction {
   display: grid;
   align-items: flex-start;
@@ -48,13 +91,35 @@
   align-items: center;
 }
 
-.CoverImageEditor{
+.CoverImageEditor {
   height: 400px;
   width: 800px;
   display: grid;
   justify-content: center;
 }
-.MuiDialog-paper{
+
+.MuiDialog-paper {
   max-width: 100% !important;
   height: 600px;
+}
+
+.ImageUploadDropZone {
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  border-radius: 12px;
+  border: 1px dashed #C7CDD0;
+  background: rgba(36, 43, 46, 0.04);
+  padding: 50px;
+  .uploadIcon {
+    background: transparent;
+    display: flex;
+    width: 144px;
+    height: 144px;
+    padding: 7.784px;
+    justify-content: center;
+    align-items: center;
+    gap: 9.73px;
+    margin: auto;
+  }
 }
