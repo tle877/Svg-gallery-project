@@ -6,6 +6,10 @@ import AppRoutes from "./Routes";
 import AnnouncementBar from "./components/AnnouncementBar/announcementBar";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
+import { TagsDropdown } from "./components/TagsDropdown/TagsDropDown";
+import CategoryDropdown from "./components/CategoryDropdown/CategoryDropdown";
+import { ImageOutlined } from "@mui/icons-material";
+import MachineDropdown from "./components/MachineDropdown/MachineDropdown";
 
 function App() {
   return (
@@ -13,6 +17,9 @@ function App() {
       <AnnouncementBar />
       <Header />
       <AppRoutes />
+      <MachineDropdown />
+      <CategoryDropdown />
+      <TagsDropdown />
       <Footer />
     </>
   );
