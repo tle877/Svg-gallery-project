@@ -1,0 +1,29 @@
+@import "../../mixin.scss";
+
+.profile-page-container{
+    background-color: #F5F6F7;
+}   
+
+.profile-nagivation {
+    button{
+    padding:12px;
+    color:#3F535E;
+    /* 个人中心-侧边导航 */
+    font-family: Metropolis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 118.182% */
+    text-transform: capitalize;
+    @include xs{
+        font-size: 15px;
+    }
+    }
+    button:hover{
+        color:#158CC5
+    }
+    button:focus{
+        background-color:rgba(21, 140, 197, 0.04);
+    }
+
+}

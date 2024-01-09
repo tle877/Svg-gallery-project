@@ -8,6 +8,8 @@ import ResetPasswordByEmail from "./pages/ResetPasswordByEmailPage";
 import ResetPassword from "./pages/ResetPassword";
 import InspirationPage from "./pages/InspirationPage/InspirationPage";
 import InspirationUploadPage from './pages/InspirationUploadPage/InspirationUploadPage';
+import ProfilePage from "./components/ProfilePage/ProfilePage";
+
 function AppRoutes() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function AppRoutes() {
         <Route path="/reset-password" element={<ResetPassword/>} />
         <Route path="/inspiration-page" element={<InspirationPage/>} />
         <Route path="/inspiration-upload-page" element={<InspirationUploadPage/>} />
+        <Route path="/profile-page" element={<ProfilePage/>} />
       </Routes>
     </Router>
   );
