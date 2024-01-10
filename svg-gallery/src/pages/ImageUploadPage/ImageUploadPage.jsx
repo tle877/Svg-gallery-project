@@ -8,13 +8,14 @@ import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown
 import CoverImageUploader from "../../components/FileUploader/CoverUploader";
 import TextField from '@mui/material/TextField';
 import ProductTionFileDropZone from "../../components/FileUploader/ProductionFileDropZone";
+import ImageUploadDropZone from "../../components/FileUploader/ImageUploadDropZone";
 
-const InspirationUploadPage = () => {
+const ImageUploadPage = () => {
   const UploadImageGroup = () => {
     return (
       <>
 
-        <DropZone />
+        <ImageUploadDropZone />
       </>
     );
   };
@@ -57,13 +58,6 @@ const InspirationUploadPage = () => {
       <div className="flex flex-row gap-6">
         <div className="basis-2/3">
           <UploadImageGroup />
-          <div className={'w-full mt-5 mb-5'}>
-            <TextField className={'w-full mt-5 mb-5'} id="standard-basic" label="Please Enter a title for your work" variant="standard" />
-          </div>
-
-          <Description />
-          <ProductionSteps />
-          <UploadProductionFile/>
         </div>
         <div className="basis-1/3">
           <CoverImageUploader />
@@ -76,4 +70,4 @@ const InspirationUploadPage = () => {
   );
 };
 
-export default InspirationUploadPage;
+export default ImageUploadPage;
