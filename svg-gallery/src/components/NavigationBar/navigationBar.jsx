@@ -20,9 +20,10 @@ const NavigationBar = () => {
   return (
     <div className={"navigationContainer"}>
       <div className={"desktopMenu"}>
-        <div className={"menu-item menu-text"}>Home</div>
-        <div className={"menu-item menu-text"}>OMTech Laser</div>
-        <div className={"menu-item"}>
+        <a href="/" className={"menu-item menu-text"}> Home</a>
+        <a href="https://omtechlaser.com/" className={"menu-item menu-text"}>OMTech Laser</a>
+        <a href="/profile" className={"menu-item menu-text"}>Profile</a>
+        <a href="/inspiration-upload-page" className={"menu-item"}>
           <Button
             className={"menu-btn"}
             variant="contained"
@@ -30,7 +31,7 @@ const NavigationBar = () => {
           >
             Upload
           </Button>
-        </div>
+        </a>
         <div className={"menu-item"} onClick={notificationClicked}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
