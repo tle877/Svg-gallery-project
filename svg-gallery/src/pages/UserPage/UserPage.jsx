@@ -4,8 +4,12 @@ import './style.scss'
 import ProductCard from "../../components/ProductCard/productCard";
 import ProductImage from "../../assets/productImage.jpeg"
 import Pagination from "../../components/Pagination/Pagination";
+import { useState } from "react";
+import ItemImage from '../../assets/Image/item-image.jpg'
 
 const UserPage = () => {
+    const [activeTab, setActiveTab] = useState('project');
+    console.log(activeTab)
     const Banner = () => {
         return (
             <>
@@ -62,7 +66,7 @@ const UserPage = () => {
             <>
                 <div className={'container'}>
                     <div className={'tabHeaderWrapper'}>
-                        <div className={'tabHeaderItem activeItem'}>
+                        <div className={activeTab == 'project'? ' tabHeaderItem activeItem' : 'tabHeaderItem'} onClick={() => handleTabClick('project')}>
                             <span>Projects</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                                 <path d="M29.2985 33.8578C28.7569 33.8578 28.2186 33.6639 27.752 33.283L19.2137 26.3349C19.0799 26.2256 18.9266 26.2256 18.7896 26.3349L10.2545 33.283C9.45514 33.9354 8.45024 34.0342 7.56607 33.5581C6.60033 33.0396 6 31.9462 6 30.7083V7.28251C6 5.55079 7.2137 4.14355 8.70147 4.14355H29.2985C30.7896 4.14355 32 5.55079 32 7.28251V30.7154C32 31.9533 31.3997 33.0431 30.4339 33.5651C30.075 33.7591 29.6868 33.8578 29.2985 33.8578ZM29.0962 31.3608C29.217 31.4595 29.3279 31.4736 29.4486 31.4066C29.6085 31.322 29.7781 31.0927 29.7781 30.7154V7.28251C29.7781 6.85223 29.5302 6.55244 29.3051 6.55244H8.70799C8.48613 6.55244 8.23491 6.85223 8.23491 7.28251V30.7154C8.23491 31.0963 8.40457 31.322 8.56444 31.4066C8.68842 31.4736 8.79608 31.4595 8.9168 31.3608L17.4551 24.4128C18.385 23.658 19.6313 23.6615 20.5579 24.4128L29.0962 31.3608Z" fill="#158CC5" />
@@ -70,20 +74,20 @@ const UserPage = () => {
                             </svg>
                             <div className={'activeLine'}></div>
                         </div>
-                        <div className={'tabHeaderItem '}>
+                        <div className={activeTab == 'download'? ' tabHeaderItem activeItem' : 'tabHeaderItem'} onClick={() => handleTabClick('download')}>
                             <span>Download</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                                 <path d="M12.2783 15.3463L17.8073 20.8777L17.8073 4.75144L20.1823 4.75144L20.1823 20.8919L25.7232 15.3487L27.4023 17.0278L19.8403 24.5898C19.6177 24.8124 19.3157 24.9375 19.0008 24.9375C18.6859 24.9375 18.3839 24.8124 18.1612 24.5898L10.5992 17.0254L12.2783 15.3463Z" fill="#3F535E" />
                                 <path d="M4.75 29.6875V21.375H7.125V29.6875C7.125 30.0024 7.25011 30.3045 7.47281 30.5272C7.69551 30.7499 7.99756 30.875 8.3125 30.875H29.6875C30.0024 30.875 30.3045 30.7499 30.5272 30.5272C30.7499 30.3045 30.875 30.0024 30.875 29.6875V21.375H33.25V29.6875C33.25 30.6323 32.8747 31.5385 32.2066 32.2066C31.5385 32.8747 30.6323 33.25 29.6875 33.25H8.3125C7.36767 33.25 6.46153 32.8747 5.79343 32.2066C5.12533 31.5385 4.75 30.6323 4.75 29.6875Z" fill="#3F535E" />
                             </svg>
                         </div>
-                        <div className={'tabHeaderItem '}>
+                        <div className={activeTab == 'favorites'? ' tabHeaderItem activeItem' : 'tabHeaderItem'} onClick={() => handleTabClick('favorites')}>
                             <span>Favorites</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                                 <path d="M17.566 10.3034C17.775 10.6146 18.1252 10.8013 18.5 10.8013C18.8748 10.8013 19.225 10.6146 19.434 10.3034C20.7355 8.36511 22.8648 7.125 25.25 7.125C29.1351 7.125 32.375 10.444 32.375 14.6523C32.375 18.5661 30.1544 22.431 27.1507 25.6123C24.3023 28.6292 20.9072 30.8623 18.5 31.8008C16.0928 30.8623 12.6977 28.6292 9.84925 25.6123C6.84555 22.431 4.625 18.5661 4.625 14.6523C4.625 10.444 7.86485 7.125 11.75 7.125C14.1352 7.125 16.2645 8.36511 17.566 10.3034Z" stroke="#3F535E" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <div className={'tabHeaderItem '}>
+                        <div className={activeTab == 'likes'? ' tabHeaderItem activeItem' : 'tabHeaderItem'} onClick={() => handleTabClick('likes')}>
                             <span>Likes</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                                 <rect x="13.8416" y="13.9373" width="0.980043" height="16.6609" stroke="#3F535E" stroke-width="0.980043" />
@@ -96,41 +100,170 @@ const UserPage = () => {
         )
     }
 
-    const TabBody = () => {
+    const DownloadItemCard = () => {
         return (
             <>
-                <div className={'tabBodyContainer'}>
-                    <div className={'container'}>
-                        <div className={'subTabHeader'}>
-                            <div className={'subTabItem activeSubTabItem'}>
-                                How-To
-                            </div>
-                            <div className={'subTabItem'}>
-                                Image
-                            </div>
-                            <div className={'subTabItem'}>
-                                Drafts
+                <div className={'DownloadItemCard'}>
+                    <div className={'itemImage'}>
+                        <img src={ItemImage} alt="" />
+                    </div>
+                    <div className={'itemTitle'}>
+                        <h3>Christmas decorations SVG,DXF,EPS,JPG</h3>
+                    </div>
+                    <div className={'actionButtons'}>
+                        <div className={'deleteBtn'}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <path d="M3.4375 5.5004H2.0625C1.88016 5.5004 1.7053 5.42797 1.57636 5.29903C1.44743 5.1701 1.375 4.99523 1.375 4.8129C1.375 4.63056 1.44743 4.45569 1.57636 4.32676C1.7053 4.19783 1.88016 4.1254 2.0625 4.1254H7.5625V2.06152C7.5625 1.87919 7.63493 1.70432 7.76386 1.57539C7.8928 1.44646 8.06766 1.37402 8.25 1.37402H13.75C13.9323 1.37402 14.1072 1.44646 14.2361 1.57539C14.3651 1.70432 14.4375 1.87919 14.4375 2.06152V4.1254H19.9375C20.1198 4.1254 20.2947 4.19783 20.4236 4.32676C20.5526 4.45569 20.625 4.63056 20.625 4.8129C20.625 4.99523 20.5526 5.1701 20.4236 5.29903C20.2947 5.42797 20.1198 5.5004 19.9375 5.5004H18.5625V19.9379C18.5625 20.1202 18.4901 20.2951 18.3611 20.424C18.2322 20.553 18.0573 20.6254 17.875 20.6254H4.125C3.94266 20.6254 3.7678 20.553 3.63886 20.424C3.50993 20.2951 3.4375 20.1202 3.4375 19.9379V5.5004ZM13.0625 4.1254V2.7504H8.9375V4.1254H13.0625ZM4.8125 19.2504H17.1875V5.5004H4.8125V19.2504ZM8.9375 16.5004C8.75516 16.5004 8.5803 16.428 8.45136 16.299C8.32243 16.1701 8.25 15.9952 8.25 15.8129V8.9379C8.25 8.75556 8.32243 8.58069 8.45136 8.45176C8.5803 8.32283 8.75516 8.2504 8.9375 8.2504C9.11984 8.2504 9.2947 8.32283 9.42364 8.45176C9.55257 8.58069 9.625 8.75556 9.625 8.9379V15.8129C9.625 15.9952 9.55257 16.1701 9.42364 16.299C9.2947 16.428 9.11984 16.5004 8.9375 16.5004ZM13.0625 16.5004C12.8802 16.5004 12.7053 16.428 12.5764 16.299C12.4474 16.1701 12.375 15.9952 12.375 15.8129V8.9379C12.375 8.75556 12.4474 8.58069 12.5764 8.45176C12.7053 8.32283 12.8802 8.2504 13.0625 8.2504C13.2448 8.2504 13.4197 8.32283 13.5486 8.45176C13.6776 8.58069 13.75 8.75556 13.75 8.9379V15.8129C13.75 15.9952 13.6776 16.1701 13.5486 16.299C13.4197 16.428 13.2448 16.5004 13.0625 16.5004Z" fill="#158CC5" />
+                            </svg>
+                        </div>
+                        <div className={'downloadBtnContainer'}>
+                            <div className={'downloadButton'}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M7.10924 8.88471L10.3102 12.0871L10.3102 2.75083L11.6852 2.75083L11.6852 12.0953L14.8931 8.88608L15.8652 9.85821L11.4872 14.2362C11.3583 14.3651 11.1835 14.4375 11.0012 14.4375C10.8189 14.4375 10.644 14.3651 10.5151 14.2362L6.13711 9.85683L7.10924 8.88471Z" fill="white" />
+                                    <path d="M2.75 17.1875V12.375H4.125V17.1875C4.125 17.3698 4.19743 17.5447 4.32636 17.6736C4.4553 17.8026 4.63016 17.875 4.8125 17.875H17.1875C17.3698 17.875 17.5447 17.8026 17.6736 17.6736C17.8026 17.5447 17.875 17.3698 17.875 17.1875V12.375H19.25V17.1875C19.25 17.7345 19.0327 18.2591 18.6459 18.6459C18.2591 19.0327 17.7345 19.25 17.1875 19.25H4.8125C4.26549 19.25 3.74089 19.0327 3.35409 18.6459C2.9673 18.2591 2.75 17.7345 2.75 17.1875Z" fill="white" />
+                                </svg>
+                                <span>Download</span>
                             </div>
                         </div>
-                        <div className={'grid grid-cols-4 gap-4'}>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                            <ProductCard imageShow={ProductImage} showLikeRate/>
-                        </div>
-                        <Pagination totalPages={10} currentPage={3} />
                     </div>
                 </div>
             </>
         )
+    }
+
+    const handleTabClick = (tabName) => {
+        console.log(tabName)
+        setActiveTab(tabName);
+    }
+    const TabBody = () => {
+        if (activeTab == 'project') {
+            return (
+                <>
+                    <div className={'tabBodyContainer'}>
+                        <div className={'container'}>
+                            <div className={'subTabHeader'}>
+                                <div className={'subTabItem activeSubTabItem'}>
+                                    How-To
+                                </div>
+                                <div className={'subTabItem'}>
+                                    Image
+                                </div>
+                                <div className={'subTabItem'}>
+                                    Drafts
+                                </div>
+                            </div>
+                            <div className={'grid grid-cols-4 gap-4'}>
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                            </div>
+                            <Pagination totalPages={10} currentPage={3} />
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        else if (activeTab == 'download') {
+            return (
+                <>
+                    <div className={'tabBodyContainer'}>
+                        <div className={'container'}>
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <DownloadItemCard />
+                            <Pagination totalPages={10} currentPage={3} />
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        else if (activeTab == 'favorites') {
+            return (
+                <>
+                    <div className={'tabBodyContainer'}>
+                        <div className={'container'}>
+                            <div className={'subTabHeader'}>
+                                <div className={'subTabItem activeSubTabItem'}>
+                                    How-To
+                                </div>
+                                <div className={'subTabItem'}>
+                                    Image
+                                </div>
+
+                            </div>
+                            <div className={'grid grid-cols-4 gap-4'}>
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                            </div>
+                            <Pagination totalPages={10} currentPage={3} />
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        else if (activeTab == 'likes') {
+            return (
+                <>
+                    <div className={'tabBodyContainer'}>
+                        <div className={'container'}>
+                            <div className={'subTabHeader'}>
+                                <div className={'subTabItem '}>
+                                    How-To
+                                </div>
+                                <div className={'subTabItem activeSubTabItem'}>
+                                    Image
+                                </div>
+
+                            </div>
+                            <div className={'grid grid-cols-4 gap-4'}>
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate />
+                            </div>
+                            <Pagination totalPages={10} currentPage={3} />
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        else {
+            return (<></>)
+        }
+
     }
 
     return (
