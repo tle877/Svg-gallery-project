@@ -4,6 +4,7 @@ import ProductCard from "../../components/ProductCard/productCard";
 import Carousel from "../../components/Carousel/HeroBannerCarousel";
 
 import { Filter } from "./components/Filter";
+import ProductImage from "../../assets/productImage.jpeg"
 
 function HomePage() {
   return (
@@ -11,7 +12,7 @@ function HomePage() {
       <Carousel />
       <div className="container flex gap-6">
         <Filter />
-        <ProductCard showUploadButtons showLikeRate />
+        <ProductCard imageShow={ProductImage} showUploadButtons showLikeRate />
       </div>
     </div>
   );
