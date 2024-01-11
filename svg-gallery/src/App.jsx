@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import "react-image-crop/dist/ReactCrop.css";
+
 import "./App.css";
 import "./fonts.css";
 import AppRoutes from "./Routes";

@@ -1,29 +1,40 @@
 import "./personal-setting.scss"
-
+import React, { useState } from 'react';
+import AvatarEditorModal from "./AvatarEditorModal"
 import Avatar from "../../assets/avatar.png"
 
 const PersonalSetting = () =>{
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [avatar, setAvatar] = useState(Avatar);
+    const handleSaveAvatar = (editedImage) => {
+        // Handle save logic here, e.g., update avatar image state
+        setAvatar(editedImage.toDataURL()); // Convert canvas to data URL
+      };
 
+      
     return (
         <div className=" personal-setting-container md:p-10 p-4 mx-auto">
             <h1 className="mb-8">Personal Settings</h1>
             <div className="infomation-container hidden md:flex gap-3 w-1/2 mb-10">
                 <div className="avatarContainer" onClick={() => setModalOpen(true)}>
-                    <img src={Avatar} alt="Avatar" />
+                    <img src={avatar} alt="Avatar" />
                 </div>
 
                 <div className="description-container flex flex-col gap-4 my-2 justify-center">
                     <h2> William</h2>
                     <p>gianna.guo@oceania-inc.com</p>
                 </div>
-            
             </div>
-
+            {isModalOpen &&
+            <AvatarEditorModal
+                onClose={() => setModalOpen(false)}
+                onSave={handleSaveAvatar}
+            />}
             {/* mobile view */}
             <div className=" md:hidden flex justify-between items-center mb-5">
                 <div className="infomation-container flex gap-2 items-center ">
                     <div className="avatarContainer">
-                        <img src={Avatar} alt="Avatar" />
+                        <img src={avatar} alt="Avatar"  />
                     </div>
                     <div className="description-container flex flex-col  my-2 justify-center">
                         <h2> William</h2>
@@ -31,7 +42,7 @@ const PersonalSetting = () =>{
                     </div>
                 </div>
                 
-                <div className="text-custom-blue">
+                <div className="text-custom-blue" onClick={() => setModalOpen(true)}>
                     <button>Change Avatar </button>
                 </div>
             </div>

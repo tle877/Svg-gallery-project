@@ -40,8 +40,7 @@ const ProfilePasswordChange = () =>{
                         Sure
                         </button>
                     </div> 
-                  
-            </div>
+                </div>
             </form>    
         </div>
 
