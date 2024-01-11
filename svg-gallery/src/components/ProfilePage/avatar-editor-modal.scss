@@ -25,12 +25,12 @@ span{
   
   .modal-content {
     border-radius: 12px;
-    width: 25%; /* Set modal width to 50% of the screen */
+    width: 22%; /* Set modal width to 50% of the screen */
     background-color: white;
-    padding: 15px 20px;
+    padding: 16px;
     position: relative;
     @include xs{
-        width: 80%;
+        width: 70%;
     }
   }
   

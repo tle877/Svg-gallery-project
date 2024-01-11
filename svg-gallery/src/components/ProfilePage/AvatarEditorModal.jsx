@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import AvatarEditor from 'react-avatar-editor';
-import './avatar-editor-modal.scss'; // Create a new stylesheet for styling the modal
+import './avatar-editor-modal.scss'; 
 
 const AvatarEditorModal = ({ onClose, onSave }) => {
   const [image, setImage] = useState(null);
