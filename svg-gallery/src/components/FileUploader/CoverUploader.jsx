@@ -126,8 +126,6 @@ const CoverImageUploader = () => {
                                         onChange={(e) => setSlideValue(e.target.value)}
                                     ></Slider>
                                     <Box>
-
-
                                     </Box>
                                 </Box>
                             )}
