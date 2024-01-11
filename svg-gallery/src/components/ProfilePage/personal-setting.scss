@@ -1,5 +1,6 @@
 @import "../../mixin.scss";
 .personal-setting-container{
+    
     h1{
         color: #2F2725;
         /* 模块标题 */
@@ -74,15 +75,17 @@
         line-height: 24px; /* 120% */
         text-transform: capitalize;
       }
+
+
     .input-form{
+        outline: none;
         border-radius: 4px;
         border: 1px solid rgba(36, 43, 46, 0.10);
         background: #FFF;
-        height: 30px;
+        height: 28px;
         grid-column: span 6;  // Equivalent to col-span-6
         padding: 1rem;      // Equivalent to p-1.5
         color: #1a202c;       // Equivalent to text-gray-900
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);  // Equivalent to shadow-sm
         &::placeholder {
             color: #a0aec0;     // Equivalent to placeholder:text-gray-400
         }
