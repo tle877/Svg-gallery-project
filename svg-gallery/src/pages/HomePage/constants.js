@@ -108,3 +108,22 @@ export const TAGS = [
     handle: "",
   },
 ];
+
+export const SEARCH_TAGS = [
+  {
+    title: "Tags",
+    handle: "",
+  },
+  {
+    title: "Svg",
+    handle: "",
+  },
+  {
+    title: "Home Decor",
+    handle: "",
+  },
+  {
+    title: "Christmas",
+    handle: "",
+  },
+];
