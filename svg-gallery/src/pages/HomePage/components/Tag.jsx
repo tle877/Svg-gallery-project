@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useCallback, useState } from "react";
 
-export const Tag = ({ tag }) => {
+export const Tag = ({ tag, disableActive }) => {
   const [active, setActive] = useState(false);
 
   const toggleActive = useCallback(() => {
@@ -11,7 +11,7 @@ export const Tag = ({ tag }) => {
   return (
     <div
       className={`rounded-2xl px-3 py-1 cursor-pointer text-sm ${
-        active
+        active && !disableActive
           ? "bg-blue text-white hover:text-white"
           : "bg-blue-60 text-dark-brown hover:text-blue"
       }`}
@@ -25,4 +25,5 @@ export const Tag = ({ tag }) => {
 
 Tag.propTypes = {
   tag: PropTypes.object.isRequired,
+  disableActive: PropTypes.bool,
 };
