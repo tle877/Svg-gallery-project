@@ -33,12 +33,19 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
   return (
     <div className="modal-container">
       <div className="modal-content">
-        {!image && <input type="file" onChange={handleImageChange} />}
+        {!image && 
+        <div className='flex justify-between '>
+        <input type="file" onChange={handleImageChange} />
+        <svg onClick={onClose} xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 20 20" fill="none">
+                <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+        </div>}
         {image && (
           <>
             <div className='flex justify-between items-center'>
               <span>Upload Avatar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20 20" fill="none">
+              <svg onClick={onClose} xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 20 20" fill="none">
                 <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -69,7 +76,7 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
             </div>
 
 
-            <div className="button-container flex justify-between px-10 py-1">   
+            <div className="button-container flex justify-between md:px-10 py-1">   
               <button onClick={onClose}
                   className=" rounded-full border border-custom-blue text-gray px-5 sm:px-7 py-1.5 text-sm leading-6  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
