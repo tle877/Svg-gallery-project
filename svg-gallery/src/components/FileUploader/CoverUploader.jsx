@@ -22,12 +22,7 @@ const CoverImageUploader = () => {
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Man_Silhouette.png"
     });
 
-    const handleSlider = (event, value) => {
-        setPicture({
-            ...picture,
-            zoom: value
-        });
-    };
+
 
     const handleCancel = () => {
         setPicture({
@@ -74,6 +69,14 @@ const CoverImageUploader = () => {
     };
     const CoverModal = () => {
 
+        const handleSlider = (event, value) => {
+            setPicture({
+                ...picture,
+                zoom: value
+            });
+        };
+
+        const [slideValue, setSlideValue] = useState(10);
         return (
             <>
                 <Dialog
@@ -111,19 +114,18 @@ const CoverImageUploader = () => {
                                         border={50}
                                         color={[255, 255, 255, 0.6]} // RGBA
                                         rotate={0}
-                                        scale={picture.zoom}
+                                        scale={slideValue / 10}
                                     />
                                     <Slider
                                         aria-label="raceSlider"
-                                        value={picture.zoom}
-                                        min={1}
-                                        max={10}
+                                        defaultValue={slideValue}
+                                        value={slideValue}
+                                        min={10}
+                                        max={50}
                                         step={0.1}
-                                        onChange={handleSlider}
+                                        onChange={(e) => setSlideValue(e.target.value)}
                                     ></Slider>
                                     <Box>
-
-
                                     </Box>
                                 </Box>
                             )}
@@ -131,7 +133,7 @@ const CoverImageUploader = () => {
 
                     </DialogContent>
                     <DialogActions>
-                        <Button  onClick={handleClose}>
+                        <Button onClick={handleClose}>
                             Cancel
                         </Button>
                         <Button variant="contained" onClick={handleSave}>Save</Button>
