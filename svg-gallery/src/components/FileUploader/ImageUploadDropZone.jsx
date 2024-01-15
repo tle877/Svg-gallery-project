@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import "./style.scss";
+import Button from '@mui/material/Button';
 
 const thumbsContainer = {
   display: "flex",
@@ -34,7 +35,7 @@ const img = {
   height: "100%",
 };
 
-const DropZone = (props) => {
+const ImageUploadDropZone = (props) => {
   const [files, setFiles] = useState([]);
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
@@ -73,28 +74,24 @@ const DropZone = (props) => {
 
   return (
     <section className="mt-5">
-      <div {...getRootProps({ className: "dropzone flex" })}>
+      <div {...getRootProps({ className: "ImageUploadDropZone" })}>
         <input {...getInputProps()} />
-        <div className={"uploadBtn"}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M14.0012 2.93243C13.531 2.93243 13.1498 3.3136 13.1498 3.78379V13.1487H3.78495C3.31476 13.1487 2.93359 13.5298 2.93359 14C2.93359 14.4702 3.31476 14.8514 3.78495 14.8514H13.1498V24.2162C13.1498 24.6864 13.531 25.0676 14.0012 25.0676C14.4713 25.0676 14.8525 24.6864 14.8525 24.2162V14.8514H24.2174C24.6876 14.8514 25.0687 14.4702 25.0687 14C25.0687 13.5298 24.6876 13.1487 24.2174 13.1487H14.8525V3.78379C14.8525 3.3136 14.4713 2.93243 14.0012 2.93243Z"
-              fill="#3F535E"
-            />
+        <div className={"uploadIcon"}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path d="M4.16797 29.1663V41.6663C4.16797 43.9674 6.03346 45.8329 8.33464 45.8329H41.668C43.9692 45.8329 45.8346 43.9674 45.8346 41.6663V29.1663" stroke="#3F535E" stroke-width="4.16667" />
+            <path d="M39.8779 18.8974L26.6196 5.63915C25.806 4.82556 24.4869 4.82556 23.6733 5.63916L10.4151 18.8974" stroke="#3F535E" stroke-width="4.16667" />
+            <line x1="25.0013" y1="6.24927" x2="25.0013" y2="35.4159" stroke="#3F535E" stroke-width="4.16667" />
           </svg>
+          
         </div>
         <div className={'fileRestriction p-5'}>
-            <span>supported file formats ：jp, jpeg, png</span>
-            <span>smallest size：2400*3500px</span>
-            <span>maximum file size：10MB</span>
+          <span>Drag and drop your file here or click Select image to upload</span>
+        </div>
+        <Button className={'selectFileBtn'} variant="outlined">Select Image</Button>
+        <div className={'fileRestriction p-5 text-center'}>
+          <span>supported file formats ：jpg、jpeg、png、svg</span>
+          <span>smallest size：2400*3500px</span>
+          <span>maximum file size：10MB</span>
         </div>
       </div>
       <aside style={thumbsContainer}>{thumbs}</aside>
@@ -102,4 +99,4 @@ const DropZone = (props) => {
   );
 };
 
-export default DropZone;
+export default ImageUploadDropZone;
