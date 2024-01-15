@@ -65,7 +65,7 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
                 height={250}
                 borderRadius={125} // Half of width/height for circular crop
                 scale={scale}
-                style={{ width: '100%' }}
+                style={{ margin: "auto"}}
               />
             </div>
             <div className="controls-container mt-2 flex justify-end gap-5 pt-1">
