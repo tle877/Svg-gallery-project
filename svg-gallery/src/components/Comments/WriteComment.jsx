@@ -36,7 +36,7 @@ const WriteComment = () => {
           </div>
         </div>
       </div>
-      <div className={"flex justify-end mt-4 hidden xl:block"}>
+      <div className={"flex justify-end mt-4 hidden xl:flex"}>
         <Button className={"submitBtn"} autoFocus>
           Post a comment
         </Button>
