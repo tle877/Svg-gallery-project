@@ -14,7 +14,7 @@ const SecuritySetting = ({handleTest}) =>{
                         id="Password" ></input>
                 </div>
                 <div className="end-btn">
-                    <button className="submit-btn" onClick={handleTest}>Edit</button>
+                    <button className="submit-password-btn" onClick={handleTest}>Edit</button>
                 </div>
             </div>    
         </div>

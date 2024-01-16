@@ -46,7 +46,7 @@ const MachineDropdown = () => {
         {isOpen && (
             <div className="items-container border flex flex-col flex-wrap gap-1 mb-6 px-4 py-1">
                 {machineList.map((item,index) =>(
-                    <div className= "category-item flex gap-2 p-1 relative " id = {item.title} onClick = {()=>handleClick(item.title,index)}>
+                    <div className= "machine-category-item flex gap-2 p-1 relative " id = {item.title} onClick = {()=>handleClick(item.title,index)}>
                         <div className="absolute left-0 top-2   ">
                             {index===activeIndex ? <img src={TickIcon} alt="Close" />: "  "}
                         </div>

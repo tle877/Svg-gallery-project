@@ -39,7 +39,7 @@ const CategoryItem = ({ handleParentClick, category, handleCheckBox, content }) 
         }
       }
       return (
-        <div className={`ml-7 mt-1 ${!isChecked? 'hidden' : ''}`} key={item.title}> 
+        <div className={`category-item ml-7 mt-1 ${!isChecked? 'hidden' : ''}`} key={item.title}> 
             <label htmlFor={`checkbox-${item.title}`}>
                 <input
                     id = {`checkbox-${item.title}`}
@@ -56,10 +56,10 @@ const CategoryItem = ({ handleParentClick, category, handleCheckBox, content }) 
 
   return (
     <div>
-        <div className="flex gap-1">
+        <div className=" category-item flex gap-1">
             {content.includes(category.title) && < ExpandLessIcon className="text-blue"/>}
             {!content.includes(category.title) && < ExpandMoreIcon/>}
-            <div key={category.title}>
+            <div key={category.title} className="category-items">
                 <label htmlFor={`checkbox-${category.title}`}>
                     <input
                     type="checkbox"

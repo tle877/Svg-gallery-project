@@ -30,13 +30,13 @@ const NavigationBar = () => {
         <div className={"uploadDropdown " + (isOpen ? "block" : "")} >
           <a href="/inspiration-upload-page" className="menu-item">
             <div>
-              <span>Inspiration Upload</span>
+              <span className="hover:text-custom-blue">Inspiration Upload</span>
             </div>
           </a>
 
           <a href="/inspiration-upload-page" className="menu-item">
             <div>
-              <span>Image Upload</span>
+              <span  className="hover:text-custom-blue" >Image Upload</span>
             </div>
           </a>
         </div>

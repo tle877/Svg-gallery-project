@@ -54,7 +54,7 @@ const PersonalSetting = () =>{
                         <span className="text-red mr-1 text-lg">*</span>Name 
                     </label>
                     <input required 
-                    className="input-form " 
+                    className="input-form  focus:outline-custom-blue " 
                     type="text"
                     name="Name"
                     id="Name" ></input>
@@ -62,7 +62,7 @@ const PersonalSetting = () =>{
                 <div className="entity-container">
                     <label htmlFor="Birthday "className="label-form ">Birthday</label>
                     <input  
-                    className="input-form" 
+                    className="input-form  focus:outline-custom-blue" 
                     type="date"
                     name="Birthday" 
                     id="Birthday" 
@@ -116,7 +116,7 @@ const PersonalSetting = () =>{
                     <div className="col-span-2 ">
                         <button
                         type="submit"
-                        className=" px-6 md:px-0 md:w-4/5 rounded-full bg-custom-blue py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className=" px-6 md:px-0 md:w-4/5 rounded-full bg-custom-blue py-1.5 text-sm leading-6 text-white "
                         >
                         Save
                         </button>

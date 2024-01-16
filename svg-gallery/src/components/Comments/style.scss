@@ -115,6 +115,9 @@
       font-weight: 400;
       line-height: 22px;  
       text-transform: capitalize;
+      &:hover{
+        background-color: rgba(30, 120, 171, 0.04);
+      }
     }
   }
 }
