@@ -3,14 +3,16 @@
 
 .desc{
     h2{
-        color: var(--, #2F2725);
-        /* 模块标题 */
+        color: #2F2725;
         font-family: Metropolis;
         font-size: 38px;
         font-style: normal;
         font-weight: 700;
         line-height: 46px; /* 121.053% */
         text-transform: capitalize;
+        @include xs{
+            font-size: 24px;
+        }
     }
     >p{
         color: var(--, #2F2725);
@@ -20,18 +22,10 @@
         font-weight: 400;
         line-height: 42px; /* 150% */
         text-transform: capitalize;
-    }
-    @include xs{
-        // margin-left: 5px;
-        // margin-right:5px;
-        padding-left: 30px;
-        h2{
-            font-size: 40px;
-            line-height: 48px
+        @include xs{
+            font-size: 14px;
+            line-height: 30px;
         }
-    }
-    >p{
-
     }
 }
 .desc_table {
@@ -54,6 +48,15 @@
         font-weight: 400;
         line-height: 29px; /* 120.833% */
         text-transform: capitalize;
+    }
+    @include xs{
+        height: 300px;
+        h3{
+            font-size: 13px;
+        }
+        p{
+            font-size: 13px;
+        }
     }
 }
 

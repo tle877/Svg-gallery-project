@@ -37,19 +37,66 @@ function HomePage() {
             </div>
           )}
         </div>
-        <div className=" flex gap-6">
-          {activeFilter && (
-            <Filter
-              open={openDrawer}
-              toggleDrawer={toggleDrawer}
-              toggleActiveFilter={toggleActiveFilter}
+        <div className=" flex flex-row gap-6">
+          <div className="w-1/4">
+            {activeFilter && (
+              <Filter
+                open={openDrawer}
+                toggleDrawer={toggleDrawer}
+                toggleActiveFilter={toggleActiveFilter}
+              />
+            )}
+          </div>
+          <div className="w-3/4 flex flex-wrap gap-6 justify-center">
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
             />
-          )}
-          <ProductCard
-            imageShow={ProductImage}
-            showUploadButtons
-            showLikeRate
-          />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+            <ProductCard
+              imageShow={ProductImage}
+              showUploadButtons
+              showLikeRate
+            />
+          </div>
+
+
+
         </div>
       </div>
     </div>

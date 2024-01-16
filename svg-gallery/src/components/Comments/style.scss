@@ -1,3 +1,4 @@
+@import "../../mixin.scss";
 .commentSectionContainer {
   background: #f7f7f6;
 }
@@ -10,6 +11,9 @@
   font-weight: 700;
   line-height: 46px;
   text-transform: capitalize;
+  @include xs{
+    font-size: 24px;
+  }
 }
 
 .commentAvatar {

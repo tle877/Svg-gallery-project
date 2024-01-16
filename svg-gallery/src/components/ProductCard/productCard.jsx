@@ -36,7 +36,7 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
                     <ShareIcons />
                 </div>)}    
             </a>
-            <div className="flex flex-col item-start sm:flex-row sm:justify-between w-full tracking-wider">
+            <div className="flex flex-col item-start sm:flex-row sm:justify-between items-center w-full tracking-wider">
                 <p className="py-2 mt-1 text-left text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
                 {showLikeRate &&(
                 <div className="inline-flex sm:items-center py-2 text-sm text-black rounded-lg ">
