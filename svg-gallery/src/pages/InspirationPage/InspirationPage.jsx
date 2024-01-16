@@ -31,9 +31,16 @@ const InspirationPage = () => {
   return (
     <>
       <div className="container mx-auto mt-5">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
+          <div className="sm:block md:hidden ">
+            <AuthorInfo/>
+            <ProductTitle />
+          </div>
           <ProductImageSlider images={productImages} />
-          <div className="mx-5">
+          <div className="sm:block md:hidden ">
+          {/* <FileDetails /> */}
+          </div>
+          <div className="mx-5  hidden md:hidden xl:block">
             <AuthorInfo />
             <ProductTitle />
             <ProductID />
@@ -47,7 +54,7 @@ const InspirationPage = () => {
         <YouMayAlsoLike />
         <RecommendedModel />
       </div>
-      <CommentsSection/>
+      <CommentsSection />
     </>
   );
 };

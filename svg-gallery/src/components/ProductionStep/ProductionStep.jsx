@@ -2,8 +2,8 @@ import "./ProductionStep.scss"
 import image1 from "../../assets/Image/image1.jpg"
 const ProductionStep = () =>{
     return (
-        <div className="productionStep container mx-auto my-10 ">
-            <h2 className="mb-10">production step</h2>
+        <div className="productionStep mx-auto my-10 ">
+            <h2 className="xl:mb-10">production step</h2>
 
             <div className="step mb-10">
                 <div className="step-title mb-10">

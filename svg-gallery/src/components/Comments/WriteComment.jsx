@@ -16,11 +16,11 @@ const WriteComment = () => {
             placeholder="Write your comment"
             id="commentInput"
           />
-          <div className={"addImageBtn"}>
+          <div className={"addImageBtn hidden xl:block"}>
             <FileUpload/>
             
           </div>
-          <div className={"addVideoBtn"}>
+          <div className={"addVideoBtn hidden xl:block"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="38"
@@ -36,7 +36,7 @@ const WriteComment = () => {
           </div>
         </div>
       </div>
-      <div className={"flex justify-end mt-4"}>
+      <div className={"flex justify-end mt-4 hidden xl:block"}>
         <Button className={"submitBtn"} autoFocus>
           Post a comment
         </Button>
