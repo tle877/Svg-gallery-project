@@ -30,15 +30,34 @@ export const CATEGORIES = [
   },
   {
     title: "Materials",
-    items: [],
+    items: [
+      {
+        title: "Wood",
+        url: "",
+      },
+      {
+        title: "Nylon",
+        url: "",
+      }
+    ],
   },
   {
     title: "Style",
-    items: [],
+    items: [
+      {
+        title: "Classic",
+        url: "",
+      },
+    ],
   },
   {
     title: "Shape",
-    items: [],
+    items: [
+      {
+        title: "Square",
+        url: "",
+      },
+    ],
   },
 ];
 

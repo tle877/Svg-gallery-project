@@ -6,8 +6,8 @@ const AccountDropdown = (props) => {
     <div className={"accountDropdown " + (isOpen ? "block" : "")}>
       <div className={"logoutBtn"}>
         <LogoutIcon />
-        <span>Logout</span>
-      </div>
+        <span className="hover:text-custom-blue">Logout</span>
+      </div>  
     </div>
   );
 };

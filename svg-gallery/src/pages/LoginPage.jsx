@@ -3,7 +3,7 @@ import topLogo from "../assets/logoLoginPage/topLogo.svg"
 import botLogo from "../assets/logoLoginPage/botLogo.svg"
 import botLogo1 from "../assets/logoLoginPage/botLogo1.svg"
 import botLogo2 from "../assets/logoLoginPage/botLogo2.svg"
-
+import "./login-page.scss"
 
 export default function LoginPage() {
   return (
@@ -53,7 +53,7 @@ export default function LoginPage() {
                   autoComplete="email"
                   placeholder="Email"
                   required
-                  className="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="input-container placeholder:text-gray-400 focus:outline-custom-blue sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -72,13 +72,13 @@ export default function LoginPage() {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="input-container placeholder:text-gray-400 focus:outline-custom-blue sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div className="text-sm flex mt-1 sm:mb-6 mb-10  ">
-                  <a href="#" className="hover:text-indigo-500">
+                  <a href="#" className="hover:text-custom-blue">
                     Forgot your password?
                   </a>
             </div>
@@ -86,7 +86,7 @@ export default function LoginPage() {
             <div className="flex justify-center">  
               <button
                 type="submit"
-                className=" sm:w-2/3 w-full rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className=" sm:w-2/3 w-full rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white "
               >
                 Login
               </button>
@@ -95,7 +95,7 @@ export default function LoginPage() {
 
           <p className="mt-2 text-center text-sm ">
             Need An Account?{' '}
-            <a href="#" className=" leading-6 text-custom-blue hover:text-indigo-500">
+            <a href="#" className=" leading-6 text-custom-blue ">
                  Register
             </a>
           </p>

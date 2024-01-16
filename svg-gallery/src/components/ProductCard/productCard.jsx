@@ -23,7 +23,7 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
             <a href="/inspiration-page" className='product-card' style={productImageStyle}>       
                 {/* <img className="rounded-t-xl main-image" src={ProductImage} alt="product image" /> */}
                 {showUploadButtons && (
-                <div className='flex product-image-button w-1/2 justify-between'>
+                <div className='flex product-image-button gap-3'>
                     <button className='howto-btn'>How-To</button>
                     <button className='download-btn'>
                         <DownloadIcons />File                        

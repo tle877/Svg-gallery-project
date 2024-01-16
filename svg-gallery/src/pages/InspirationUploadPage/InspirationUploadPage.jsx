@@ -52,6 +52,7 @@ const InspirationUploadPage = () => {
     )
   }
 
+
   return (
     <div className={"container mx-auto mt-5"}>
       <div className="flex-row gap-6 hidden xl:flex">

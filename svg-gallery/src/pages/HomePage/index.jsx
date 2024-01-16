@@ -8,6 +8,7 @@ import ProductImage from "../../assets/productImage.jpeg";
 import { SearchField } from "./components/Search";
 import { useCallback, useState } from "react";
 import { Tune } from "@mui/icons-material";
+import Pagination from "../../components/Pagination/Pagination";
 
 function HomePage() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -94,10 +95,8 @@ function HomePage() {
               showLikeRate
             />
           </div>
-
-
-
-        </div>
+                  </div>
+        <Pagination totalPages={10} currentPage={3} />
       </div>
     </div>
   );
