@@ -5,7 +5,7 @@ import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import Avatar from "../../assets/avatar.png";
 import NotificationPanel from './notificationPanel';
 import AccountDropdown from './accountDropdown';
-
+import UploadDropdown from "./uploadDropdown";
 const NavigationBar = () => {
   const [openNotification, setOpenNotification] = useState(false);
   const [openAccountDropdown, setOpenAccountDropdown] = useState(false);
@@ -23,26 +23,7 @@ const NavigationBar = () => {
     setOpenUploadDropdown(!openUploadDropdown);
   }
 
-  const UploadDropdown = (props) => {
-    const { isOpen } = props
-    return (
-      <>
-        <div className={"uploadDropdown " + (isOpen ? "block" : "")} >
-          <a href="/inspiration-upload-page" className="menu-item">
-            <div>
-              <span className="hover:text-custom-blue">Inspiration Upload</span>
-            </div>
-          </a>
-
-          <a href="/inspiration-upload-page" className="menu-item">
-            <div>
-              <span  className="hover:text-custom-blue" >Image Upload</span>
-            </div>
-          </a>
-        </div>
-      </>
-    )
-  }
+  
   return (
     <div className={"navigationContainer"}>
       <div className={"desktopMenu"}>
@@ -51,9 +32,9 @@ const NavigationBar = () => {
         <a href="/profile" className={"menu-item menu-text"}>Profile</a>
         <div className="menu-btn flex my-3 px-5 gap-2 items-center" onClick={uploadClicked} >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path d="M1.5 10.5V15C1.5 15.8284 2.17157 16.5 3 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V10.5" stroke="white" stroke-width="1.5" />
-            <path d="M14.356 6.8033L9.58306 2.03033C9.29017 1.73744 8.8153 1.73744 8.5224 2.03033L3.74943 6.8033" stroke="white" stroke-width="1.5" />
-            <line x1="9" y1="2.25" x2="9" y2="12.75" stroke="white" stroke-width="1.5" />
+            <path d="M1.5 10.5V15C1.5 15.8284 2.17157 16.5 3 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V10.5" stroke="white" strokeWidth="1.5" />
+            <path d="M14.356 6.8033L9.58306 2.03033C9.29017 1.73744 8.8153 1.73744 8.5224 2.03033L3.74943 6.8033" stroke="white" strokeWidth="1.5" />
+            <line x1="9" y1="2.25" x2="9" y2="12.75" stroke="white" strokeWidth="1.5" />
           </svg>
           Upload
         </div>

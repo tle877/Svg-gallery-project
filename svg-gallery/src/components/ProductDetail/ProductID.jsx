@@ -13,7 +13,7 @@ const ProductID = () => {
       window.getSelection().addRange(range);
       document.execCommand('copy');
       window.getSelection().removeAllRanges();
-      alert(spanRef.current.innerText);
+      alert("Copied:" + spanRef.current.innerText);
     }
   };
   return (

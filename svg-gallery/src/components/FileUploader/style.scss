@@ -1,4 +1,5 @@
 @import "../../mixin.scss";
+
 .custom-file-upload {
   display: inline-block;
   cursor: pointer;
@@ -112,6 +113,7 @@
   border: 1px dashed #C7CDD0;
   background: rgba(36, 43, 46, 0.04);
   padding: 50px;
+
   .uploadIcon {
     background: transparent;
     display: flex;
@@ -123,11 +125,21 @@
     gap: 9.73px;
     margin: auto;
   }
-  @include xs{
+  .hiddenUploadIcon{
+    display: none !important;
+  }
+
+  @include xs {
     width: 100%;
     padding: 0;
-    .uploadIcon{
+
+    .uploadIcon {
       height: 100px;
     }
   }
+}
+
+.ImageUploadDropZoneError {
+  border: 1px dashed #F56C6C;
+  background: #FDE2E2;
 }

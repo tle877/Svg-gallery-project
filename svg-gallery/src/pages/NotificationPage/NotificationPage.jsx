@@ -140,7 +140,7 @@ const NotificationPage = () => {
                 <div className={'notificationList mt-5'}>
                     <div className={'notificationHeader'}>
                         <div className={'typeName'}>
-                            <span>Comments Notification</span>
+                            <span>{activeMenu} Notification</span>
                         </div>
                         <div className={'deleteNoti'}>
                             <span>Delete All Notifications</span>
@@ -150,11 +150,17 @@ const NotificationPage = () => {
                         activeMenu == 'comment' ?
                             <>
                                 <CommentNotification />
+                                <hr />
                                 <CommentNotification />
+                                <hr />
                                 <CommentNotification />
+                                <hr />
                                 <CommentNotification />
+                                <hr />
                                 <CommentNotification />
+                                <hr />
                                 <CommentNotification />
+                                <hr />
                                 <Pagination totalPages={8} currentPage={3}/>
                             </>
                             :
@@ -165,9 +171,13 @@ const NotificationPage = () => {
                         activeMenu == 'favorite' ?
                             <>
                                 <FavoriteNotification />
+                                <hr />
                                 <FavoriteNotification />
+                                <hr />
                                 <FavoriteNotification />
+                                <hr />
                                 <FavoriteNotification />
+                                <hr />
                             </>
                             :
                             <></>
@@ -177,10 +187,15 @@ const NotificationPage = () => {
                         activeMenu == 'like' ?
                             <>
                                 <LikeNotification />
+                                <hr />
                                 <LikeNotification />
+                                <hr />
                                 <LikeNotification />
+                                <hr />
                                 <LikeNotification />
+                                <hr />
                                 <LikeNotification />
+                                <hr />
                                 <LikeNotification />
                             </>
                             :
@@ -190,8 +205,11 @@ const NotificationPage = () => {
                         activeMenu == 'system' ?
                             <>
                                 <SystemNotification />
+                                <hr />
                                 <SystemNotification />
+                                <hr />
                                 <SystemNotification />
+                                <hr />
                                 <SystemNotification />
                             </>
                             :

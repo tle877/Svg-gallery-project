@@ -6,7 +6,8 @@ const MobileMenu = (props) => {
         <div className={'mobileDropdownMenu ' + (isOpen ? "block" : "")}>
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">OMTECH LASER</a></li>
+                <li><a href="https://omtechlaser.com/">OMTECH LASER</a></li>
+                <li><a href="/profile">PROFILE</a></li>
             </ul>
         </div>
     );

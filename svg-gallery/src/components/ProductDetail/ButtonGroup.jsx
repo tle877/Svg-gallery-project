@@ -9,7 +9,7 @@ const ButtonGroup = () => {
           className={"menu-btn w-1/4 downloadBtn mr-5"}
           variant="contained"
         >
-          Upload
+          Download
         </Button>
         <div className="mr-2">
           <svg
