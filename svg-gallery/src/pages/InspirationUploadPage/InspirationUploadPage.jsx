@@ -8,6 +8,10 @@ import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown
 import CoverImageUploader from "../../components/FileUploader/CoverUploader";
 import TextField from '@mui/material/TextField';
 import ProductTionFileDropZone from "../../components/FileUploader/ProductionFileDropZone";
+import PowerInspirationUpload from "../../components/PowerInspirationUpload";
+import MaterialInspirationUpload from "../../components/MaterialInspirationUpload";
+import ProductInspirationUpload from "../../components/ProductInspirationUpload";
+import TimeInspirationUpload from "../../components/TimeInspirationUpload";
 
 const InspirationUploadPage = () => {
   const UploadImageGroup = () => {
@@ -71,6 +75,11 @@ const InspirationUploadPage = () => {
           <CategoryDropdown />
           <MachineDropdown />
           <TagsDropdown />
+          <PowerInspirationUpload />
+          <MaterialInspirationUpload />
+          <TimeInspirationUpload />
+          <ProductInspirationUpload />
+
         </div>
       </div>
       <div className="flex xl:hidden">
@@ -80,6 +89,11 @@ const InspirationUploadPage = () => {
           <CategoryDropdown />
           <MachineDropdown />
           <TagsDropdown />
+          <PowerInspirationUpload />
+          <MaterialInspirationUpload />
+          <TimeInspirationUpload />
+          <ProductInspirationUpload />
+
           <ProductionSteps />
           <UploadProductionFile />
         </div>

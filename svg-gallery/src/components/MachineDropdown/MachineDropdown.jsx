@@ -5,7 +5,7 @@ import { machineList } from "./machineList";
 import TickIcon from "../../assets/tick.svg"
 
 const MachineDropdown = () => {
-    const [isOpen, setOpen] = useState(true);
+    const [isOpen, setOpen] = useState(false);
     const [content, setContent] = useState("");
     const [activeIndex,setActiveIndex] = useState(null)
     const handleClick = (title,index)=>{
@@ -27,14 +27,14 @@ const MachineDropdown = () => {
         setOpen(!isOpen);
       };
     return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto mb-5">
         <div>
       
             <div className="flex justify-between">
-                <h4 className="font-bold mb-2 text-lg"> Machine </h4>
+                <h4 className="font-bold mb-4 text-lg"> Machine </h4>
             </div>
-            <div className="selected-items-container w-full relative">
-                <div className=" min-h-8 p-1 ml-2">
+            <div className= {`selected-items-container w-full relative ${isOpen? "active-input" : ""}` }>
+                <div className=" min-h-7 p-1 ml-2">
                     {content}
                 </div>
                 <span className="absolute top-2 right-2 " onClick={handleDropdownClick}>
