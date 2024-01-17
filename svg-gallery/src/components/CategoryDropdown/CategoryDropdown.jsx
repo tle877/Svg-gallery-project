@@ -6,7 +6,7 @@ import { categoryList } from "./categoryList";
 import CloseIcon from "../../assets/close-icon.svg";
 
 const CategoryDropdown = () => {
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   const [content, setContent] = useState([]);
 
   const handleCheckBox = (title) => {
@@ -29,15 +29,15 @@ const CategoryDropdown = () => {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto my-5">
       <div>
         <div className="flex justify-between">
           <h4 className="font-bold mb-2 text-lg">
             <span className="text-red font-extrabold">*</span> Categorize
           </h4>
         </div>
-        <div className="selected-items-container w-full relative">
-          <div className="flex flex-wrap gap-1 min-h-8 mr-2">
+        <div className= {`selected-items-container w-full relative ${isOpen? "active-input" : ""}` }>
+          <div className="flex flex-wrap gap-1 min-h-7 mr-2">
             {content.map((item) => (
               <div
                 key={item}
