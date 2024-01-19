@@ -1,5 +1,15 @@
+
 .gallery-container{
-    .product-card{
-        width:10px;
+    display:grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap:24px;
+}
+
+
+@media screen and (min-width: 1080px) and (max-width:1999px){
+    .gallery-container{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap:24px;
     }
 }
+
