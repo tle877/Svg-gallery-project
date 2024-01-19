@@ -38,8 +38,8 @@ function HomePage() {
             </div>
           )}
         </div>
-        <div className=" flex flex-row gap-6">
-          <div className="w-1/4">
+        <div className=" grid grid-cols-4 gap-6">
+          <div className=" hidden sm:grid col-span-1 ">
             {activeFilter && (
               <Filter
                 open={openDrawer}
@@ -48,7 +48,9 @@ function HomePage() {
               />
             )}
           </div>
-          <div className="w-3/4 flex flex-wrap gap-6 justify-center">
+          {/* grid grid-cols-2 sm:w-3/4 sm:flex sm:flex-wrap sm:gap-6 sm:justify-center */}
+          <div className="gallery-container sm:grid col-span-3">
+            <div className="grid sm:grid-cols-3 gap-6">
             <ProductCard
               imageShow={ProductImage}
               showUploadButtons
@@ -94,6 +96,8 @@ function HomePage() {
               showUploadButtons
               showLikeRate
             />
+            </div>
+           
           </div>
                   </div>
         <Pagination totalPages={10} currentPage={3} />
