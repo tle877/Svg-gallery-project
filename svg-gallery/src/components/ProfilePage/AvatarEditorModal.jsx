@@ -84,13 +84,13 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
 
             <div className="button-container flex justify-between md:px-10 py-1">   
               <button onClick={onClose}
-                className=" rounded-full border border-custom-blue text-gray px-5 sm:px-7 py-1.5 text-sm leading-6  shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-full border border-custom-blue text-custom-blue px-5 sm:px-7 py-1.5 text-sm leading-6 "
               >
                 Cancel
               </button>
               <button onClick={handleSave}
                 type="submit"
-                className=" rounded-full bg-custom-blue px-7 sm:px-9 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className=" rounded-full bg-custom-blue px-7 sm:px-9 py-1.5 text-sm leading-6 text-white s "
               >
                 Save
               </button>

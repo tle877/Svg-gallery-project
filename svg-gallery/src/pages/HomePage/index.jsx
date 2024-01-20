@@ -1,5 +1,6 @@
 // src/pages/HomePage.jsx
 // import React from 'react';
+import "./home-page.scss"
 import ProductCard from "../../components/ProductCard/productCard";
 import Carousel from "../../components/Carousel/HeroBannerCarousel";
 
@@ -38,8 +39,8 @@ function HomePage() {
             </div>
           )}
         </div>
-        <div className=" flex flex-row gap-6">
-          <div className="w-1/4">
+        <div className=" md:grid md:grid-cols-6">
+          <div className=" hidden md:grid col-span-2 ">
             {activeFilter && (
               <Filter
                 open={openDrawer}
@@ -48,11 +49,14 @@ function HomePage() {
               />
             )}
           </div>
-          <div className="w-3/4 flex flex-wrap gap-6 justify-center">
+          {/* grid grid-cols-2 sm:w-3/4 sm:flex sm:flex-wrap sm:gap-6 sm:justify-center */}
+          <div className="md:grid md:col-span-4 " >
+            <div className="gallery-container ">
             <ProductCard
               imageShow={ProductImage}
               showUploadButtons
               showLikeRate
+              showLikeRateButton
             />
             <ProductCard
               imageShow={ProductImage}
@@ -94,6 +98,8 @@ function HomePage() {
               showUploadButtons
               showLikeRate
             />
+            </div>
+           
           </div>
                   </div>
         <Pagination totalPages={10} currentPage={3} />

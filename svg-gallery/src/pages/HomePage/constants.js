@@ -59,6 +59,33 @@ export const CATEGORIES = [
       },
     ],
   },
+  {
+    title: "Font",
+    items: [
+      {
+        title: "Font1",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "HomeDecor",
+    items: [
+      {
+        title: "Home",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "Diy",
+    items: [
+      {
+        title: "Square",
+        url: "",
+      },
+    ],
+  },
 ];
 
 export const TAGS = [
