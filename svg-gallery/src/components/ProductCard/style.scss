@@ -6,11 +6,12 @@
     display: block;
     border-radius: 12px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 540px) {
     .product-card {
         height: 170px;
     }
 }
+
 .image-desc {
     color: #2F2725;
     font-style: normal;

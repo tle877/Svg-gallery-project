@@ -19,7 +19,7 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
 
   return (
     <div className={'productCard'}>
-        <div className="rounded-lg h-full">
+        <div className="rounded-lg h-full ">
             <a href="/inspiration-page" className='product-card grid grid-cols-7 p-2' style={productImageStyle}>       
                 {/* <img className="rounded-t-xl main-image" src={ProductImage} alt="product image" /> */}
                 <div className='col-span-6 ml-1 mt-1'>
@@ -43,12 +43,12 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
                 </div>
                    
             </a>
-            <div className="flex flex-col items-start justify-center sm:flex-row sm:justify-between w-full tracking-wider">
-                <p className="py-2 mt-1 text-left text-sm font-normal image-desc ">Christmas SVG,DXF,EPS,JPG</p>
+            <div className="flex flex-col items-start justify-center md:grid md:grid-cols-3 w-full tracking-wider">
+                <p className="py-2 mt-1 text-left text-sm font-normal image-desc col-span-2">Christmas SVG,DXF,EPS,JPG</p>
                 
-                {showLikeRate &&(
-                <div className=" sm:py-2 flex gap-2 text-sm text-black rounded-lg ">
-                    <div className='flex '>
+                <div>{showLikeRate &&(
+                <div className=" md:py-2 flex justify-end gap-2 text-sm text-black rounded-lg">
+                    <div className='flex  '>
                         <StarIcons />
                         <span>5.0</span>
                     </div>
@@ -59,7 +59,8 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
 
 
                 </div>)
-                }
+                }</div>
+                
             </div>
         </div>     
     </div>

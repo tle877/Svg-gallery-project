@@ -9,7 +9,7 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
   const [currentCategory, setCurrentCategory] = useState(false);
 
   return (
-    <div className="max-w-[300px] mb-10">
+    <div className="max-w-[300px] mb-10 ">
       {open ? (
         <Drawer open={open} onClose={() => toggleDrawer()}>
           <div className="px-8">

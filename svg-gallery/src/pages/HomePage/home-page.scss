@@ -6,10 +6,11 @@
 }
 
 
-@media screen and (min-width: 1080px) and (max-width:1999px){
+@media screen and (min-width: 768px) and (max-width:9999px){
     .gallery-container{
         grid-template-columns: repeat(3,minmax(0,1fr));
         gap:18px;
     }
 }
+
 
