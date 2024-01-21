@@ -39,8 +39,8 @@ function HomePage() {
             </div>
           )}
         </div>
-        <div className=" md:grid md:grid-cols-6">
-          <div className=" hidden md:grid col-span-2 ">
+        <div className=" md:grid md:grid-cols-4 gap-6 ">
+          <div className=" hidden md:grid col-span-1 ">
             {activeFilter && (
               <Filter
                 open={openDrawer}
@@ -50,7 +50,7 @@ function HomePage() {
             )}
           </div>
           {/* grid grid-cols-2 sm:w-3/4 sm:flex sm:flex-wrap sm:gap-6 sm:justify-center */}
-          <div className="md:grid md:col-span-4 " >
+          <div className="md:grid md:col-span-3 " >
             <div className="gallery-container ">
             <ProductCard
               imageShow={ProductImage}
