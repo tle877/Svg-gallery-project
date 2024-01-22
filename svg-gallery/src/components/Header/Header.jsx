@@ -6,11 +6,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MobileMenu from "../NavigationBar/mobileMenu";
 import CloseIcon from '@mui/icons-material/Close';
 import { Search, Tune } from "@mui/icons-material";
+
 const Header = () => {
-  const [openMobileMene, setOpenMobileMenu] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const mobileMenuIconClicked = () => {
-    setOpenMobileMenu(!openMobileMene);
+    setOpenMobileMenu(!openMobileMenu);
   }
   const checkURL = () => {
     const currentURL = window.location.href;
@@ -53,13 +54,13 @@ const Header = () => {
       <div className={"container mx-auto mobileHeader flex lg:hidden"}>
         <div className={"headerLeft"}>
           {
-            openMobileMene ?
+            openMobileMenu ?
               <CloseIcon onClick={mobileMenuIconClicked} />
               :
               <MenuIcon onClick={mobileMenuIconClicked} />
           }
           <LogoContainer />
-          <MobileMenu isOpen={openMobileMene} />
+          <MobileMenu isOpen={openMobileMenu} />
         </div>
         <NavigationBar />
 

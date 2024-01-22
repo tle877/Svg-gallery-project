@@ -10,12 +10,13 @@ import UploadDropdown from "./components/uploadDropdown";
 import DeletedImg from '../../assets/Image/deleted-img.png'
 const UserPage = () => {
     const [activeTab, setActiveTab] = useState('project');
+    const [activeSubTab, setActiveSubTab] = useState('project:howto');
     const [openUploadDropdown, setOpenUploadDropdown] = useState(false);
 
     const Banner = () => {
         return (
             <>
-                <div className="w-full">
+                <div className="w-full hidden lg:block">
                     <img src={BannerImage} alt="" />
                 </div>
             </>
@@ -29,7 +30,7 @@ const UserPage = () => {
         return (
             <>
                 <div className={'container'}>
-                    <div className={'authorSectionContainer relative'}>
+                    <div className={'authorSectionContainer relative hidden lg:flex'}>
                         <div className={'authorInfo'}>
                             <div className={'authorAvatar'}>
                                 <img src={Avatar} alt="" />
@@ -65,6 +66,26 @@ const UserPage = () => {
 
                         </div>
                         <UploadDropdown isOpen={openUploadDropdown} />
+                    </div>
+                    <div className={'authorSectionMobileContainer grid lg:hidden justify-center p-5'}>
+                        <div className={'authorAvatar mx-auto'}>
+                            <img src={Avatar} alt="" />
+                        </div>
+                        <div className={'authorName mt-5'}>William</div>
+                        <div className={'tagLine'}>
+                            New York / Crafts / Receive Praise: 2341
+                        </div>
+                        <div className={'authorDescription'}>
+                            Passionate about crafts, welcome to communicate
+                        </div>
+                        <a href="/profile-page" className="mx-auto mt-5">
+                            <div className={'editProfileBtn'}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2088 10.6781L9.17751 10.8256H9.17626L9.32376 9.79431L15.66 3.46056C15.7177 3.40086 15.7866 3.35325 15.8629 3.32049C15.9391 3.28774 16.0211 3.2705 16.1041 3.26978C16.1871 3.26905 16.2694 3.28487 16.3462 3.31629C16.423 3.34772 16.4928 3.39413 16.5515 3.45281C16.6102 3.51149 16.6566 3.58128 16.688 3.65809C16.7195 3.7349 16.7353 3.8172 16.7345 3.90018C16.7338 3.98317 16.7166 4.06518 16.6838 4.14143C16.6511 4.21769 16.6035 4.28665 16.5438 4.34431L10.2088 10.6781ZM17.8343 3.184C17.74 2.95643 17.6017 2.74968 17.4275 2.57556V2.57681C17.0759 2.2253 16.5991 2.02783 16.1019 2.02783C15.6047 2.02783 15.1279 2.2253 14.7763 2.57681L8.29376 9.05806C8.19829 9.1538 8.13645 9.27793 8.11751 9.41181L7.82251 11.4743C7.80871 11.5704 7.81749 11.6684 7.84816 11.7606C7.87884 11.8527 7.93056 11.9364 7.99922 12.0051C8.06789 12.0738 8.15161 12.1255 8.24374 12.1562C8.33588 12.1868 8.43389 12.1956 8.53001 12.1818L10.5925 11.8868C10.7265 11.8675 10.8507 11.8052 10.9463 11.7093L17.4275 5.22806C17.6017 5.05393 17.74 4.84718 17.8343 4.61962C17.9286 4.39205 17.9771 4.14814 17.9771 3.90181C17.9771 3.65548 17.9286 3.41156 17.8343 3.184ZM16.4331 9.55891C16.3159 9.67612 16.25 9.8351 16.25 10.0009V16.2509H3.75V3.75085H10C10.1658 3.75085 10.3247 3.68501 10.4419 3.5678C10.5592 3.45059 10.625 3.29162 10.625 3.12585C10.625 2.96009 10.5592 2.80112 10.4419 2.68391C10.3247 2.5667 10.1658 2.50085 10 2.50085H3.125C2.95924 2.50085 2.80027 2.5667 2.68306 2.68391C2.56585 2.80112 2.5 2.96009 2.5 3.12585V16.8759C2.5 17.0416 2.56585 17.2006 2.68306 17.3178C2.80027 17.435 2.95924 17.5009 3.125 17.5009H16.875C17.0408 17.5009 17.1997 17.435 17.3169 17.3178C17.4342 17.2006 17.5 17.0416 17.5 16.8759V10.0009C17.5 9.8351 17.4342 9.67612 17.3169 9.55891C17.1997 9.4417 17.0408 9.37586 16.875 9.37586C16.7092 9.37586 16.5503 9.4417 16.4331 9.55891Z" fill="#3F535E" />
+                                </svg>
+                                <span>Edit Profile</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </>
@@ -150,7 +171,7 @@ const UserPage = () => {
         const { image } = props
         return (
             <>
-                <div className={'DownloadItemCard'}>
+                <div className={'DownloadItemCard hidden lg:flex'}>
                     <div className={'itemImage'}>
                         <img src={image} alt="" />
                     </div>
@@ -174,6 +195,35 @@ const UserPage = () => {
                         </div>
                     </div>
                 </div>
+                <div className={'DownloadItemCardMobile flex flex-row lg:hidden mt-5 gap-3'}>
+                    <div className={'basis-1/2'}>
+                        <div className={'itemImage'}>
+                            <img src={image} alt="" />
+                        </div>
+                    </div>
+                    <div className={'basis-1/2 grid'}>
+                        <div className={'itemTitle'}>
+                            <h3>Christmas decorations SVG,DXF,EPS,JPG</h3>
+                        </div>
+                        <div className={'actionButtons'}>
+                            <div className={'downloadBtnContainer'}>
+                                <div className={'downloadButton'}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <path d="M7.10924 8.88471L10.3102 12.0871L10.3102 2.75083L11.6852 2.75083L11.6852 12.0953L14.8931 8.88608L15.8652 9.85821L11.4872 14.2362C11.3583 14.3651 11.1835 14.4375 11.0012 14.4375C10.8189 14.4375 10.644 14.3651 10.5151 14.2362L6.13711 9.85683L7.10924 8.88471Z" fill="white" />
+                                        <path d="M2.75 17.1875V12.375H4.125V17.1875C4.125 17.3698 4.19743 17.5447 4.32636 17.6736C4.4553 17.8026 4.63016 17.875 4.8125 17.875H17.1875C17.3698 17.875 17.5447 17.8026 17.6736 17.6736C17.8026 17.5447 17.875 17.3698 17.875 17.1875V12.375H19.25V17.1875C19.25 17.7345 19.0327 18.2591 18.6459 18.6459C18.2591 19.0327 17.7345 19.25 17.1875 19.25H4.8125C4.26549 19.25 3.74089 19.0327 3.35409 18.6459C2.9673 18.2591 2.75 17.7345 2.75 17.1875Z" fill="white" />
+                                    </svg>
+                                    <span>Download</span>
+                                </div>
+                            </div>
+                            <div className={'deleteBtn'}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M3.4375 5.5004H2.0625C1.88016 5.5004 1.7053 5.42797 1.57636 5.29903C1.44743 5.1701 1.375 4.99523 1.375 4.8129C1.375 4.63056 1.44743 4.45569 1.57636 4.32676C1.7053 4.19783 1.88016 4.1254 2.0625 4.1254H7.5625V2.06152C7.5625 1.87919 7.63493 1.70432 7.76386 1.57539C7.8928 1.44646 8.06766 1.37402 8.25 1.37402H13.75C13.9323 1.37402 14.1072 1.44646 14.2361 1.57539C14.3651 1.70432 14.4375 1.87919 14.4375 2.06152V4.1254H19.9375C20.1198 4.1254 20.2947 4.19783 20.4236 4.32676C20.5526 4.45569 20.625 4.63056 20.625 4.8129C20.625 4.99523 20.5526 5.1701 20.4236 5.29903C20.2947 5.42797 20.1198 5.5004 19.9375 5.5004H18.5625V19.9379C18.5625 20.1202 18.4901 20.2951 18.3611 20.424C18.2322 20.553 18.0573 20.6254 17.875 20.6254H4.125C3.94266 20.6254 3.7678 20.553 3.63886 20.424C3.50993 20.2951 3.4375 20.1202 3.4375 19.9379V5.5004ZM13.0625 4.1254V2.7504H8.9375V4.1254H13.0625ZM4.8125 19.2504H17.1875V5.5004H4.8125V19.2504ZM8.9375 16.5004C8.75516 16.5004 8.5803 16.428 8.45136 16.299C8.32243 16.1701 8.25 15.9952 8.25 15.8129V8.9379C8.25 8.75556 8.32243 8.58069 8.45136 8.45176C8.5803 8.32283 8.75516 8.2504 8.9375 8.2504C9.11984 8.2504 9.2947 8.32283 9.42364 8.45176C9.55257 8.58069 9.625 8.75556 9.625 8.9379V15.8129C9.625 15.9952 9.55257 16.1701 9.42364 16.299C9.2947 16.428 9.11984 16.5004 8.9375 16.5004ZM13.0625 16.5004C12.8802 16.5004 12.7053 16.428 12.5764 16.299C12.4474 16.1701 12.375 15.9952 12.375 15.8129V8.9379C12.375 8.75556 12.4474 8.58069 12.5764 8.45176C12.7053 8.32283 12.8802 8.2504 13.0625 8.2504C13.2448 8.2504 13.4197 8.32283 13.5486 8.45176C13.6776 8.58069 13.75 8.75556 13.75 8.9379V15.8129C13.75 15.9952 13.6776 16.1701 13.5486 16.299C13.4197 16.428 13.2448 16.5004 13.0625 16.5004Z" fill="#158CC5" />
+                                </svg>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </>
         )
     }
@@ -183,8 +233,8 @@ const UserPage = () => {
         setActiveTab(tabName);
     }
 
-    const handleSubTabClick = event => {
-        event.currentTarget.classList.toggle('activeSubTabItem');
+    const handleSubTabClick = (tabName) => {
+        setActiveSubTab(tabName);
     }
     const TabBody = () => {
         if (activeTab == 'project') {
@@ -193,17 +243,17 @@ const UserPage = () => {
                     <div className={'tabBodyContainer'}>
                         <div className={'container'}>
                             <div className={'subTabHeader'}>
-                                <div className={'subTabItem handleSubTabClick'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'project:howto'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('project:howto')}>
                                     How-To
                                 </div>
-                                <div className={'subTabItem '} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'project:image'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('project:image')}>
                                     Image
                                 </div>
-                                <div className={'subTabItem'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'project:drafts'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('project:drafts')}>
                                     Drafts
                                 </div>
                             </div>
-                            <div className={'grid grid-cols-4 gap-4'}>
+                            <div className={'grid grid-cols-2 lg:grid-cols-4 gap-4'}>
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={DeletedImg} showLikeRate />
@@ -249,15 +299,15 @@ const UserPage = () => {
                     <div className={'tabBodyContainer'}>
                         <div className={'container'}>
                             <div className={'subTabHeader'}>
-                                <div className={'subTabItem handleSubTabClick'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'favorites:howto'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('favorites:howto')}>
                                     How-To
                                 </div>
-                                <div className={'subTabItem'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'favorites:image'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('favorites:image')}>
                                     Image
                                 </div>
 
                             </div>
-                            <div className={'grid grid-cols-4 gap-4'}>
+                            <div className={'grid grid-cols-2 lg:grid-cols-4 gap-4'}>
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
@@ -283,15 +333,15 @@ const UserPage = () => {
                     <div className={'tabBodyContainer'}>
                         <div className={'container'}>
                             <div className={'subTabHeader'}>
-                                <div className={'subTabItem handleSubTabClick'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'likes:howto'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('likes:howto')}>
                                     How-To
                                 </div>
-                                <div className={'subTabItem'} onClick={handleSubTabClick}>
+                                <div className={'subTabItem ' + ( activeSubTab == 'likes:image'? 'activeSubTabItem' : '')} onClick={() => handleSubTabClick('likes:image')}>
                                     Image
                                 </div>
 
                             </div>
-                            <div className={'grid grid-cols-4 gap-4'}>
+                            <div className={'grid grid-cols-2 lg:grid-cols-4 gap-4'}>
                                 <ProductCard imageShow={DeletedImg} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={DeletedImg} showLikeRate />

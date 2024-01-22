@@ -1,3 +1,5 @@
+@import '../../mixin.scss';
+
 .authorSectionContainer {
     display: flex;
     align-items: center;
@@ -6,9 +8,9 @@
     width: 100%;
 
     .authorInfo {
-        width: 35%;
+        width: 45%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
 
         .authorAvatar {
@@ -68,6 +70,7 @@
                 font-weight: 400;
                 line-height: 24px;
                 text-transform: capitalize;
+                opacity: 0.4;
             }
 
             .authorDescription {
@@ -100,6 +103,62 @@
     }
 
 }
+.authorSectionMobileContainer{
+    .authorAvatar {
+        width: 70px;
+        height: 70px;
+        display: grid;
+        align-items: center;
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+    .authorName {
+        color: #2F2725;
+        font-family: Metropolis;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .tagLine {
+        color: #3F535E;
+        font-family: Metropolis;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: capitalize;
+        opacity: 0.4;
+        text-align: center;
+    }
+    .authorDescription {
+        color: #3F535E;
+        font-family: Metropolis;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        text-transform: capitalize;
+        text-align: center
+    }
+    .editProfileBtn {
+        display: inline-flex;
+        height: 32px;
+        padding: 3px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 25.11px;
+        border: 1px solid #C7CDD0;
+        background: #FFF;
+        cursor: pointer;
+    }
+}
 
 .tabHeaderWrapper {
     display: flex;
@@ -107,10 +166,12 @@
     align-items: center;
     gap: 60px;
     padding: 25px 0;
+    max-width: 100%;
+    width: 100%;
 
     .tabHeaderItem {
         display: inline-flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
         cursor: pointer;
         span {
@@ -146,6 +207,76 @@
             left: 30%;
         }
     }
+
+    @include xs{
+        gap: 0;
+        padding: 0;
+        .tabHeaderItem{
+            padding: 10px;
+            gap: 3px;
+            span{
+                font-size: 12px;
+            }
+            svg{
+                width: 15px;
+            }
+            
+        }
+        .activeItem{
+            span{
+                font-size: 12px;
+            }
+            .activeLine{
+                bottom: 0;
+            }
+        }
+    }
+    @include sm{
+        gap: 30;
+        padding: 0;
+        .tabHeaderItem{
+            padding: 10px;
+            gap: 3px;
+            span{
+                font-size: 14px;
+            }
+            svg{
+                width: 20px;
+            }
+            
+        }
+        .activeItem{
+            span{
+                font-size: 14px;
+            }
+            .activeLine{
+                bottom: 0;
+            }
+        }
+    }
+    @include md{
+        gap: 30;
+        padding: 0;
+        .tabHeaderItem{
+            padding: 10px;
+            gap: 3px;
+            span{
+                font-size: 18px;
+            }
+            svg{
+                width: 25px;
+            }
+            
+        }
+        .activeItem{
+            span{
+                font-size: 18px;
+            }
+            .activeLine{
+                bottom: 0;
+            }
+        }
+    }
 }
 
 .tabBodyContainer {
@@ -169,6 +300,15 @@
             line-height: 28px;
             text-transform: capitalize;
             cursor: pointer;
+            @include xs{
+                font-size: 14px;
+            }
+            @include sm{
+                font-size: 14px;
+            }
+            @include md{
+                font-size: 14px;
+            }
         }
 
         .activeSubTabItem {
@@ -176,7 +316,18 @@
             background: #1E78AB;
             color: #ffffff !important;
             padding: 3px 25px;
+            @include xs{
+                font-size: 14px;
+                padding: 0px 15px;
+            }
         }
+        @include xs{
+            padding: 15px 0;
+            gap: 50px;
+        }
+    }
+    @include xs{
+        padding: 0;
     }
 }
 
@@ -230,7 +381,7 @@
             align-items: flex-end;
 
             .downloadButton {
-                width: 50%;
+                // width: 50%;
                 justify-content: center;
                 background: #158CC5;
                 display: inline-flex;
@@ -245,6 +396,79 @@
     }
 }
 
+.DownloadItemCardMobile{
+    .itemImage{
+        img{
+            border-radius: 12px;
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            @include sm{
+                height: 254px;
+            }
+            @include md{
+                height: 254px;
+            }
+            @include lg{
+                height: 254px;
+            }
+        }
+    }
+    .itemTitle {
+        h3 {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            text-transform: capitalize;
+        }
+    }
+    .actionButtons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .deleteBtn {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+
+        .downloadBtnContainer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+            @include sm{
+                width: 60%;
+            }
+            @include md{
+                width: 50%;
+            }
+            @include lg{
+                width: 50%;
+            }
+            .downloadButton {
+                width: 70%;
+                justify-content: center;
+                background: #158CC5;
+                display: flex;
+                padding: 5px 5px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                color: #ffffff;
+                cursor: pointer;
+                font-size: 11px;
+                align-items: center;
+                svg{
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
 .uploadBtnDropdown {
     display: none;
     z-index: 3;

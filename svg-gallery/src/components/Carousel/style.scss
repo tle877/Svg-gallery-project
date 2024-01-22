@@ -1,5 +1,16 @@
+@import "../../mixin.scss";
+
 .mySwiper {
-  height: 254px;
+  height: 254px !important;
+  @include xs{
+    height: 178px !important;
+  }
+  @include sm{
+    height: 254px !important;
+  }
+  @include md{
+    height: 254px !important;
+  }
 }
 
 .swiper {
