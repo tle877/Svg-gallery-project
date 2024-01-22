@@ -25,11 +25,13 @@
 }
 
 .commentAvatar {
-  width: 56px;
-  height: 56px;
+  width: 150px;
   margin-right: 20px;
   img {
     border-radius: 50%;
+  }
+  @include sm{
+    width: auto;
   }
 }
 .writeCommentBox {

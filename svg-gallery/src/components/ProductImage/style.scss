@@ -84,7 +84,18 @@
   right: 5%;
 }
 .swiper-wrapper{
-  @include xs{
-    height: auto !important;
-  }
+  // @include xs{
+  //   height: auto !important;
+  // }
+}
+.swiper-pagination{
+  position: static;
+}
+.swiper-pagination-bullet{
+  background: #6f6f6f !important;
+  width: 30px !important;
+}
+.swiper-pagination-bullet-active{
+  background: #2F2725 !important;
+  width: 30px !important;
 }

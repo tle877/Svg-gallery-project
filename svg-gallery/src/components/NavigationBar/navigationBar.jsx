@@ -1,15 +1,17 @@
 import { useState } from "react";
 import "./style.scss";
-import Button from "@mui/material/Button";
-import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
+// import Button from "@mui/material/Button";
+// import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
 import Avatar from "../../assets/avatar.png";
 import NotificationPanel from './notificationPanel';
 import AccountDropdown from './accountDropdown';
 import UploadDropdown from "./uploadDropdown";
+import AccountDropDownMobile from "./accountDropdownMobile";
 const NavigationBar = () => {
   const [openNotification, setOpenNotification] = useState(false);
   const [openAccountDropdown, setOpenAccountDropdown] = useState(false);
   const [openUploadDropdown, setOpenUploadDropdown] = useState(false);
+  const [openAccountDropdownMobile, setOpenAccountDropdownMobile] = useState(false);
 
   const notificationClicked = () => {
     setOpenNotification(!openNotification);
@@ -19,6 +21,9 @@ const NavigationBar = () => {
     setOpenAccountDropdown(!openAccountDropdown);
   }
 
+  const accountMobileClicked = () => {
+    setOpenAccountDropdownMobile(!openAccountDropdownMobile);
+  }
   const uploadClicked = () => {
     setOpenUploadDropdown(!openUploadDropdown);
   }
@@ -61,7 +66,7 @@ const NavigationBar = () => {
             />
           </svg>
         </div>
-        <div className={"menu-item"} onClick={accountClicked}>
+        <div className={"menu-item hidden"} onClick={accountClicked}>
           <div className={"avatarContainer"}>
             <img src={Avatar} alt="" />
           </div>
@@ -100,7 +105,7 @@ const NavigationBar = () => {
             />
           </svg>
         </div>
-        <div className={"menu-item"} onClick={accountClicked}>
+        <div className={"menu-item"} onClick={accountMobileClicked}>
           <div className={"avatarContainer"}>
             <img src={Avatar} alt="" />
           </div>
@@ -109,6 +114,7 @@ const NavigationBar = () => {
 
       <NotificationPanel isOpen={openNotification} />
       <AccountDropdown isOpen={openAccountDropdown} />
+      <AccountDropDownMobile isOpen={openAccountDropdownMobile} />
     </div>
   );
 };

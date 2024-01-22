@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Pagination } from "swiper/modules";
 const ProductImage = ({ images }) => {
   // eslint-disable-next-line no-unused-vars
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -87,47 +88,77 @@ const ProductImage = ({ images }) => {
   }
 
   return (
-    <div>
-      {/* Main Image */}
-      <div className="mb-4">
-        <img
-          src={images[activeIndex]}
-          alt={`Product ${activeIndex + 1}`}
-          className="w-full h-auto mainImage"
-          onClick={handleMainImageClick}
-        />
-        <ImageViewerModal />
-      </div>
+    <>
+      <div className="hidden md:block">
+        {/* Main Image */}
+        <div className="mb-4">
+          <img
+            src={images[activeIndex]}
+            alt={`Product ${activeIndex + 1}`}
+            className="w-full h-auto mainImage"
+            onClick={handleMainImageClick}
+          />
+          <ImageViewerModal />
+        </div>
 
-      {/* Thumbnail Slider */}
-      <Swiper
-        modules={[Navigation, Thumbs]}
-        onSwiper={setThumbsSwiper}
-        watchSlidesProgress
-        spaceBetween={10}
-        slidesPerView={5}
-        className="mb-4 thumbnailSlider relative"
-        navigation={true}
-        loop={true}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div
-              onClick={() => handleThumbClick(index)}
-              className={
-                "swiper-slide-thumbnail cursor-pointer border-2 border-blue-500"
-              }
-            >
-              <img
-                src={image}
-                alt={`Product ${index + 1}`}
-                className="w-full h-auto"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+        {/* Thumbnail Slider */}
+        <Swiper
+          modules={[Navigation, Thumbs]}
+          onSwiper={setThumbsSwiper}
+          watchSlidesProgress
+          spaceBetween={10}
+          slidesPerView={5}
+          className="mb-4 thumbnailSlider relative"
+          navigation={true}
+          loop={true}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div
+                onClick={() => handleThumbClick(index)}
+                className={
+                  "swiper-slide-thumbnail cursor-pointer border-2 border-blue-500"
+                }
+              >
+                <img
+                  src={image}
+                  alt={`Product ${index + 1}`}
+                  className="w-full h-auto"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="block md:hidden mb-5">
+          <Swiper 
+            slidesPerView = {1}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  onClick={() => handleThumbClick(index)}
+                  className={
+                    "swiper-slide-thumbnail cursor-pointer border-2 border-blue-500"
+                  }
+                >
+                  <img
+                    src={image}
+                    alt={`Product ${index + 1}`}
+                    className="w-full h-auto"
+                    onClick={handleMainImageClick}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+      </div>
+    </>
+    
   );
 };
 
