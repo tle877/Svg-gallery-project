@@ -24,7 +24,7 @@ function HomePage() {
   }, [activeFilter]);
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 ">
       <Carousel />
       <SearchField toggleDrawer={toggleDrawer} />
       <div className="container">
@@ -39,8 +39,8 @@ function HomePage() {
             </div>
           )}
         </div>
-        <div className=" md:grid md:grid-cols-6">
-          <div className=" hidden md:grid col-span-2 ">
+        <div className=" md:grid md:grid-cols-4 gap-6 ">
+          <div className=" hidden md:grid col-span-1 ">
             {activeFilter && (
               <Filter
                 open={openDrawer}
@@ -50,8 +50,8 @@ function HomePage() {
             )}
           </div>
           {/* grid grid-cols-2 sm:w-3/4 sm:flex sm:flex-wrap sm:gap-6 sm:justify-center */}
-          <div className="md:grid md:col-span-4 " >
-            <div className="gallery-container ">
+          <div className={`md:grid ${activeFilter ? 'md:col-span-3': 'md:col-span-4'}`} >
+            <div className={`gallery-container ${activeFilter ? 'md:grid md:grid-cols-3':"md:grid md:grid-cols-4 gap-8"} `}>
             <ProductCard
               imageShow={ProductImage}
               showUploadButtons
