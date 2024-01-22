@@ -7,7 +7,7 @@ const Rating = () => {
     <div className="relative w-[355px] h-[129px] mt-5">
       <div className="w-[355px] h-[129px]">
         <div className="absolute w-[355px] h-[21px] top-0 left-0">
-          <div className="inline-flex items-start gap-[10px] relative">
+          <div className="inline-flex items-start gap-[2px] relative">
             <StarIcon className={"activeStar"} />
             <StarIcon className={"activeStar"} />
             <StarIcon className={"activeStar"} />
@@ -25,7 +25,7 @@ const Rating = () => {
           </div>
         </div>
         <div className="absolute w-[355px] h-[21px] top-[27px] left-0">
-          <div className="inline-flex items-start gap-[10px] relative">
+          <div className="inline-flex items-start gap-[2px] relative">
             <StarIcon className={"activeStar"} />
             <StarIcon className={"activeStar"} />
             <StarIcon className={"activeStar"} />
@@ -43,7 +43,7 @@ const Rating = () => {
           </div>
         </div>
         <div className="absolute w-[355px] h-[21px] top-[54px] left-0">
-          <div className="inline-flex items-start gap-[10px] relative">
+          <div className="inline-flex items-start gap-[2px] relative">
             <StarIcon className={"activeStar"} />
             <StarIcon className={"activeStar"} />
             <StarIcon className={"inactiveStar"} />
@@ -61,7 +61,7 @@ const Rating = () => {
           </div>
         </div>
         <div className="absolute w-[355px] h-[21px] top-[81px] left-0">
-          <div className="inline-flex items-start gap-[10px] relative">
+          <div className="inline-flex items-start gap-[2px] relative">
             <StarIcon className={"activeStar"} />
             <StarIcon className={"inactiveStar"} />
             <StarIcon className={"inactiveStar"} />
@@ -77,7 +77,7 @@ const Rating = () => {
           </div>
         </div>
         <div className="absolute w-[355px] h-[21px] top-[108px] left-0">
-          <div className="inline-flex items-start gap-[10px] relative">
+          <div className="inline-flex items-start gap-[2px] relative">
             <StarIcon className={"inactiveStar"} />
             <StarIcon className={"inactiveStar"} />
             <StarIcon className={"inactiveStar"} />

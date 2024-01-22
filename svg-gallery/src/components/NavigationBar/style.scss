@@ -1,56 +1,85 @@
 @import "../../mixin.scss";
 
 .navigationContainer {
-  width: 40%;
+  // width: 40%;
   display: grid;
   align-items: center;
+
   @include xs {
     width: 50%;
   }
+  @include sm {
+    width: 35%;
+  }
+  @include md {
+    width: 30%;
+  }
 }
+
+
 .desktopMenu {
   display: flex;
   justify-content: space-around;
+
   .menu-item {
     display: grid;
     align-items: center;
+    margin: 10px
   }
+
   .menu-btn {
     border-radius: 23px;
     background: #158cc5;
+    color: #ffffff;
+    cursor: pointer;
   }
+
   .menu-text {
     color: #221c1c;
     font-family: Metropolis;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 120% */
+    line-height: 24px;
+    /* 120% */
     text-transform: uppercase;
     align-items: center;
     display: grid;
   }
+
   .avatarContainer {
     width: 32px;
     height: 32px;
+
     img {
       border-radius: 50%;
     }
   }
+
   @include xs {
     display: none;
   }
 }
+
 .mobileMenu {
   display: none;
+
+  .menu-btn {
+    border-radius: 23px;
+    background: #158cc5;
+    color: #ffffff;
+    cursor: pointer;
+  }
   @include xs {
     display: flex;
     justify-content: space-around;
     width: 100%;
+
     .menu-item {
       display: grid;
       align-items: center;
     }
+
     .menu-btn {
       border-radius: 23px;
       background: #158cc5;
@@ -58,9 +87,92 @@
       height: 25px;
       font-size: 11px;
     }
+
     .avatarContainer {
       width: 32px;
       height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include sm {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include md {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include lg {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
       img {
         border-radius: 50%;
       }
@@ -70,6 +182,7 @@
 
 .mobileDropdownMenu {
   display: none;
+
   @include xs {
     z-index: 3;
     width: 100%;
@@ -79,14 +192,85 @@
     left: 0%;
     background: #fff;
     box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
     ul {
       li {
-        color:#221c1c;
+        color: #221c1c;
         font-family: Metropolis;
         font-size: 20px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 35px; /* 120% */
+        font-weight: bold;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include sm {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include md {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include lg {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 35px;
+        /* 120% */
         text-transform: uppercase;
       }
     }
@@ -97,7 +281,7 @@
   display: none;
   position: absolute;
   z-index: 3;
-  top: 11%;
+  top: 4.5%;
   right: 15%;
   width: 466px;
   min-height: 100px;
@@ -105,25 +289,74 @@
   border: 0.5px solid rgba(17, 41, 54, 0.04);
   background: #fff;
   box-shadow: 7px 8px 11px rgba(17, 41, 54, 0.04);
+
   @include xs {
-    width: 90%;
+    width: 70%;
+    right: 12.5%;
+    top: 3.7%;
+  }
+  @include sm{
+    top: 3.7%;
+    width: 70%;
     right: 5%;
+  }
+  @include md{
+    width: 50%;
+    right: 5%;
+  }
+  @include lg{
+    top: 8.5%;
+    right: 3%;
+  }
+  @include xl{
+    top: 10%;
+    right: 5%;
+  }
+}
+.notificationOverlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.60);
+  top: 4.5%;
+  bottom: 0px;
+  display: none;
+  @include xs{
+    top: 3.7%;
+  }
+  @include sm{
+    top: 3.7%;
+  }
+  @include md{
+    display: none !important;
+  }
+  @include lg{
+    display: none !important;
+  }
+  @include xl{
+    display: none !important;
   }
 }
 
 .notificationItemWrapper {
   padding: 1.5rem;
+
   .notificationItemHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .userAvatar {
       width: 32px;
       height: 32px;
+
       img {
         border-radius: 50%;
       }
     }
+
     .notificationItemName {
       width: 65%;
       color: #2f2725;
@@ -133,17 +366,27 @@
       font-weight: 800;
       line-height: 22px;
       text-transform: capitalize;
+      @include xs{
+        width: 60%;
+        font-size: 16px;
+      }
     }
+
     .notificationItemDate {
       color: #c7cdd0;
       font-family: Avenir;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
-      line-height: 18px; /* 128.571% */
+      line-height: 18px;
+      /* 128.571% */
       text-transform: capitalize;
+      @include xs{
+        font-size: 11px;
+      }
     }
   }
+
   .notificationItemBody {
     padding: 1rem;
     color: #2f2725;
@@ -151,7 +394,8 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 171.429% */
+    line-height: 24px;
+    /* 171.429% */
     text-transform: capitalize;
   }
 }
@@ -169,11 +413,13 @@
   top: 11%;
   right: 7%;
   position: absolute;
+
   .logoutBtn {
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
     span {
       margin-left: 10px;
       color: #2f2725;
@@ -182,8 +428,58 @@
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
-      line-height: 24px; /* 120% */
+      line-height: 24px;
+      /* 120% */
       text-transform: capitalize;
+      &:hover{
+        color: theme("colors.custom-blue")
+      }
     }
+  }
+}
+
+.uploadDropdown {
+  display: none;
+  z-index: 3;
+  width: auto;
+  min-height: 56px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 0.5px solid rgba(17, 41, 54, 0.04);
+  background: #fff;
+  box-shadow: 7px 8px 11px rgba(17, 41, 54, 0.04);
+  top: 10%;
+  right: 12%;
+  position: absolute;
+  padding: 15px;
+  cursor: pointer;
+
+  span {
+    margin-left: 10px;
+    color: #2f2725;
+    text-align: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 120% */
+    text-transform: capitalize;
+  }
+  @include xs{
+    top: 3.5%
+  }
+  @include sm{
+    top: 3%
+  }
+  @include md{
+    top: 4%
+  }
+  @include lg{
+    top: 12%;
+    right: 5%;
+  }
+  @include xl{
+    top: 10%;
+    right: 13%;
   }
 }

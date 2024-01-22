@@ -13,10 +13,10 @@ import {Autoplay, FreeMode, Pagination } from 'swiper/modules';
 
 const RecommendedModel = () => {
     return (
-        <div className="recommendedModel container mx-auto my-10">
+        <div className="recommendedModel mx-auto sm:my-10 my-5 ">
             <div >
                 <div className="flex justify-between items-center mb-5"> 
-                    <h2 className=" leading-10 ml-5 sm:ml-0 sm:mb-5">Recommended Models</h2>
+                    <h2 className=" leading-10 sm:ml-0 sm:mb-5">Recommended Models</h2>
                 </div>
                 
                 <div className=" hidden sm:grid sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-4 lg:gap-6 hidden" >

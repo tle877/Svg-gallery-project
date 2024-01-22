@@ -2,9 +2,9 @@ import "./Description.scss";
 
 const Description = () => {
   return (
-    <div className="desc container mx-auto mb-5">
-      <h2 className="mb-10">Description</h2>
-      <p className="mb-20 sm:mb-14">
+    <div className="desc mx-auto  flex flex-col sm:gap-10 gap-2 sm:mb-10 mb-5 ">
+      <h2>Description</h2>
+      <p>
         Did you know that whales use echolocation to help navigate the oceans?
         Whales are one of the most majestic creatures! This DIY laser engraving
         project captures that essence. You can create and enjoy whales at your

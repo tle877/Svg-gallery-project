@@ -30,15 +30,61 @@ export const CATEGORIES = [
   },
   {
     title: "Materials",
-    items: [],
+    items: [
+      {
+        title: "Wood",
+        url: "",
+      },
+      {
+        title: "Nylon",
+        url: "",
+      }
+    ],
   },
   {
     title: "Style",
-    items: [],
+    items: [
+      {
+        title: "Classic",
+        url: "",
+      },
+    ],
   },
   {
     title: "Shape",
-    items: [],
+    items: [
+      {
+        title: "Square",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "Font",
+    items: [
+      {
+        title: "Font1",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "HomeDecor",
+    items: [
+      {
+        title: "Home",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "Diy",
+    items: [
+      {
+        title: "Square",
+        url: "",
+      },
+    ],
   },
 ];
 

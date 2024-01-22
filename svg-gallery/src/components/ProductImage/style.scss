@@ -1,8 +1,12 @@
+@import "../../mixin.scss";
 .mainImage{
   border-radius: 12px;
 }
 .thumbnailSlider {
   height: 150px !important;
+  @include xs{
+    height: 50px !important;
+  }
 }
 .swiper-button-prev {
   background-image: url("../../assets/left-arrow.svg");
@@ -13,6 +17,9 @@
   top: 45%;
   left: 1%;
   z-index: 6;
+  @include xs{
+    top: 20%
+  }
 }
 .swiper-button-next {
   background-image: url("../../assets/right-arrow.svg");
@@ -23,6 +30,9 @@
   top: 45%;
   right: 1%;
   z-index: 6;
+  @include xs{
+    top: 20%;
+  }
 }
 
 .modalContainer {
@@ -73,3 +83,22 @@
   position: absolute;
   right: 5%;
 }
+.swiper-wrapper{
+  // @include xs{
+  //   height: auto !important;
+  // }
+}
+.productImageSwiper{
+  .swiper-pagination{
+    position: static;
+  }
+  .swiper-pagination-bullet{
+    background: #6f6f6f !important;
+    width: 30px !important;
+  }
+  .swiper-pagination-bullet-active{
+    background: #2F2725 !important;
+    width: 30px !important;
+  }
+}
+

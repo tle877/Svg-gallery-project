@@ -1,7 +1,9 @@
+@import "../../mixin.scss";
+
 .heading {
   color: #2f2725;
   font-family: Metropolis;
-  font-size: 38px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 700;
   line-height: 46px; /* 121.053% */
@@ -25,4 +27,10 @@
   border-radius: 2px;
   border: 1px solid rgba(36, 43, 46, 0.1);
   background: #fff;
+}
+
+@media screen and (max-width:640px) {
+  .heading{
+    font-size:20px;
+  }
 }

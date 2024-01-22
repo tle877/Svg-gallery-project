@@ -8,24 +8,11 @@ const AuthorInfo = () => {
         <div className="relative authorName">
           William
         </div>
-        <div className="relative w-[320px] h-[18px] mr-[-10.00px]">
-          <div className="absolute top-0 left-0 opacity-40 [font-family:'Metropolis-Regular',Helvetica] font-normal text-e-c-abf-e text-[14px] tracking-[0] leading-[18px] whitespace-nowrap">
-            New York /
+        <div className="flex ">
+          <div className="authorDescription text-gray-400 md:text-black">
+            New York / Crafts / 2023-11-13 / Views：2341
           </div>
-          <div className="absolute top-0 left-[79px] opacity-40 [font-family:'Metropolis-Regular',Helvetica] font-normal text-e-c-abf-e text-[14px] tracking-[0] leading-[18px] whitespace-nowrap">
-            Crafts /
-          </div>
-          <div className="absolute top-0 left-[136px] opacity-40 [font-family:'Metropolis-Regular',Helvetica] font-normal text-e-c-abf-e text-[14px] tracking-[0] leading-[18px] whitespace-nowrap">
-            2023-11-13 /
-          </div>
-          <div className="absolute w-[83px] h-[18px] top-0 left-[227px]">
-            <div className="absolute top-0 left-0 opacity-40 [font-family:'Metropolis-Regular',Helvetica] font-normal text-e-c-abf-e text-[14px] tracking-[0] leading-[18px] whitespace-nowrap">
-              Views：
-            </div>
-            <div className="absolute top-0 left-[52px] opacity-40 [font-family:'Metropolis-Regular',Helvetica] font-normal text-e-c-abf-e text-[14px] tracking-[0] leading-[18px] whitespace-nowrap">
-              2341
-            </div>
-          </div>
+
         </div>
       </div>
     </div>

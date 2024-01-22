@@ -86,20 +86,20 @@ const FileDetails = () => {
   }
 
   return (
-    <div className="flex items-start gap-[40px] relative mt-5">
-      <div className="relative w-[127px] h-[22px]">
-        <div className="inline-flex items-start gap-[4px] relative">
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] font-normal text-mj-w71a text-[18px] tracking-[0] leading-[22px] whitespace-nowrap">
+    <div className="flex justify-between sm:justify-normal sm:gap-[25px] lg:gap-[40px]  mt-5 w-full">
+      <div className=" ">
+        <div className="flex items-start gap-1 ">
+          <div className=" w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] md:text-[15px] lg:text-[18px] whitespace-nowrap">
             File Type:
           </div>
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] font-normal text-mj-w71a text-[18px] tracking-[0] leading-[22px] whitespace-nowrap">
+          <div className=" w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] md:text-[15px] lg:text-[18px] whitespace-nowrap">
             Svg
           </div>
         </div>
       </div>
-      <div className="relative w-[173px] h-[22px]">
-        <div className="inline-flex items-start gap-[4px] relative">
-          <div className="relative w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] font-normal text-mj-w71a text-[18px] tracking-[0] leading-[22px] whitespace-nowrap">
+      <div className="">
+        <div className="inline-flex items-start gap-1 ">
+          <div className=" w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] font-normal md:text-[15px] lg:text-[18px] whitespace-nowrap">
             Premium License
           </div>
           <svg
@@ -126,10 +126,10 @@ const FileDetails = () => {
         </div>
       </div>
       <div
-        className="inline-flex items-start gap-[4px] relative flex-[0_0_auto]"
+        className="inline-flex items-start gap-[4px]  flex-[0_0_auto]"
         onClick={handleClickOpen}
       >
-        <div className="relative w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] font-normal text-[#158cc5] text-[18px] tracking-[0] leading-[22px] whitespace-nowrap">
+        <div className=" w-fit mt-[-1.00px] [font-family:'Metropolis-Regular',Helvetica] text-[#158cc5] md:text-[15px] lg:text-[18px] whitespace-nowrap">
           Report
         </div>
         <svg

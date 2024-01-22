@@ -51,7 +51,7 @@ export default function ResetPassword() {
                         name="password"
                         type="password"
                         required
-                        className="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="input-container placeholder:text-gray-400 focus:outline-custom-blue sm:text-sm sm:leading-6"
                     />
                     </div>
                 </div>
@@ -68,7 +68,7 @@ export default function ResetPassword() {
                         name="confirmPassword"
                         type="password"
                         required
-                        className="block pl-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="input-container placeholder:text-gray-400 focus:outline-custom-blue sm:text-sm sm:leading-6"
                     />
                     </div>
                 </div>
@@ -76,7 +76,7 @@ export default function ResetPassword() {
                 <div className="flex justify-center">
                     <button
                     type="submit"
-                    className=" sm:w-2/3 w-full rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className=" sm:w-2/3 w-full rounded-full bg-custom-blue px-3 py-1.5 text-sm leading-6 text-white"
                     >
                     Reset Password
                     </button>

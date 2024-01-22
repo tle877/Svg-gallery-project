@@ -1,3 +1,28 @@
+@import "../../mixin.scss";
+
+
+.title-container::placeholder{
+  
+    color: #C7CDD0;
+    font-family: Metropolis;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    text-transform: capitalize;
+  
+}
+
+.title-container{
+  border-bottom: 1px solid rgba(17, 41, 54, 0.10);
+  font-family: Metropolis;
+    font-size: 30px;
+    font-style: normal;
+
+    line-height: 46px;
+    text-transform: capitalize;
+  outline:none;
+}
 .custom-file-upload {
   display: inline-block;
   cursor: pointer;
@@ -98,6 +123,12 @@
   justify-content: center;
 }
 
+.description-container{
+  border-radius: 2px;
+  border: 1px solid rgba(17, 41, 54, 0.10);
+  width:100%;
+  height: 146px;
+}
 .MuiDialog-paper {
   max-width: 100% !important;
   height: 600px;
@@ -111,6 +142,7 @@
   border: 1px dashed #C7CDD0;
   background: rgba(36, 43, 46, 0.04);
   padding: 50px;
+
   .uploadIcon {
     background: transparent;
     display: flex;
@@ -121,5 +153,81 @@
     align-items: center;
     gap: 9.73px;
     margin: auto;
+  }
+  .hiddenUploadIcon{
+    display: none !important;
+  }
+
+  @include xs {
+    width: 100%;
+    padding: 0;
+
+    .uploadIcon {
+      height: 100px;
+    }
+  }
+}
+
+.upload-sub-text{
+  color:  #C7CDD0;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  text-transform: capitalize;
+}
+.ImageUploadDropZoneError {
+  border: 1px dashed #F56C6C;
+  background: #FDE2E2;
+}
+.select-cover-title{
+  color: #2f2725;
+    font-family: Metropolis;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    text-transform: capitalize;
+}
+
+.absolute.bottom-3{
+  color: #C7CDD0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+  text-transform: lowercase;
+}
+.fileRestriction-upload-file{
+span {
+    color: #C7CDD0;
+    font-family: Metropolis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+  }
+}
+.fileRestriction-mobile{
+  span {
+    color: #3f535e;
+    font-family: Metropolis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+  }
+}
+@media screen and (max-width: 640px) {
+  .fileRestriction{
+    display:none
+  }
+  .productionFile{
+    display:none
   }
 }

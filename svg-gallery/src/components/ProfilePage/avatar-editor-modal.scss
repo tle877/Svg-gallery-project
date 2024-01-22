@@ -1,0 +1,56 @@
+@import "../../mixin.scss";
+
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10; /* Set z-index to 10 */
+    span{
+      color: #000;
+      /* 模块标题 */
+      font-family: Metropolis;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 46px; /* 121.053% */
+      text-transform: capitalize;
+  }
+  }
+  
+  .modal-content {
+    border-radius: 12px;
+    min-width: 330px;
+    width: 22%; /* Set modal width to 50% of the screen */
+    background-color: white;
+    padding: 16px;
+    position: relative;
+    @include xs{
+        width: 70%;
+    }
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .zoom-btn{
+    width:6%;
+    @include xs{
+      width: 10%;
+    }
+  }
+  .controls-container img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed the button's width */
+  }
+  

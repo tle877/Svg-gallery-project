@@ -28,7 +28,7 @@ export const theme = {
       "custom-blue": "#158CC5",
     },
     fontFamily: {
-      Poppins: ["Poppins, sans-serif"],
+      Poppins: ["Metropolis, sans-serif"],
     },
     container: {
       center: true,

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Avenir:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 @import '@fontsource/metropolis';
+@import './mixin.scss';
 
 @font-face {
   font-family: "Metropolis-Bold";
@@ -34,10 +35,20 @@
 @tailwind utilities;
 
 html{
-    font-family: 'Avenir';
+    font-family: 'Metropolis';
 }
 
 body {
   background-color: #ffffff;
+  height: 100%;
+  @include xs{
+    position: relative;
+  }
+  @include sm{
+    position: relative;
+  }
+  @include md{
+    position: relative;
+  }
 }
 

@@ -48,18 +48,27 @@ const ImageUploadPage = () => {
     return (
       <>
         <h3 className={"heading"}>Upload Image Group</h3>
-        <ProductTionFileDropZone/>
+        <ProductTionFileDropZone />
       </>
     )
   }
 
   return (
     <div className={"container mx-auto mt-5"}>
-      <div className="flex flex-row gap-6">
+      <div className="flex-row gap-6 hidden xl:flex">
         <div className="basis-2/3">
           <UploadImageGroup />
         </div>
         <div className="basis-1/3">
+          <CoverImageUploader />
+          <CategoryDropdown />
+          <MachineDropdown />
+          <TagsDropdown />
+        </div>
+      </div>
+      <div className="flex xl:hidden">
+        <div className="w-full">
+          <UploadImageGroup />
           <CoverImageUploader />
           <CategoryDropdown />
           <MachineDropdown />

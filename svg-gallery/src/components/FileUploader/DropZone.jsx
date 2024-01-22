@@ -48,7 +48,7 @@ const DropZone = (props) => {
           }),
         ),
       );
-    },
+    }
   });
 
   const thumbs = files.map((file) => (

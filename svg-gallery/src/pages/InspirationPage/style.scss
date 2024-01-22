@@ -1,0 +1,17 @@
+@import '../../mixin.scss';
+
+.stickyBtnContainer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    background: #ffffff;
+    padding: 25px;
+    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.04);
+    z-index: 10;
+    .downloadBtn{
+        margin-right: 0 !important;
+    }
+}
