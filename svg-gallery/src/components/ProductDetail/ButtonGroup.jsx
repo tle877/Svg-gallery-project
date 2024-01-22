@@ -11,12 +11,11 @@ const ButtonGroup = () => {
   return (
     <>
       <div className="flex mt-5">
-        <Button
-          className={"menu-btn w-1/4 downloadBtn mr-5"}
-          variant="contained"
+        <button       
+        className="downloadBtn px-7 py-1.5 text-sm leading-6 text-white"
         >
-          Download
-        </Button>
+        Download
+        </button>
 
         {/* love button */}
         <div className="mr-2" onMouseOver={()=>setLoveHover(true)} onMouseLeave = {()=>setLoveHover(false)}>

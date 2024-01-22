@@ -12,6 +12,7 @@ import PowerInspirationUpload from "../../components/PowerInspirationUpload";
 import MaterialInspirationUpload from "../../components/MaterialInspirationUpload";
 import ProductInspirationUpload from "../../components/ProductInspirationUpload";
 import TimeInspirationUpload from "../../components/TimeInspirationUpload";
+import TitleInspirationUpload from "../../components/TitleInspirationUpload";
 
 const InspirationUploadPage = () => {
   const UploadImageGroup = () => {
@@ -26,22 +27,17 @@ const InspirationUploadPage = () => {
   const Description = () => {
     return (
       <>
-        <h3 className={"heading"}>Description</h3>
-        <BaseTextareaAutosize
-          className={'descriptionTextArea mt-5'}
-          maxRows={4}
-          aria-label="maximum height"
-          placeholder="Please describe your work in one paragraph"
-        />
+        <h3 className="heading mb-8">Description</h3>
+        <textarea className="description-container py-3 px-2 mb-4" placeholder="Please describe your work in one paragraph"></textarea>
       </>
     );
   };
 
   const ProductionSteps = () => {
     return (
-      <div className="mt-5 mb-5">
-        <h3 className={"heading mb-5"}>Production Steps</h3>
-        <CkEditor className="mt-5" />
+      <div className="my-4 ">
+        <h3 className={"heading sm:mb-8"}>Production Steps</h3>
+        <CkEditor className="mt-4" />
       </div>
 
     )
@@ -49,47 +45,55 @@ const InspirationUploadPage = () => {
 
   const UploadProductionFile = () => {
     return (
-      <>
-        <h3 className={"heading"}>Upload Image Group</h3>
+      <div >
+        <div className="flex flex-col sm:flex-row sm:items-end sm:gap-2">
+          <h3 className={"heading mt-4  "}>Upload Your Files </h3>
+          <span className="upload-sub-text"> Upload your production files for more people to learn from!</span>
+        </div>
+        
         <ProductTionFileDropZone />
-      </>
+      </div>
     )
   }
 
 
   return (
-    <div className={"container mx-auto mt-5"}>
-      <div className="flex-row gap-6 hidden xl:flex">
+    <div className={"container mx-auto mt-4"}>
+      <div className="flex-row gap-6 hidden sm:flex">
         <div className="w-2/3">
+          <h1 className="heading">Upload Image Group</h1>
           <UploadImageGroup />
-          <div className={'w-full mt-5 mb-5'}>
-            <TextField className={'w-full mt-5 mb-5'} id="standard-basic" label="Please Enter a title for your work" variant="standard" />
-          </div>
-
+          <input 
+            className=" title-container w-full p-2 h-10 my-8" 
+            placeholder="please Enter a title for your work"
+          />
+          
           <Description />
           <ProductionSteps />
           <UploadProductionFile />
         </div>
+
         <div className="w-1/3">
+        <h3 className={"select-cover-title mb-2 mt-0"}>Select a cover </h3>
           <CoverImageUploader />
           <CategoryDropdown />
-          <MachineDropdown />
           <TagsDropdown />
-          <PowerInspirationUpload />
           <MaterialInspirationUpload />
           <TimeInspirationUpload />
           <ProductInspirationUpload />
 
+
+
         </div>
       </div>
-      <div className="flex xl:hidden">
+      <div className="flex sm:hidden">
         <div className="w-full">
           <UploadImageGroup />
           <CoverImageUploader />
+
+          <TitleInspirationUpload />
           <CategoryDropdown />
-          <MachineDropdown />
           <TagsDropdown />
-          <PowerInspirationUpload />
           <MaterialInspirationUpload />
           <TimeInspirationUpload />
           <ProductInspirationUpload />

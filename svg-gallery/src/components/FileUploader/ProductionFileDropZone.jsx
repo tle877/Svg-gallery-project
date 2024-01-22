@@ -79,8 +79,9 @@ const ProductTionFileDropZone = (props) => {
           </svg>
         </div>
         <Button className={'selectFileBtn'} variant="outlined">Select File</Button>
-        <div className={'fileRestriction p-5'}>
-          <span>Supported File formats: xcs,dxf,,bmp,zip.Maximum File Size: 50M</span>
+
+        <div className={'fileRestriction-upload-file p-5 text-center '}>
+          <span >Supported File formats: xcs,dxf,,bmp,zip.Maximum File Size: 50M</span>
         </div>
       </div>
     </section>

@@ -1,4 +1,12 @@
 @import "../../mixin.scss";
+.replyAvatar{
+  img{
+    width: 110px;
+    height: 53px;
+    border-radius: 50%;
+  }
+
+}
 .commentSectionContainer {
   background: #f7f7f6;
 }
@@ -55,8 +63,8 @@
 }
 
 .commentCardContainer {
-  display: flex;
-  width: 100%;
+ 
+
   .authorName {
     color: #2f2725;
     font-family: Metropolis;
@@ -84,18 +92,7 @@
     line-height: 30px;
     text-transform: capitalize;
   }
-  .commentMedia {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .mediaItem {
-      width: 33%;
-      img {
-        width: 100%;
-      }
-    }
-  }
+
   .actionBtns {
     display: flex;
     justify-content: space-between;
