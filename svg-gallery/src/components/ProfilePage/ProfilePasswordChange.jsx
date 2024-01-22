@@ -37,7 +37,7 @@ const ProfilePasswordChange = () =>{
                             type="submit"
                             className=" rounded-full bg-custom-blue px-7 sm:px-9 py-1.5 text-sm leading-6 text-white"
                         >
-                        Sure
+                        Cancel
                         </button>
                     </div> 
                 </div>
