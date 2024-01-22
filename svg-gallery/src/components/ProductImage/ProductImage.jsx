@@ -130,7 +130,7 @@ const ProductImage = ({ images }) => {
           ))}
         </Swiper>
       </div>
-      <div className="block md:hidden mb-5">
+      <div className="productImageSwiper block md:hidden mb-5">
           <Swiper 
             slidesPerView = {1}
             pagination={{
