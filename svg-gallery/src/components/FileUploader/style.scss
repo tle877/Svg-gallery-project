@@ -105,20 +105,6 @@
     text-transform: capitalize;
   }
 }
-.fileRestriction-mobile{
-  span {
-    color: #3f535e;
-    font-family: Metropolis;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    /* 150% */
-    text-transform: capitalize;
-  }
-}
-
-
 
 .CoverImageUploaderContainer {
   height: 268px;
@@ -213,7 +199,30 @@
   line-height: 22px; /* 122.222% */
   text-transform: lowercase;
 }
-
+.fileRestriction-upload-file{
+span {
+    color: #C7CDD0;
+    font-family: Metropolis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+  }
+}
+.fileRestriction-mobile{
+  span {
+    color: #3f535e;
+    font-family: Metropolis;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+  }
+}
 @media screen and (max-width: 640px) {
   .fileRestriction{
     display:none

@@ -170,7 +170,7 @@ const CoverImageUploader = () => {
 
                     </div>
                 
-                    <div className={'fileRestriction-mobile mt-4'}>
+                    <div className={'fileRestriction-mobile mt-4 px-2 text-center'}>
 
                         <span >supported file formats ：jpg</span>
                     </div>
