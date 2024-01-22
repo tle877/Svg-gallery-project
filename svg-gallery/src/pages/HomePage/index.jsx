@@ -33,7 +33,7 @@ function HomePage() {
         <SearchField toggleDrawer={toggleDrawer} />
         <Carousel />
       </div>
-      <div className="flex flex-col gap-12 ">
+      <div className="flex flex-col gap-12 mt-5">
         <div className="container">
           <div>
             {!activeFilter && (

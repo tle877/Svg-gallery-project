@@ -34,7 +34,6 @@ const NavigationBar = () => {
       <div className={"desktopMenu hidden lg:flex"}>
         <a href="/" className={"menu-item menu-text"}> Home</a>
         <a href="https://omtechlaser.com/" className={"menu-item menu-text"}>OMTech Laser</a>
-        <a href="/profile" className={"menu-item menu-text"}>Profile</a>
         <div className="menu-btn flex my-3 px-5 gap-2 items-center" onClick={uploadClicked} >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path d="M1.5 10.5V15C1.5 15.8284 2.17157 16.5 3 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V10.5" stroke="white" strokeWidth="1.5" />
