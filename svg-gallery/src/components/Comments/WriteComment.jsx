@@ -8,9 +8,11 @@ const WriteComment = () => {
   return (
     <>
       <div className={"writeCommentBox mt-5"}>
+        
         <div className={"commentAvatar"}>
           <img src={AvatarImage} alt="" />
         </div>
+
         <div className={"commentBox"}>
           <TextField
             fullWidth

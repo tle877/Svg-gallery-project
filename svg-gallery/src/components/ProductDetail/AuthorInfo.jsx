@@ -9,7 +9,7 @@ const AuthorInfo = () => {
           William
         </div>
         <div className="flex ">
-          <div className="authorDescription">
+          <div className="authorDescription text-gray-400 md:text-black">
             New York / Crafts / 2023-11-13 / Views：2341
           </div>
 

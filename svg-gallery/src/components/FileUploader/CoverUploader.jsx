@@ -79,6 +79,7 @@ const CoverImageUploader = () => {
         const [slideValue, setSlideValue] = useState(10);
         return (
             <>
+            
                 <Dialog
                     onClose={handleClose}
                     aria-labelledby="customized-dialog-title"
@@ -146,7 +147,9 @@ const CoverImageUploader = () => {
         <div>
             <div className={'CoverImageUploaderContainer'}>
                 <div>
-                    <div className={"uploadBtn mx-auto grid"} onClick={handleClickOpen}>
+            
+                    <div className={"uploadBtn mx-auto relative"} onClick={handleClickOpen}>
+                        <div className='absolute top-50 left-50'>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="28"
@@ -161,9 +164,13 @@ const CoverImageUploader = () => {
                                 fill="#3F535E"
                             />
                         </svg>
+                        </div>
+                        <span className='absolute bottom-3 sm:hidden' >Upload cover</span>
+                       
 
                     </div>
-                    <div className={'fileRestriction mt-4'}>
+                
+                    <div className={'fileRestriction-mobile mt-4 px-2 text-center'}>
 
                         <span >supported file formats ：jpg</span>
                     </div>
