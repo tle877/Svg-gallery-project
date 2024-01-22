@@ -3,11 +3,45 @@ import Avatar from "../../assets/Image/potrait.png"
 import ItemImage from '../../assets/Image/item-image.jpg'
 import { useState } from 'react'
 import Pagination from '../../components/Pagination/Pagination'
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper.scss'; // Import the Swiper styles
 const NotificationPage = () => {
     const [activeMenu, setActiveMenu] = useState('like');
     const handleMenuClick = (menu) => {
         setActiveMenu(menu);
     }
+
+    const MenuMobile = () => {
+        return (
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={2.4}
+            className={'menuContainer mt-2'}
+          >
+            <SwiperSlide>
+              <div  className={activeMenu === 'like' ? 'menuItem activeMenu' : 'menuItem'} onClick={() => handleMenuClick('like')}>
+                Like Notification
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={activeMenu === 'favorite' ? 'menuItem activeMenu' : 'menuItem'}  onClick={() => handleMenuClick('favorite')}>
+                Favorite Notification
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={activeMenu === 'comment' ? 'menuItem activeMenu' : 'menuItem'} onClick={() => handleMenuClick('comment')}>
+                Comments Notification
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={activeMenu === 'system' ? 'menuItem activeMenu' : 'menuItem'} onClick={() => handleMenuClick('system')}>
+                System Notification
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        );
+      };
+      
     const Menu = () => {
         return (
             <>
@@ -142,8 +176,8 @@ const NotificationPage = () => {
                         <div className={'typeName'}>
                             <span>{activeMenu} Notification</span>
                         </div>
-                        <div className={'deleteNoti'}>
-                            <span>Delete All Notifications</span>
+                        <div className="deleteNoti sm:block hidden">
+                            <span >Delete All Notifications</span>
                         </div>
                     </div>
                     {
@@ -223,7 +257,7 @@ const NotificationPage = () => {
 
     return (
         <>
-            <div className={'notificationPage'}>
+            <div className={'notificationPage hidden sm:block'}>
                 <div className={"container mx-auto mt-5"}>
                     <div className="flex flex-row gap-6">
                         <div className="basis-1/4">
@@ -235,6 +269,19 @@ const NotificationPage = () => {
                     </div>
                 </div>
 
+            </div>
+            <div  className={'notificationPage sm:hidden'}>
+                <div className=' mx-auto'>
+                    <div className='flex flex-col gap-6'>
+                        <MenuMobile />
+                    </div>
+                    <div>
+                    <NotificationList />
+                    </div>
+                   
+                </div>
+                
+                
             </div>
         </>
     );

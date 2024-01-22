@@ -1,8 +1,8 @@
+@import "../../mixin.scss";
 .notificationPage {
     background: #F5F6F7;
 
     .menuContainer {
-        height: 500px;
         border-radius: 12px;
         background: #FFF;
         padding: 30px;
@@ -39,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             padding: 20px 0;
+            align-items: center;
 
             .typeName {
                 color: #2F2725;
@@ -48,6 +49,12 @@
                 font-weight: 700;
                 line-height: 46px;
                 text-transform: capitalize;
+                @include sm{
+                    font-size:28px
+                }
+                @include md{
+                    font-size:28px
+                }
             }
 
             .deleteNoti {
@@ -69,7 +76,7 @@
             padding: 20px 0;
 
             .userAvatar {
-                width: 5%;
+                width: 60px;
 
                 img {
                     border-radius: 50%;
@@ -107,21 +114,111 @@
                     }
                 }
                 .notiBody{
-                    height: 55px;
+                   
                     display: grid;
                     margin-top: 20px;
                 }
             }
 
             .projectImg {
-                width: 10%;
+                width: 80px;
 
                 img {
-                    width: 80px;
+                    width: 100%;
                     height: 60px;
                     border-radius: 1.987px;
                 }
             }
         }
+    }
+}
+
+
+// mobile view
+@media screen and (min-width:561px) and (max-width:640px) {
+    .notificationPage{
+        .menuContainer{
+            .menuItem{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and (min-width:503px) and (max-width:560px) {
+    .notificationPage{
+        .menuContainer{
+            .menuItem{
+                font-size: 19px;
+            }
+        }
+    }
+}
+@media screen and (min-width:450px) and (max-width:500px) {
+    .notificationPage{
+        .menuContainer{
+            .menuItem{
+                font-size: 17px;
+            }
+        }
+    }
+}
+@media screen and (min-width:400px) and (max-width:450px){
+    .notificationPage{
+        .menuContainer{
+            .menuItem{
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .notificationPage{
+        .menuContainer{
+            .menuItem{
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media screen and (max-width:639px) {
+    .notificationPage {
+        .menuContainer{
+            padding:2px;
+            .menuItem {
+            margin-top: 0px;
+            padding:0px;
+            height:40px;
+            padding:2px;   
+            }
+        }    
+        .notificationList {
+            padding:15px 15px;
+            .notificationCard{
+
+                .userAvatar{
+                    width: 18%;
+                }
+                .notificationContent{
+                    .cardHeader{
+                        justify-content: normal;
+                        .userName{
+                            font-size: 17px;
+                        }
+                    }
+                }
+                .projectImg{
+                    width:33%
+                }
+            }
+            .notificationHeader{
+                padding:0px;
+                .typeName{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .menuContainer{
+        border-radius: 0px;
     }
 }
