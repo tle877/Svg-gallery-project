@@ -26,7 +26,7 @@ const NavigationBar = () => {
   
   return (
     <div className={"navigationContainer"}>
-      <div className={"desktopMenu"}>
+      <div className={"desktopMenu hidden lg:flex"}>
         <a href="/" className={"menu-item menu-text"}> Home</a>
         <a href="https://omtechlaser.com/" className={"menu-item menu-text"}>OMTech Laser</a>
         <a href="/profile" className={"menu-item menu-text"}>Profile</a>
@@ -68,16 +68,16 @@ const NavigationBar = () => {
         </div>
       </div>
 
-      <div className={"mobileMenu"}>
-        <div className={"menu-item"}>
-          <Button
-            className={"menu-btn"}
-            variant="contained"
-            startIcon={<FileUploadOutlinedIcon />}
-          >
-            Upload
-          </Button>
+      <div className={"mobileMenu flex lg:hidden w-full"}>
+        <div className="menu-btn flex my-3 px-5 gap-2 items-center" onClick={uploadClicked} >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M1.5 10.5V15C1.5 15.8284 2.17157 16.5 3 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V10.5" stroke="white" strokeWidth="1.5" />
+            <path d="M14.356 6.8033L9.58306 2.03033C9.29017 1.73744 8.8153 1.73744 8.5224 2.03033L3.74943 6.8033" stroke="white" strokeWidth="1.5" />
+            <line x1="9" y1="2.25" x2="9" y2="12.75" stroke="white" strokeWidth="1.5" />
+          </svg>
+          Upload
         </div>
+        <UploadDropdown isOpen={openUploadDropdown} />
         <div className={"menu-item"} onClick={notificationClicked}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
