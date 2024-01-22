@@ -19,10 +19,64 @@
     padding: 5px;
     width: 70%;
   }
+  @include sm {
+    padding: 5px;
+    width: 70%;
+  }
+  @include md {
+    padding: 5px;
+    width: 70%;
+  }
+  @include lg {
+    padding: 5px;
+    width: 40%;
+  }
 }
 .mobileHeader {
   display: none;
   @include xs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+    .headerLeft {
+      width: 40%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  @include sm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+    .headerLeft {
+      width: 40%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+    .headerLeft {
+      width: 40%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  @include lg {
     display: flex;
     justify-content: space-between;
     align-items: center;

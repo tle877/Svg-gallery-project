@@ -39,7 +39,7 @@ const Header = () => {
   }
   return (
     <div className={"header"}>
-      <div className={"container mx-auto headerContainer items-center"}>
+      <div className={"container mx-auto headerContainer hidden lg:flex items-center"}>
         <LogoContainer />
         {
           showSearchBar ?
@@ -50,7 +50,7 @@ const Header = () => {
 
         <NavigationBar />
       </div>
-      <div className={"container mx-auto mobileHeader"}>
+      <div className={"container mx-auto mobileHeader flex lg:hidden"}>
         <div className={"headerLeft"}>
           {
             openMobileMene ?

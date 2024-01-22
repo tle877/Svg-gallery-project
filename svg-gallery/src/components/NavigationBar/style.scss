@@ -8,6 +8,12 @@
   @include xs {
     width: 50%;
   }
+  @include sm {
+    width: 35%;
+  }
+  @include md {
+    width: 30%;
+  }
 }
 
 .desktopMenu {
@@ -57,7 +63,94 @@
 .mobileMenu {
   display: none;
 
+  .menu-btn {
+    border-radius: 23px;
+    background: #158cc5;
+    color: #ffffff;
+    cursor: pointer;
+  }
   @include xs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include sm {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include md {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      display: grid;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 23px;
+      background: #158cc5;
+      max-width: 100px;
+      height: 25px;
+      font-size: 11px;
+    }
+
+    .avatarContainer {
+      width: 32px;
+      height: 32px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  @include lg {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -90,6 +183,75 @@
   display: none;
 
   @include xs {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include sm {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include md {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    padding: 1.5rem;
+    top: 100px;
+    left: 0%;
+    background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(34, 28, 28, 0.03);
+
+    ul {
+      li {
+        color: #221c1c;
+        font-family: Metropolis;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px;
+        /* 120% */
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include lg {
     z-index: 3;
     width: 100%;
     position: absolute;
