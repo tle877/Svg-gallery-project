@@ -31,16 +31,11 @@ const InspirationPage = () => {
   return (
     <>
       <div className="container mx-auto mt-5">
-        <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
-          <div className="sm:block md:hidden ">
-            <AuthorInfo/>
-            <ProductTitle />
+        <div className="hidden md:grid md:grid-cols-2 md:gap-4 xl:gap-10">
+          <div>
+            <ProductImageSlider images={productImages} />
           </div>
-          <ProductImageSlider images={productImages} />
-          <div className="sm:block md:hidden ">
-          {/* <FileDetails /> */}
-          </div>
-          <div className="mx-5  hidden md:hidden xl:block">
+          <div className="mx-3 hidden md:block">
             <AuthorInfo />
             <ProductTitle />
             <ProductID />
@@ -49,6 +44,26 @@ const InspirationPage = () => {
             <ButtonGroup />
           </div>
         </div>
+
+        {/* mobile view */}
+        <div className="md:hidden flex flex-col gap-1 mb-3">
+          <div className="grid grid-cols-6 gap-16 sm:gap-0">
+              <div className="col-span-2">
+              <AuthorInfo />
+              </div>
+              <div className="mt-[-55px] ml-5 sm:ml-[-15px] grid col-span-4">
+              <ProductID />
+              </div>
+          </div>
+          <ProductTitle />
+          <FileDetails />
+          <div>
+            <ProductImageSlider images={productImages} />
+          </div>
+        </div>
+        {/* end mobile view */}
+
+
         <Description />
         <ProductionStep />
         <YouMayAlsoLike />

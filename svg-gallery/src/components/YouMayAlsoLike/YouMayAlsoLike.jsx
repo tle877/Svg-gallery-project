@@ -14,7 +14,7 @@ import { Autoplay,FreeMode, Pagination } from 'swiper/modules';
 
 const YouMayAlsoLike = () => {
   return (
-    <div className="youMayAlsoLike mx-auto my-10">
+    <div className="youMayAlsoLike mx-auto sm:my-10 my-5">
         <div >
             <div className="flex justify-between items-center mb-5"> 
                 <h2 className=" leading-10 sm:ml-0 sm:mb-5">You May Also Like</h2>
