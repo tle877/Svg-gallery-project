@@ -73,7 +73,9 @@ const ImageUploadPage = () => {
       </div>
       <div className="flex flex-col xl:hidden">
         <div className="w-full">
+        <h1 className={"heading"}>Upload Image</h1>
           <UploadImageGroup />
+        <h1 className={"heading mb-1 mt-4"}>Add cover Image</h1>
           <CoverImageUploader />
           <TitleInspirationUpload />
           <CategoryDropdown />

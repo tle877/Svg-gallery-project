@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Tag } from "./Tag";
 import { Drawer } from "@mui/material";
 import TuneIcon from "../../../assets/TuneIcon.jsx"
+import { TuneIconActive } from "../../../assets/TuneIcon.jsx";
 
 export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
   const [currentCategory, setCurrentCategory] = useState(false);
@@ -18,7 +19,7 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
               className="w-full py-5 cursor-pointer"
               onClick={() => toggleDrawer()}
             >
-              <TuneIcon />
+              <TuneIconActive />
             </div>
             <div className="mb-16">
               <h4 className="font-bold mb-6 text-lg">Category</h4>

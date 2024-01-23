@@ -30,7 +30,14 @@ function HomePage() {
         <SearchField toggleDrawer={toggleDrawer} />
       </div>
       <div className="flex md:hidden flex-col gap-6 mt-5 mb-5 ">
+        <div className="flex items-center mx-5">
+        <TuneIcon
+          className="block cursor-pointer"
+          toggleDrawer={() => toggleDrawer()}
+        />
         <SearchField toggleDrawer={toggleDrawer} />
+        </div>
+        
         <Carousel />
       </div>
       <div className="flex flex-col gap-12 mt-5">

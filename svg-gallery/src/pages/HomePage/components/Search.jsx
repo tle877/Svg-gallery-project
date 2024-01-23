@@ -7,10 +7,6 @@ export const SearchField = ({ toggleDrawer }) => {
   return (
     <div className="container flex flex-col justify-center items-center gap-6">
       <div className="max-w-[1120px] w-full flex justify-center items-center gap-4">
-        <TuneIcon
-          className="block md:!hidden cursor-pointer"
-          onClick={() => toggleDrawer()}
-        />
         <div className="group h-[60px] flex grow items-center px-5 py-4 bg-blue-40 rounded-full border border-transparent [&:has(input:focus)]:border-blue [&:has(input:focus)]:border">
           <input
             type="text"

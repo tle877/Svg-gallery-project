@@ -97,14 +97,14 @@ const ImageUploadDropZone = (props) => {
           </svg>
 
         </div>
-        <div className={'fileRestriction-imageUpload mb-10' }>
+        <div className={'fileRestriction-imageUpload sm:mb-10 mb-5' }>
           <span className={(isError ? "hidden" : "block")}>
             <span className="hidden sm:block">Drag and drop your file here or  </span>click <span className="text-blue">Select image</span> to upload
           </span>
           <span className={(isError ? "block text-center" : "hidden")}>{errorMsg}</span>
         </div>
         <button className={'selectFileBtn px-3 py-1'} variant="outlined">Select Image</button>
-        <div className={'fileRestriction-imageUpload flex flex-col gap-2 mt-5 text-center'}>
+        <div className={'fileRestriction-imageUpload flex flex-col sm:gap-2 mt-5 text-center'}>
           <span>supported file formats ：jpg、jpeg、png、svg</span>
           <span>smallest size：2400*3500px</span>
           <span>maximum file size：10MB</span>
