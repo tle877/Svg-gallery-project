@@ -491,3 +491,21 @@
     right: 13%;
   }
 }
+
+.hasNotification{
+  position: relative;
+}
+.notiCount{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #EC0404;
+  color: #ffffff;
+  font-size: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+}

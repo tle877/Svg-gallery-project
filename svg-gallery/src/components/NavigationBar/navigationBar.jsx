@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.scss";
 // import Button from "@mui/material/Button";
 // import FileUploadOutlinedIcon from "@mui/icons-material/FileUploadOutlined";
@@ -12,6 +12,9 @@ const NavigationBar = () => {
   const [openAccountDropdown, setOpenAccountDropdown] = useState(false);
   const [openUploadDropdown, setOpenUploadDropdown] = useState(false);
   const [openAccountDropdownMobile, setOpenAccountDropdownMobile] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [hasNotification, setHasNotification] = useState(true);
+  const [isInspirationPage, setIsInspirationPage] = useState(false)
 
   const notificationClicked = () => {
     setOpenNotification(!openNotification);
@@ -28,11 +31,29 @@ const NavigationBar = () => {
     setOpenUploadDropdown(!openUploadDropdown);
   }
 
+  const checkURL = () => {
+    const currentURL = window.location.href;
+    const inspirationString = "/inspiration-page"
+    const containsString = currentURL.includes(inspirationString);
+    if (containsString) {
+      setIsInspirationPage(true)
+    }
+  }
+
+  useEffect(() => {
+    checkURL();
+  }, [])
   
   return (
     <div className={"navigationContainer"}>
       <div className={"desktopMenu hidden lg:flex"}>
-        <a href="/" className={"menu-item menu-text"}> Home</a>
+        {
+          isInspirationPage? 
+          <></>
+          :
+          <a href="/" className={"menu-item menu-text"}> Home</a>
+        }
+       
         <a href="https://omtechlaser.com/" className={"menu-item menu-text"}>OMTech Laser</a>
         <div className="menu-btn flex my-3 px-5 gap-2 items-center" onClick={uploadClicked} >
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -43,7 +64,7 @@ const NavigationBar = () => {
           <span className="minorText" >Upload</span>
         </div>
         <UploadDropdown isOpen={openUploadDropdown} />
-        <div className={"menu-item"} onClick={notificationClicked}>
+        <div className={"menu-item " + (hasNotification? "hasNotification" : "")} onClick={notificationClicked}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -64,6 +85,14 @@ const NavigationBar = () => {
               fill="#2F2725"
             />
           </svg>
+          {
+            hasNotification?
+            <div className="notiCount">
+              66
+            </div>
+            :
+            <></>
+          }
         </div>
         <div className={"menu-item hidden"} onClick={accountClicked}>
           <div className={"avatarContainer"}>

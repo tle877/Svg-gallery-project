@@ -1,12 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./style.scss";
-import { TextareaAutosize as BaseTextareaAutosize } from "@mui/base/TextareaAutosize";
 import DropZone from "../../components/FileUploader/DropZone";
 import CkEditor from "../../components/CKEditor/CKEditor";
 import { TagsDropdown } from "../../components/TagsDropdown/TagsDropdown";
 import MachineDropdown from "../../components/MachineDropdown/MachineDropdown";
 import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown";
 import CoverImageUploader from "../../components/FileUploader/CoverUploader";
-import TextField from '@mui/material/TextField';
 import ProductTionFileDropZone from "../../components/FileUploader/ProductionFileDropZone";
 import PowerInspirationUpload from "../../components/PowerInspirationUpload";
 import MaterialInspirationUpload from "../../components/MaterialInspirationUpload";

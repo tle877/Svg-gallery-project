@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -84,9 +85,9 @@ const ImageUploadDropZone = (props) => {
         <input {...getInputProps()} />
         <div className={"uploadIcon " + (isError ? "hiddenUploadIcon" : "")}>
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
-            <path d="M4.16797 29.1663V41.6663C4.16797 43.9674 6.03346 45.8329 8.33464 45.8329H41.668C43.9692 45.8329 45.8346 43.9674 45.8346 41.6663V29.1663" stroke="#3F535E" stroke-width="4.16667" />
-            <path d="M39.8779 18.8974L26.6196 5.63915C25.806 4.82556 24.4869 4.82556 23.6733 5.63916L10.4151 18.8974" stroke="#3F535E" stroke-width="4.16667" />
-            <line x1="25.0013" y1="6.24927" x2="25.0013" y2="35.4159" stroke="#3F535E" stroke-width="4.16667" />
+            <path d="M4.16797 29.1663V41.6663C4.16797 43.9674 6.03346 45.8329 8.33464 45.8329H41.668C43.9692 45.8329 45.8346 43.9674 45.8346 41.6663V29.1663" stroke="#3F535E" strokeWidth="4.16667" />
+            <path d="M39.8779 18.8974L26.6196 5.63915C25.806 4.82556 24.4869 4.82556 23.6733 5.63916L10.4151 18.8974" stroke="#3F535E" strokeWidth="4.16667" />
+            <line x1="25.0013" y1="6.24927" x2="25.0013" y2="35.4159" stroke="#3F535E" strokeWidth="4.16667" />
           </svg>
 
         </div>

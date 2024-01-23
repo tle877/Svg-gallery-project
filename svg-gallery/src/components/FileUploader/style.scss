@@ -253,3 +253,85 @@ span {
     display:none
   }
 }
+
+.modal-title{
+  color: #2F2725;
+  font-family: Metropolis !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  line-height: 20px !important; /* 120% */
+  text-transform: capitalize !important;
+}
+.CoverModal{
+  .modal-footer{
+    justify-content: space-between !important;
+  }
+  .ImageUploadDropZone{
+    padding: 60px;
+  }
+  .zoom-out{
+    margin-right: 10px;
+    cursor: pointer;
+    svg{
+      width: 36px;
+    }
+  }
+  .zoom-out:hover{
+    svg{
+      stroke: #158CC5;
+      fill: #158CC5;
+      path{
+        stroke: #158CC5;
+        fill: #158CC5;
+      }
+    }
+  }
+  .zoom-in{
+    cursor: pointer;
+    svg{
+      width: 36px;
+    }
+  }
+  .zoom-in:hover{
+    svg{
+      stroke: #158CC5;
+      fill: #158CC5;
+      path{
+        stroke: #158CC5;
+        fill: #158CC5;
+      }
+    }
+  }
+  .modalContent{
+    padding: 0;
+  }
+}
+.editedImage{
+  position: relative;
+  img{
+    border-radius: 12px;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .replaceCoverBtn{
+    border-radius: 55px;
+    border: 2px solid #C7CDD0;
+    background: #FFF;
+    z-index: 10;
+    opacity: 1;
+    padding: 5px;
+    border: none;
+  }
+}

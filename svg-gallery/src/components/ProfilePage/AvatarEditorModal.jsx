@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import AvatarEditor from 'react-avatar-editor';
 import './avatar-editor-modal.scss'; 
 import MinusIcon from "../../assets/minus-circle.svg"
 import PlusIcon from "../../assets/plus-circle.svg"
 
+// eslint-disable-next-line react/prop-types
 const AvatarEditorModal = ({ onClose, onSave }) => {
   const [image, setImage] = useState(null);
   const [scale, setScale] = useState(1);
@@ -43,8 +44,8 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
         <div className='flex justify-between '>
           <input type="file" onChange={handleImageChange} />
           <svg onClick={onClose} xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 20 20" fill="none">
-            <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>}
         {image && (
@@ -52,8 +53,8 @@ const AvatarEditorModal = ({ onClose, onSave }) => {
             <div className='flex justify-between items-center'>
               <span>Upload Avatar</span>
               <svg onClick={onClose} xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 20 20" fill="none">
-                <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 2.5L2.5 17.5" stroke="#C7CDD0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2.5 2.5L17.5 17.5" stroke="#C7CDD0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
 

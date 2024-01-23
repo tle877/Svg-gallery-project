@@ -41,7 +41,7 @@ const InspirationPage = () => {
             <div className="mr-2" onMouseOver={()=>setLoveHover(true)} onMouseLeave = {()=>setLoveHover(false)}>
               {loveHover ?  
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                  <g clip-path="url(#clip0_1122_17482)">
+                  <g clipPath="url(#clip0_1122_17482)">
                     <circle 
                       cx="18" 
                       cy="18" 
@@ -98,7 +98,7 @@ const InspirationPage = () => {
             <div className="mr-2" onMouseEnter ={()=> setLikeHover(true)} onMouseLeave ={()=> setLikeHover(false)}>
               {likeHover ? 
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <g clip-path="url(#clip0_1122_15116)">
+                <g clipPath="url(#clip0_1122_15116)">
                   <circle 
                     cx="18" 
                     cy="18" 
@@ -106,8 +106,8 @@ const InspirationPage = () => {
                     fill="#158CC5"
                   />
                   <path 
-                    fill-rule="evenodd" 
-                    clip-rule="evenodd" 
+                    fillRule="evenodd" 
+                    clipRule="evenodd" 
                     d="M18.6 9.66699C17.1484 9.66699 15.9964 10.8003 15.9964 12.2723C15.9964 13.129 15.2557 14.4907 14.432 15.1713C14.1319 15.4193 13.6538 15.64 13.002 15.8266V26.3288L22.623 26.331L22.6297 26.332C22.646 26.333 22.6627 26.3337 22.6794 26.3337C23.1767 26.3337 23.667 26.1937 24.094 25.923L24.1857 25.863C24.5157 25.6341 24.7883 25.3319 24.982 24.98L25.0083 24.9297C25.0852 24.8128 25.1422 24.6835 25.1787 24.547L26.6254 18.1623L26.6404 18.099C26.6584 18.0113 26.667 17.9123 26.6644 17.8113L26.6635 17.7976C26.6967 17.2535 26.5579 16.7123 26.266 16.251L26.215 16.1717C25.7634 15.4963 25.0234 15.0763 24.217 15.0153L24.1647 15.012L24.1447 15.0093C24.0957 15.0033 24.0464 15.0003 23.997 15.0003L21.1564 14.9983L21.1924 14.8253C21.2859 14.3425 21.3329 13.8518 21.3327 13.36C21.3327 12.8033 21.2694 12.2477 21.1477 11.6933L21.134 11.6407C21.1287 11.6233 21.1227 11.6062 21.116 11.5893L21.1067 11.569L21.0934 11.521C20.9319 10.9852 20.6023 10.5157 20.1532 10.1818C19.7042 9.84787 19.1596 9.66738 18.6 9.66699ZM12.002 26.3286V16.0601C11.5604 16.1441 11.0678 16.2171 10.5247 16.278L10.458 16.287C10.146 16.338 9.86219 16.4982 9.65734 16.7391C9.45249 16.98 9.33991 17.2858 9.3397 17.602L9.33503 24.9153L9.33403 24.9203C9.3307 24.9437 9.33203 24.9647 9.33437 24.995L9.33603 25.0617C9.35306 25.4034 9.50085 25.7255 9.7488 25.9613C9.99675 26.1971 10.3259 26.3285 10.668 26.3283L12.002 26.3286Z" 
                     fill="white"
                   />
@@ -171,33 +171,33 @@ const InspirationPage = () => {
                 <path 
                   d="M23.5 13.9998C24.8807 13.9998 26 12.8805 26 11.4998C26 10.119 24.8807 8.99976 23.5 8.99976C22.1193 8.99976 21 10.119 21 11.4998C21 12.8805 22.1193 13.9998 23.5 13.9998Z" 
                   stroke="white" 
-                  stroke-width="2" 
-                  stroke-linejoin="round"
+                  strokeWidth="2" 
+                  strokeLinejoin="round"
                 />
                 <path 
                   d="M12.5 20.4995C13.8807 20.4995 15 19.3802 15 17.9995C15 16.6188 13.8807 15.4995 12.5 15.4995C11.1193 15.4995 10 16.6188 10 17.9995C10 19.3802 11.1193 20.4995 12.5 20.4995Z" 
                   stroke="white" 
-                  stroke-width="2" 
-                  stroke-linejoin="round"
+                  strokeWidth="2" 
+                  strokeLinejoin="round"
                 />
                 <path 
                   d="M21.0024 12.7866L14.6719 16.6221" 
-                  stroke="white" stroke-width="2" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
+                  stroke="white" strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
                   />
                 <path 
                   d="M14.668 19.2817L21.3382 23.2232" 
                   stroke="white" 
-                  stroke-width="2" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
                   />
                 <path 
                   d="M23.5 21.9998C24.8807 21.9998 26 23.1191 26 24.4998C26 25.8805 24.8807 26.9998 23.5 26.9998C22.1193 26.9998 21 25.8805 21 24.4998C21 23.1191 22.1193 21.9998 23.5 21.9998Z" 
                   stroke="white" 
-                  stroke-width="2" 
-                  stroke-linejoin="round"
+                  strokeWidth="2" 
+                  strokeLinejoin="round"
                   />
               </svg>
               :
