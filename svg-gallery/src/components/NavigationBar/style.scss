@@ -16,7 +16,15 @@
   }
 }
 
-
+.minorText{
+  color: #FFF;
+  font-family: Metropolis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 128.571% */
+  text-transform: capitalize;
+}
 .desktopMenu {
   display: flex;
   justify-content: space-around;

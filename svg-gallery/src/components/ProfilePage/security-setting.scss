@@ -62,6 +62,11 @@
     }
 
     .submit-password-btn {
+        color: var(--, #2F2725);
+
+        font-weight: 600;
+        line-height: 22px; /* 122.222% */
+        text-transform: capitalize;
         border-radius: 31px;
         background-color: rgba(36, 43, 46, 0.10);
         display: inline-flex;

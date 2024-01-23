@@ -5,7 +5,8 @@ import LogoContainer from "./logo";
 import MenuIcon from "@mui/icons-material/Menu";
 import MobileMenu from "../NavigationBar/mobileMenu";
 import CloseIcon from '@mui/icons-material/Close';
-import { Search, Tune } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
+
 
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -53,12 +54,15 @@ const Header = () => {
       </div>
       <div className={"container mx-auto mobileHeader flex lg:hidden"}>
         <div className={"headerLeft"}>
-          {
-            openMobileMenu ?
-              <CloseIcon onClick={mobileMenuIconClicked} />
-              :
-              <MenuIcon onClick={mobileMenuIconClicked} />
-          }
+          <div className="mr-4">
+            {
+              openMobileMenu ?
+                <CloseIcon onClick={mobileMenuIconClicked} />
+                :
+                <MenuIcon onClick={mobileMenuIconClicked} />
+            }
+          </div>
+         
           <LogoContainer />
           <MobileMenu isOpen={openMobileMenu} />
         </div>

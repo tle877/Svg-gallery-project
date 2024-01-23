@@ -111,6 +111,8 @@ const InspirationUploadPage = () => {
           <CoverImageUploader />
           <CategoryDropdown />
           <TagsDropdown />
+          <MachineDropdown />
+          <PowerInspirationUpload />
           <MaterialInspirationUpload />
           <TimeInspirationUpload />
           <ProductInspirationUpload />
@@ -121,12 +123,16 @@ const InspirationUploadPage = () => {
       </div>
       <div className="flex sm:hidden">
         <div className="w-full">
+        <h1 className="heading mb-[-18px]">Upload Image Group</h1>
           <UploadImageGroup />
+          <h1 className="heading">Add Cover Page</h1>
           <CoverImageUploader />
 
           <TitleInspirationUpload />
           <CategoryDropdown />
           <TagsDropdown />
+          <MachineDropdown />
+          <PowerInspirationUpload />
           <MaterialInspirationUpload />
           <TimeInspirationUpload />
           <ProductInspirationUpload />

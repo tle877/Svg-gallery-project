@@ -1,9 +1,10 @@
-import { Tune } from "@mui/icons-material";
+
 import { CATEGORIES, TAGS } from "../constants";
 import { Category } from "./Category";
 import { useState } from "react";
 import { Tag } from "./Tag";
 import { Drawer } from "@mui/material";
+import TuneIcon from "../../../assets/TuneIcon.jsx"
 
 export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
   const [currentCategory, setCurrentCategory] = useState(false);
@@ -17,7 +18,7 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
               className="w-full py-5 cursor-pointer"
               onClick={() => toggleDrawer()}
             >
-              <Tune />
+              <TuneIcon />
             </div>
             <div className="mb-16">
               <h4 className="font-bold mb-6 text-lg">Category</h4>
@@ -50,7 +51,7 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
             className="flex gap-4 p-5 mb-8 bg-blue-40 text-dark-brown text-xl"
             onClick={toggleActiveFilter}
           >
-            <Tune />
+            <TuneIcon />
             Refine
           </div>
           <div className="px-8">

@@ -1,12 +1,13 @@
-import { Search, Tune } from "@mui/icons-material";
+import { Search } from "@mui/icons-material";
 import { Tag } from "./Tag";
 import { SEARCH_TAGS } from "../constants";
+import TuneIcon from "../../../assets/TuneIcon";
 
 export const SearchField = ({ toggleDrawer }) => {
   return (
     <div className="container flex flex-col justify-center items-center gap-6">
       <div className="max-w-[1120px] w-full flex justify-center items-center gap-4">
-        <Tune
+        <TuneIcon
           className="block md:!hidden cursor-pointer"
           onClick={() => toggleDrawer()}
         />

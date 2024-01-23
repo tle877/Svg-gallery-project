@@ -1,14 +1,13 @@
 import "./style.scss";
+
 import { TextareaAutosize as BaseTextareaAutosize } from "@mui/base/TextareaAutosize";
-import DropZone from "../../components/FileUploader/DropZone";
 import CkEditor from "../../components/CKEditor/CKEditor";
 import { TagsDropdown } from "../../components/TagsDropdown/TagsDropdown";
-import MachineDropdown from "../../components/MachineDropdown/MachineDropdown";
 import CategoryDropdown from "../../components/CategoryDropdown/CategoryDropdown";
 import CoverImageUploader from "../../components/FileUploader/CoverUploader";
-import TextField from '@mui/material/TextField';
 import ProductTionFileDropZone from "../../components/FileUploader/ProductionFileDropZone";
 import ImageUploadDropZone from "../../components/FileUploader/ImageUploadDropZone";
+import TitleInspirationUpload from "../../components/TitleInspirationUpload";
 
 const ImageUploadPage = () => {
   const UploadImageGroup = () => {
@@ -55,23 +54,29 @@ const ImageUploadPage = () => {
 
   return (
     <div className={"container mx-auto mt-5"}>
+
       <div className="flex-row gap-6 hidden xl:flex">
         <div className="basis-2/3">
+          <h1 className={"heading"}>Upload Image</h1>
+          <div className="w-2/3 mr-auto">
           <UploadImageGroup />
+          </div>
+          
         </div>
         <div className="basis-1/3">
+          <h1 className={"heading mb-1"}>Select a cover</h1>
           <CoverImageUploader />
+          <TitleInspirationUpload />
           <CategoryDropdown />
-          <MachineDropdown />
           <TagsDropdown />
         </div>
       </div>
-      <div className="flex xl:hidden">
+      <div className="flex flex-col xl:hidden">
         <div className="w-full">
           <UploadImageGroup />
           <CoverImageUploader />
+          <TitleInspirationUpload />
           <CategoryDropdown />
-          <MachineDropdown />
           <TagsDropdown />
         </div>
       </div>

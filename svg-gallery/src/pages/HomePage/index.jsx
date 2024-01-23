@@ -8,8 +8,8 @@ import { Filter } from "./components/Filter";
 import ProductImage from "../../assets/productImage.jpeg";
 import { SearchField } from "./components/Search";
 import { useCallback, useState } from "react";
-import { Tune } from "@mui/icons-material";
 import Pagination from "../../components/Pagination/Pagination";
+import TuneIcon from "../../assets/TuneIcon";
 
 function HomePage() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -41,7 +41,7 @@ function HomePage() {
                 className="gap-4 p-5 mb-8 bg-blue-40 w-auto text-dark-brown text-xl max-w-[300px] hidden md:flex"
                 onClick={toggleActiveFilter}
               >
-                <Tune />
+                <TuneIcon />
                 Refine
               </div>
             )}

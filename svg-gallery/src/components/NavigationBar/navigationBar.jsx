@@ -40,7 +40,7 @@ const NavigationBar = () => {
             <path d="M14.356 6.8033L9.58306 2.03033C9.29017 1.73744 8.8153 1.73744 8.5224 2.03033L3.74943 6.8033" stroke="white" strokeWidth="1.5" />
             <line x1="9" y1="2.25" x2="9" y2="12.75" stroke="white" strokeWidth="1.5" />
           </svg>
-          Upload
+          <span className="minorText" >Upload</span>
         </div>
         <UploadDropdown isOpen={openUploadDropdown} />
         <div className={"menu-item"} onClick={notificationClicked}>

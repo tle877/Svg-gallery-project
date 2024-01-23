@@ -83,7 +83,7 @@ const ImageUploadDropZone = (props) => {
       <div {...getRootProps({ className: "ImageUploadDropZone " + (isError ? "ImageUploadDropZoneError" : "") })}>
         <input {...getInputProps()} />
         <div className={"uploadIcon " + (isError ? "hiddenUploadIcon" : "")}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50" fill="none">
             <path d="M4.16797 29.1663V41.6663C4.16797 43.9674 6.03346 45.8329 8.33464 45.8329H41.668C43.9692 45.8329 45.8346 43.9674 45.8346 41.6663V29.1663" stroke="#3F535E" stroke-width="4.16667" />
             <path d="M39.8779 18.8974L26.6196 5.63915C25.806 4.82556 24.4869 4.82556 23.6733 5.63916L10.4151 18.8974" stroke="#3F535E" stroke-width="4.16667" />
             <line x1="25.0013" y1="6.24927" x2="25.0013" y2="35.4159" stroke="#3F535E" stroke-width="4.16667" />
@@ -96,12 +96,14 @@ const ImageUploadDropZone = (props) => {
           </svg>
 
         </div>
-        <div className={'fileRestriction p-5'}>
-          <span className={(isError ? "hidden" : "block")}>Drag and drop your file here or click Select image to upload</span>
+        <div className={'fileRestriction-imageUpload mb-10' }>
+          <span className={(isError ? "hidden" : "block")}>
+            <span className="hidden sm:block">Drag and drop your file here or  </span>click <span className="text-blue">Select image</span> to upload
+          </span>
           <span className={(isError ? "block text-center" : "hidden")}>{errorMsg}</span>
         </div>
-        <Button className={'selectFileBtn'} variant="outlined">Select Image</Button>
-        <div className={'fileRestriction p-5 text-center'}>
+        <button className={'selectFileBtn px-3 py-1'} variant="outlined">Select Image</button>
+        <div className={'fileRestriction-imageUpload flex flex-col gap-2 mt-5 text-center'}>
           <span>supported file formats ：jpg、jpeg、png、svg</span>
           <span>smallest size：2400*3500px</span>
           <span>maximum file size：10MB</span>

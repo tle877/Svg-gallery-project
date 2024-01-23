@@ -76,17 +76,23 @@
 }
 
 .selectFileBtn {
+  
   margin: auto !important;
   border-radius: 25.11px !important;
   border: 1px solid #C7CDD0 !important;
-  background: #FFF !important;
+  background: #FFF;
   color: #3F535E !important;
-  font-size: 18px !important;
+  font-size: 14px !important;
   font-style: normal !important;
   font-weight: 400 !important;
   line-height: 22px !important;
   text-transform: capitalize;
+  &:hover{
+   
+    background: rgba(17, 41, 54, 0.04);
+  }
 }
+
 
 .fileRestriction {
   display: grid;
@@ -98,6 +104,20 @@
     color: #3f535e;
     font-family: Metropolis;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+  }
+}
+.fileRestriction-imageUpload{
+  text-align: center;
+
+  span {
+    color: #3f535e;
+    font-family: Metropolis;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
@@ -141,13 +161,12 @@
   border-radius: 12px;
   border: 1px dashed #C7CDD0;
   background: rgba(36, 43, 46, 0.04);
-  padding: 50px;
+  padding: 80px 50px;
 
   .uploadIcon {
     background: transparent;
     display: flex;
-    width: 144px;
-    height: 144px;
+
     padding: 7.784px;
     justify-content: center;
     align-items: center;
@@ -160,11 +179,14 @@
 
   @include xs {
     width: 100%;
-    padding: 0;
+    padding: 30px 10px 60px 10px;
 
     .uploadIcon {
       height: 100px;
     }
+  }
+  .text-blue {
+    color: #158CC5;
   }
 }
 

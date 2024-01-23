@@ -73,6 +73,7 @@ const DropZone = (props) => {
 
   return (
     <section className="mt-5">
+      <aside style={thumbsContainer}>{thumbs}</aside>
       <div {...getRootProps({ className: "dropzone flex" })}>
         <input {...getInputProps()} />
         <div className={"uploadBtn"}>
@@ -97,7 +98,7 @@ const DropZone = (props) => {
             <span>maximum file size：10MB</span>
         </div>
       </div>
-      <aside style={thumbsContainer}>{thumbs}</aside>
+      
     </section>
   );
 };

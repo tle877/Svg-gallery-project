@@ -25,9 +25,12 @@
   font-weight: 500;
   line-height: 32px; /* 133.333% */
   text-transform: capitalize;
+  
 }
 .seeAllButton:hover {
-  color: blue;
+  
+  border-radius: 20px;
+  background: rgba(17, 41, 54, 0.04);
 }
 
 .swiper {

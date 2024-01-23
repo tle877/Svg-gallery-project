@@ -18,7 +18,7 @@ const YouMayAlsoLike = () => {
         <div >
             <div className="flex justify-between items-center mb-5"> 
                 <h2 className=" leading-10 sm:ml-0 sm:mb-5">You May Also Like</h2>
-                <button className="seeAllButton sm:mb-5">See All</button>
+                <button className="seeAllButton sm:mb-5 px-8 py-2">See All</button>
             </div>
             
             <div className=" hidden sm:grid sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-4 lg:grid-cols-4 lg:gap-6 hidden" >
