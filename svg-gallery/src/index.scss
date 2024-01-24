@@ -3,16 +3,16 @@
 @import '@fontsource/metropolis';
 @import './mixin.scss';
 
-@font-face {
-  font-family: "Metropolis-Bold";
-  src: local("Metropolis-Bold"),
-    url(./assets/fonts/Metropolis-Bold.otf) format("opentype");
-}
-@font-face {
-  font-family: "Metropolis";
-  src: local("Metropolis-Regular"),
-    url(./assets/fonts/Metropolis-Regular.otf) format("opentype");
-}
+// @font-face {
+//   font-family: "Metropolis-Bold";
+//   src: local("Metropolis-Bold"),
+//     url(./assets/fonts/Metropolis-Bold.otf) format("opentype");
+// }
+// @font-face {
+//   font-family: "Metropolis";
+//   src: local("Metropolis-Regular"),
+//     url(./assets/fonts/Metropolis-Regular.otf) format("opentype");
+// }
 #nprogress .bar {
   background: #80ffff !important;
   height: 3px !important;

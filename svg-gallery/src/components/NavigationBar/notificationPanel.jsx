@@ -10,6 +10,10 @@ const NotificationPanel = (props) => {
                 <NotificationItem/>
                 <NotificationItem/>
                 <NotificationItem/>
+                <hr />
+                <div className="p-5 flex justify-center items-center">
+                    <a href="/notification" className="all-msg-btn">All Messages</a>
+                </div>
             </div>
             <div className={'notificationOverlay ' + (isOpen? 'block' : '')}></div>
         </>

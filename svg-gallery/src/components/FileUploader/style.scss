@@ -306,6 +306,9 @@ span {
   .modalContent{
     padding: 0;
   }
+  .css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop{
+    background: rgba(0, 0, 0, 0.75) !important;
+  }
 }
 .editedImage{
   position: relative;
@@ -331,7 +334,7 @@ span {
     background: #FFF;
     z-index: 10;
     opacity: 1;
-    padding: 5px;
+    padding: 10px;
     border: none;
   }
 }

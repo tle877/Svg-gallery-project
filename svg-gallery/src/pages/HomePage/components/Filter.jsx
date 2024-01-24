@@ -6,6 +6,7 @@ import { Tag } from "./Tag";
 import { Drawer } from "@mui/material";
 import TuneIcon from "../../../assets/TuneIcon.jsx"
 import { TuneIconActive } from "../../../assets/TuneIcon.jsx";
+import '../home-page.scss'
 
 export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
   const [currentCategory, setCurrentCategory] = useState(false);
@@ -38,11 +39,12 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg">Related Tags</h4>
-              <div className="flex flex-wrap gap-x-1 gap-y-3">
+              <div className="flex flex-wrap gap-x-1 gap-y-3 mb-3">
                 {TAGS?.map((e) => (
                   <Tag tag={e} key={e.title} />
                 ))}
               </div>
+              <a href="/" className="loadMore">Load more</a>
             </div>
           </div>
         </Drawer>
@@ -73,11 +75,12 @@ export const Filter = ({ open, toggleDrawer, toggleActiveFilter }) => {
             </div>
             <div>
               <h4 className="font-bold mb-6 text-lg">Related Tags</h4>
-              <div className="flex flex-wrap gap-x-1 gap-y-3">
+              <div className="flex flex-wrap gap-x-1 gap-y-3 mb-3">
                 {TAGS?.map((e) => (
                   <Tag tag={e} key={e.title} />
                 ))}
               </div>
+              <a href="/" className="loadMore">Load more</a>
             </div>
           </div>
         </div>

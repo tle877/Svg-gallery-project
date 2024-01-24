@@ -193,7 +193,7 @@ const CoverImageUploader = () => {
                     <div className='editedImage' onClick={handleClickOpen}>
                         <img src={editedImage} />
                         <div className='overlay'>
-                            <button className='replaceCoverBtn'>Replacing Cover</button>
+                            <button className='replaceCoverBtn '>Replacing Cover</button>
                         </div>
                     </div>
                         
