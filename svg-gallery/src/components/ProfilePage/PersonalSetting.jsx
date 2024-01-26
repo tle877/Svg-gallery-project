@@ -15,12 +15,12 @@ const PersonalSetting = () => {
     return (
         <div className=" personal-setting-container md:p-10 p-4 mx-auto">
             <h1 className="mb-8">Personal Settings</h1>
-            <div className="infomation-container hidden md:flex gap-3 w-1/2 mb-10">
+            <div className="infomation-container hidden md:flex gap-3 w-2/3 mb-10">
                 <div className="avatarContainer" onClick={() => setModalOpen(true)}>
                     <img src={avatar} alt="Avatar" />
                 </div>
 
-                <div className="description-container flex flex-col gap-4 my-2 justify-center">
+                <div className="flex flex-col gap-4 my-2 justify-center">
                     <h2> William</h2>
                     <p>gianna.guo@oceania-inc.com</p>
                 </div>
@@ -36,7 +36,7 @@ const PersonalSetting = () => {
                     <div className="avatarContainer">
                         <img src={avatar} alt="Avatar" />
                     </div>
-                    <div className="description-container flex flex-col  my-2 justify-center">
+                    <div className="flex flex-col  my-2 justify-center">
                         <h2> William</h2>
                         <p>gianna.guo@oceania-inc.com</p>
                     </div>

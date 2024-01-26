@@ -29,8 +29,9 @@ function HomePage() {
         <Carousel />
         <SearchField toggleDrawer={toggleDrawer} />
       </div>
+      
       <div className="flex md:hidden flex-col gap-6 mt-5 mb-5 ">
-        <div className="flex items-center mx-5">
+        <div className="flex items-center mx-4">
         <TuneIcon
           className="block cursor-pointer"
           toggleDrawer={() => toggleDrawer()}

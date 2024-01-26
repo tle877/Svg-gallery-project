@@ -90,7 +90,7 @@ const InspirationUploadPage = () => {
 
 
   return (
-    <div className={"container mx-auto mt-4"}>
+    <div className={"container mx-auto my-4"}>
       <div className="flex-row gap-6 hidden sm:flex">
         <div className="w-2/3">
           <h1 className="heading">Upload Image Group</h1>
@@ -115,10 +115,9 @@ const InspirationUploadPage = () => {
           <MaterialInspirationUpload />
           <TimeInspirationUpload />
           <ProductInspirationUpload />
-
-
-
         </div>
+
+        
       </div>
       <div className="flex sm:hidden">
         <div className="w-full">
@@ -140,7 +139,30 @@ const InspirationUploadPage = () => {
           <UploadProductionFile />
         </div>
       </div>
+
+      <div className="flex justify-between sm:w-2/3 mt-5">
+          <button
+            className=" cancel-btn rounded-full border border-[#C7CDD0]  px-5 sm:px-8 py-1.5 text-sm leading-6  "
+          >
+          Cancel
+          </button>
+
+        <div className="flex sm:gap-10 gap-4">
+          <button
+            className=" rounded-full border border-custom-blue text-custom-blue px-7 sm:px-9 py-1.5 text-sm leading-6  "
+          >
+          Save
+          </button>
+          <button
+            className=" rounded-full bg-custom-blue px-5 sm:px-7 py-1.5 text-sm leading-6 text-white"
+          >
+          Upload
+         </button>
+        </div>
+      </div>
+      
     </div>
+    
   );
 };
 
