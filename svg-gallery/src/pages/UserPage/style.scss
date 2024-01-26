@@ -497,3 +497,81 @@
       text-transform: capitalize;
     }
   }
+  .confirmModal{
+    .MuiDialog-paper{
+        height: auto !important;
+        border-radius: 12px !important;
+    }
+    .confirmModalContent{
+        display: grid;
+        justify-content: center;
+        margin: 20px;
+        // padding: 25px 200px;
+        // height: 305px;
+        .title{
+            color: #2F2725;
+            font-family: Metropolis;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px; /* 114.286% */
+            height: 50px;
+            text-align: center;
+        }
+        .description{
+            color: #3F535E;
+            text-align: center;
+            font-family: Metropolis;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29px; /* 120.833% */
+            height: 50px;
+        }
+        .modalBtn{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .cancelBtn{
+                display: inline-flex;
+                padding: 16px 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 47px;
+                border: 2px solid #C7CDD0;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .doneBtn{
+                display: inline-flex;
+                padding: 16px 48px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 37px;
+                background: #158CC5;
+                color: #ffffff;
+                cursor: pointer;
+            }
+        }
+        @include xs{
+            .title{
+                font-size: 18px;
+            }
+            .description{
+                font-size: 16px;
+            }
+            .modalBtn{
+                height: 60px;
+                .cancelBtn{
+                    padding: 10px 40px
+                }
+                .doneBtn{
+                    padding: 10px 40px
+                }
+            }
+        }
+    }
+  }
