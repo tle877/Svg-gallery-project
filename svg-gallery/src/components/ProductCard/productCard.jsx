@@ -4,12 +4,14 @@ import { HeartIcons,
     LikeIcons,
     ShareIcons,
     DownloadIcons,
-    StarIcons } from '../../assets/Icons/ImageIcons';
+    StarIcons,
+    UploadIcons,
+    TrashIcons } from '../../assets/Icons/ImageIcons';
 
 
 
 // eslint-disable-next-line react/prop-types
-const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageShow}) => {
+const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,showUpDeleteButton,imageShow}) => {
     const productImageStyle = {
         backgroundImage: `url(${imageShow})`, 
         backgroundSize: 'cover',
@@ -40,7 +42,15 @@ const ProductCard = ({showUploadButtons,showLikeRate,showLikeRateButton,imageSho
                         <ThumbsupIcons />
                         <ShareIcons />
                     </div>)}
+                    {showUpDeleteButton && (
+                    <div className='flex flex-col gap-3 sm:hidden h-3/5'>
+                        <UploadIcons />
+                        <TrashIcons />
+                       
+                    </div>)}
+                
                 </div>
+             
                    
             </a>
             <div className="flex flex-col items-start justify-center md:grid md:grid-cols-5 w-full tracking-wider">

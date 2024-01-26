@@ -53,16 +53,15 @@ const ImageUploadPage = () => {
   }
 
   return (
-    <div className={"container mx-auto mt-5"}>
+    <div className={"container mx-auto my-5"}>
 
       <div className="flex-row gap-6 hidden xl:flex">
         <div className="basis-2/3">
           <h1 className={"heading"}>Upload Image</h1>
           <div className="w-2/3 mr-auto">
           <UploadImageGroup />
-          </div>
-          
         </div>
+      </div>
         <div className="basis-1/3">
           <h1 className={"heading mb-1"}>Select a cover</h1>
           <CoverImageUploader />
@@ -71,6 +70,9 @@ const ImageUploadPage = () => {
           <TagsDropdown />
         </div>
       </div>
+
+
+
       <div className="flex flex-col xl:hidden">
         <div className="w-full">
         <h1 className={"heading"}>Upload Image</h1>
@@ -80,6 +82,26 @@ const ImageUploadPage = () => {
           <TitleInspirationUpload />
           <CategoryDropdown />
           <TagsDropdown />
+        </div>
+      </div>
+      
+      <div className="flex justify-between mt-10 sm:mt-5">
+          <button
+            className=" cancel-btn rounded-full border border-[#C7CDD0]  px-5 sm:px-9 py-1.5 text-sm leading-6  "
+          >
+          Cancel
+          </button>
+          <div className="flex sm:gap-10 gap-4">
+          <button
+            className=" rounded-full border border-custom-blue text-custom-blue px-7 sm:px-10 py-1.5 text-sm leading-6  "
+          >
+          Save
+          </button>
+          <button
+            className=" rounded-full bg-custom-blue px-5 sm:px-9 py-1.5 text-sm leading-6 text-white"
+          >
+          Upload
+         </button>
         </div>
       </div>
     </div>

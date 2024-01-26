@@ -254,8 +254,8 @@ const UserPage = () => {
                                 </div>
                             </div>
                             <div className={'grid grid-cols-2 lg:grid-cols-4 gap-4'}>
-                                <ProductCard imageShow={ProductImage} showLikeRate />
-                                <ProductCard imageShow={ProductImage} showLikeRate />
+                                <ProductCard imageShow={ProductImage} showLikeRate showUpDeleteButton />
+                                <ProductCard imageShow={ProductImage} showLikeRate showUpDeleteButton />
                                 <ProductCard imageShow={DeletedImg} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
                                 <ProductCard imageShow={ProductImage} showLikeRate />
