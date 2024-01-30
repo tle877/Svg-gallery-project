@@ -16,6 +16,7 @@ import RecommendedModel from "../../components/RecommendedModel/RecommendedModel
 import Description from "../../components/Description/Description";
 import ProductionStep from "../../components/ProductionStep/ProductionStep";
 import CommentsSection from "../../components/Comments/CommentsSection";
+import StarIcon from "@mui/icons-material/Star";
 import './style.scss'
 import { useState } from "react";
 const InspirationPage = () => {
@@ -29,6 +30,7 @@ const InspirationPage = () => {
     Image_3,
     Image_4,
   ];
+  const [activeStars, setActiveStars] = useState(0);
   const StickyButtons = () => {
     const [loveHover, setLoveHover] = useState(false)
     const [likeHover, setLikeHover] = useState(false)
@@ -261,6 +263,39 @@ const InspirationPage = () => {
       </>
     )
   }
+  
+  const handleStarHover = (index) => {
+    setActiveStars(index + 1);
+  };
+
+  const handleStarClick = (index) => {
+    setActiveStars(index + 1);
+  };
+  const Stars = Array.from({length: 5}, (_,index) => (
+    <StarIcon 
+      key={index} 
+      className={index < activeStars ? 'activeStar' : 'inactiveStar'} 
+      onMouseEnter={() => handleStarHover(index)}
+      onClick={() => handleStarClick(index)}
+    />
+  ))
+  const LeaveYourRate = () => {
+    return(
+      <>
+        <div className="container leaveYourRate mb-5">
+          <div className="rating">
+            <div className="ratingLabel">Leave Your Rate</div>
+            <div className="ratingStars">
+            {Stars}
+            </div>
+            <div className="submitButton">
+              Submit
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
@@ -302,6 +337,7 @@ const InspirationPage = () => {
         <ProductionStep />
         <YouMayAlsoLike />
         <RecommendedModel />
+        <LeaveYourRate/>
       </div>
       <CommentsSection />
       <div className="flex lg:hidden">

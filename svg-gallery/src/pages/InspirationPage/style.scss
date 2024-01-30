@@ -1,17 +1,141 @@
-@import '../../mixin.scss';
+@import "../../mixin.scss";
 
-.stickyBtnContainer{
-    position: fixed;
+.stickyBtnContainer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  background: #ffffff;
+  padding: 25px;
+  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.04);
+  z-index: 10;
+  .downloadBtn {
+    margin-right: 0 !important;
+  }
+}
+.leaveYourRate {
+  border-radius: 8px;
+  background: rgba(21, 140, 197, 0.04);
+  .rating {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    bottom: 0;
-    background: #ffffff;
-    padding: 25px;
-    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.04);
-    z-index: 10;
-    .downloadBtn{
-        margin-right: 0 !important;
+    align-items: center;
+    height: 224px;
+    padding: 50px;
+    .ratingLabel {
+      color: #2f2725;
+      text-align: center;
+      font-family: Metropolis;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 46px;
+      text-transform: capitalize;
+      margin-right: 20px;
     }
+    .ratingStars {
+      display: flex;
+      width: 65%;
+      .activeStar {
+        fill: #fcb500 !important;
+        font-size: 48px;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      .inactiveStar {
+        fill: #242b2e !important;
+        fill-opacity: 0.1;
+        font-size: 48px;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+    .submitButton {
+      border-radius: 25.11px !important;
+      background: #158cc5 !important;
+      color: #ffffff !important;
+      padding: 5px 40px !important;
+    }
+  }
+  @include xs {
+    .rating {
+      height: 181px;
+      padding: 0px;
+      .ratingLabel {
+        width: 30%;
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 0;
+      }
+      .ratingStars {
+        width: 45%;
+        justify-content: center;
+        .activeStar {
+          font-size: 25px;
+          margin-right: 0;
+        }
+        .inactiveStar {
+          font-size: 25px;
+          margin-right: 0;
+        }
+      }
+      //   .btnContainer{
+      //     width: 25%;
+      //     .submitButton {
+
+      //       }
+      //   }
+    }
+  }
+  @include sm {
+    .rating {
+      height: 181px;
+      padding: 0px;
+      .ratingLabel {
+        width: 30%;
+        font-size: 28px;
+        line-height: 35px;
+        margin-right: 0;
+      }
+      .ratingStars {
+        width: 45%;
+        justify-content: center;
+        .activeStar {
+          font-size: 35px;
+          margin-right: 0;
+        }
+        .inactiveStar {
+          font-size: 35px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include md{
+    .rating {
+        height: 181px;
+        padding: 0px;
+        .ratingLabel {
+          width: 30%;
+          font-size: 30px;
+          line-height: 35px;
+          margin-right: 0;
+        }
+        // .ratingStars {
+        //   width: 45%;
+        //   justify-content: center;
+        //   .activeStar {
+        //     font-size: 35px;
+        //     margin-right: 0;
+        //   }
+        //   .inactiveStar {
+        //     font-size: 35px;
+        //     margin-right: 0;
+        //   }
+        // }
+      }
+  }
 }
